@@ -219,7 +219,8 @@
       "lista_sobre_mim",
       "remedios",
       "gaveta_g",
-      "fita_02"
+      "fita_02",
+      "sonhos_infancia"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -284,7 +285,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "conta_paga"
+      "conta_paga",
+      "espelho_riscos"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -538,7 +540,8 @@
     "tese": "neutra",
     "conexoes_possiveis": [
       "carta_recebida",
-      "relogio_parado"
+      "relogio_parado",
+      "espelho_riscos"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -554,7 +557,94 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "lista_sobre_mim"
+      "lista_sobre_mim",
+      "lista_classe"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "sonhos_infancia": {
+    "id": "sonhos_infancia",
+    "numero": 35,
+    "titulo": "Pasta F — os sonhos",
+    "corpo": "Helena registrava sonhos em terceira pessoa, sobre uma menina de nove anos numa cozinha de azulejo verde. A menina derruba uma jarra, corta o dorso da mão esquerda e escolhe não gritar. Eu nunca contei a ninguém que não gritei.",
+    "tags": [
+      "eu",
+      "infancia",
+      "helena"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "memoria_cozinha",
+      "secao_d",
+      "lista_classe"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "memoria_cozinha": {
+    "id": "memoria_cozinha",
+    "numero": 36,
+    "titulo": "A memória da cozinha",
+    "corpo": "Alguém gritou o meu nome e segurou a minha mão embaixo da torneira. Com raiva por cima do susto. É a primeira vez na vida que eu me lembro disso.",
+    "tags": [
+      "eu",
+      "infancia",
+      "memoria"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "memoria_banheira",
+      "sonhos_infancia"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "memoria_banheira": {
+    "id": "memoria_banheira",
+    "numero": 37,
+    "titulo": "A memória da casa vazia",
+    "corpo": "A casa da minha infância era grande e vazia e eu ficava sozinha nela desde as duas da tarde. O tamanho do silêncio é a coisa que eu mais lembro.",
+    "tags": [
+      "eu",
+      "infancia",
+      "memoria"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "memoria_cozinha"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "espelho_riscos": {
+    "id": "espelho_riscos",
+    "numero": 38,
+    "titulo": "Riscos por dentro do espelho",
+    "corpo": "Grupos de cinco, o quinto atravessado, no canto inferior do vidro do banheiro — entre o vidro e o fundo do espelho. A mesma inclinação dos riscos da parede do porão.",
+    "tags": [
+      "presenca",
+      "porao",
+      "impossivel"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "onze_dias",
+      "cadeado_novo"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "lista_classe": {
+    "id": "lista_classe",
+    "numero": 39,
+    "titulo": "MARTINS, L. — transferida em setembro",
+    "corpo": "Lista de presença da 5ª série B, Escola Municipal Rui Barbosa, distrito de São Brás, 1997. Helena substituiu ali por dois meses. Eu estava na quinta série em 1997 — mas em 1997 eu ainda usava o nome da minha mãe.",
+    "tags": [
+      "eu",
+      "infancia",
+      "1997",
+      "helena"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "sonhos_infancia",
+      "helena_cicatriz"
     ],
     "textura": "res://assets/ui/card_papel.png"
   }

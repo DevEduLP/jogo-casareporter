@@ -792,6 +792,15 @@ export function buildHouse() {
       label: 'Caixa dentro do poço', verb: 'Retirar', hidden: true,
       action: { type: 'read', doc: 'pasta_g', clue: 'pasta_g_existe' },
     },
+
+    /* ---------- capítulo 8: a investigação vira sobre Laura ---------- */
+    {
+      // A pasta F estava no arquivo o tempo todo. Laura só volta a procurar
+      // depois de descobrir que Helena catalogava a si mesma.
+      id: 'arquivo_pasta_f', pos: [-3.2, 0.45, -5.2], size: [0.8, 0.9, 0.8],
+      label: 'Caixa de papelão', verb: 'Abrir', hidden: true,
+      action: { type: 'read', doc: 'pasta_f_sonhos' },
+    },
   );
 
   // Plataformas: a casa assenta sobre um alicerce e a varanda tem um degrau.

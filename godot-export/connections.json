@@ -304,5 +304,73 @@
       "A": 2,
       "C": 1
     }
+  },
+  {
+    "a": "memoria_cozinha",
+    "b": "memoria_banheira",
+    "titulo": "As duas lembranças não cabem juntas",
+    "corpo": "Numa, alguém grita o meu nome na cozinha e segura a minha mão embaixo da torneira. Na outra, aquela casa está vazia desde as duas da tarde e sempre esteve. Eu tive as duas hoje, com quatro cômodos de distância, e as duas chegaram com a mesma textura de coisa vivida. Pelo menos uma é falsa. Eu não faço ideia de qual.",
+    "teses": {
+      "B": 5
+    }
+  },
+  {
+    "a": "sonhos_infancia",
+    "b": "memoria_cozinha",
+    "titulo": "Ela sonhou primeiro",
+    "corpo": "Helena registrou a jarra, o corte no dorso da mão esquerda e a decisão de não gritar em novembro de 1997. Eu me lembrei disso hoje, pela primeira vez, depois de ler o que ela escreveu. Ou ela viu a minha infância, ou eu acabei de construir uma lembrança a partir de um papel.",
+    "teses": {
+      "A": 3,
+      "B": 3
+    }
+  },
+  {
+    "a": "sonhos_infancia",
+    "b": "secao_d",
+    "titulo": "A menina que ela inventou tinha dados verificáveis",
+    "corpo": "Helena chorou por não ter ouvido o nome de uma criança que ela mesma julgava ter inventado. E a criança inventada tinha uma cicatriz que existe, num dorso de mão que existe, pelo motivo exato pelo qual ela existe.",
+    "teses": {
+      "A": 4,
+      "B": 1
+    }
+  },
+  {
+    "a": "lista_classe",
+    "b": "sonhos_infancia",
+    "titulo": "São Brás, 1997",
+    "corpo": "Helena substituiu dois meses numa escola de distrito em 1997, e sonhou com a menina naquele mesmo ano. Uma aluna transferida em setembro aparece na lista com o meu sobrenome — que eu ainda não usava. Ou não é sobre mim, ou eu não sei tanto sobre a minha própria infância quanto eu achava.",
+    "teses": {
+      "C": 3,
+      "B": 2
+    }
+  },
+  {
+    "a": "espelho_riscos",
+    "b": "onze_dias",
+    "titulo": "Contaram em dois lugares",
+    "corpo": "Riscos no porão e riscos por dentro do vidro do banheiro, na mesma mão. Quem contou os meus onze dias de hesitação contou também de pé, neste banheiro, olhando para o próprio reflexo.",
+    "teses": {
+      "C": 3,
+      "A": 2
+    }
+  },
+  {
+    "a": "espelho_riscos",
+    "b": "cadeado_novo",
+    "titulo": "A pessoa que se olha neste espelho",
+    "corpo": "O espelho está limpo, com um risco de flanela no canto, numa casa com vinte e sete anos de poeira. E tem uma contagem arranhada por dentro do vidro. Alguém vem aqui, se olha, e conta.",
+    "teses": {
+      "C": 4
+    }
+  },
+  {
+    "a": "lista_classe",
+    "b": "helena_cicatriz",
+    "titulo": "Duas mulheres com a mesma mão",
+    "corpo": "A descrição física que Helena fez de si mesma tem a minha cicatriz. Uma lista de presença de 1997 tem o meu sobrenome. As duas coisas são fracas sozinhas e nenhuma prova nada. É exatamente isso que me impede de largar.",
+    "teses": {
+      "B": 3,
+      "A": 2
+    }
   }
 ]

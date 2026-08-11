@@ -813,6 +813,89 @@ Eu prefiro a dois. Quero deixar registrado que eu prefiro a dois, e que preferir
     clue: 'helena_depois',
   },
 
+  /* ======================= CAPÍTULO 8 — LAURA ============================ */
+
+  pasta_f_sonhos: {
+    id: 'pasta_f_sonhos',
+    type: 'diary',
+    title: 'Pasta F — sonhos',
+    meta: 'Arquivo. Folhas soltas, numeradas a lápis, sem ordem de data.',
+    pages: [
+`Helena anotava os sonhos com a mesma frieza com que anotava as contas de água. Hora de dormir, hora de acordar, duração estimada, e o texto em terceira pessoa — como se ela estivesse relatando o sonho de outra pessoa.
+
+Depois entendi por quê. Ela não estava sonhando com ela mesma.
+
+"F-04 — 22/09/1997. Deitei 23h10, acordei 4h20.
+
+A menina tem uns nove anos. Está numa cozinha que não é esta. O azulejo vai só até a metade da parede e é verde. Ela está em cima de uma cadeira porque não alcança a pia."`,
+
+`"F-07 — 11/11/1997.
+
+A mesma cozinha. A menina derruba uma jarra de vidro. Não é acidente exatamente — ela estava se equilibrando e sabia que ia cair e escolheu não gritar por ajuda.
+
+Corta a mão esquerda, no dorso. Muito sangue para um corte tão fino.
+
+Ela não chora. Fica olhando a mão como quem confere uma conta."`,
+
+`"F-11 — 03/02/1998.
+
+A mesma menina, mais velha. Está deitada no escuro e há uma mulher no corredor, fora do quarto, contando.
+
+Não contando para dormir. Contando alguma coisa. Números na casa dos vinte, e depois recomeçando do um.
+
+A menina está acordada e finge que não. Isso eu sei porque a respiração dela no sonho é a respiração falsa de criança acordada, e é uma coisa que eu não teria como inventar porque nunca fui criança acordada no escuro. Eu dormia bem."`,
+
+`"F-14 — 26/03/1998.
+
+Alguém chama a menina pelo nome.
+
+Não consegui ouvir. Acordei antes, e fiquei quinze minutos sentada na cama tentando puxar o som de volta, e não veio.
+
+Anotar que a frustração foi desproporcional. Chorei. Não choro há anos. Chorei por não ter ouvido o nome de uma criança que eu inventei."`,
+    ],
+    lauraNote: 'Azulejo verde até a metade da parede. Uma cadeira na frente da pia porque eu não alcançava.\n\nA jarra caiu quando eu tinha nove anos e eu não gritei. Nunca contei isso a ninguém — nem o não ter gritado, que é a parte de que eu tenho vergonha.\n\nO resto eu não reconheço. Ninguém contava nada no corredor da minha casa. Disso eu tenho certeza, e é a única coisa desta pasta de que eu tenho certeza, e eu já reparei no que isso significa.',
+    clue: 'sonhos_infancia',
+  },
+
+  pasta_b_escola: {
+    id: 'pasta_b_escola',
+    type: 'report',
+    title: 'Pasta B — escola / substituições',
+    meta: 'Arquivo. A pasta mais burocrática e mais grossa depois da G.',
+    pages: [
+`Sete anos de substituições, organizadas por ano e por escola. Helena rodava a região inteira: Vale das Pedras, Cedro, São Brás, três distritos que eu tive que procurar no mapa.
+
+Comprovantes de pagamento, planos de aula datilografados, listas de presença. É a parte mais chata do arquivo dela e é a única que prova que ela existia fora desta casa.`,
+
+`1997. Escola Municipal Rui Barbosa, distrito de São Brás. Substituição de dois meses, agosto e setembro.
+
+Lista de presença, 5ª série B, trinta e um nomes em ordem alfabética, datilografados.
+
+Na margem, ao lado de alguns, anotações a lápis de Helena. "atenta". "não enxerga o quadro". "faltou 6x, ver com a coordenação".
+
+E, na letra M:
+
+MARTINS, L. — "transferida em setembro"`,
+
+`Eu estava na quinta série em 1997.
+
+Martins é o nome do meu pai. Eu usei o da minha mãe até os doze anos, quando ela pediu que eu trocasse, e eu troquei, e nunca perguntei por quê.
+
+Então em 1997 eu não me chamava Martins.
+
+Eu deveria estar aliviada.`,
+
+`Existem duzentos mil Martins neste país. Um número não trivial deles tem L. Uma menina transferida em setembro de 1997 de uma escola municipal de distrito é a coisa mais comum que já aconteceu.
+
+Eu sei disso. Eu escreveria isso numa matéria e eu estaria certa.
+
+O que eu não consigo escrever é por que a minha mão está tremendo, se a data está errada e o nome está errado e nada aqui é sobre mim.
+
+Eu nunca estive em São Brás. Eu tenho certeza absoluta disso do mesmo jeito que eu tinha certeza absoluta de que ninguém contava números no corredor.`,
+    ],
+    clue: 'lista_classe',
+  },
+
   /* ===================== notas curtas de ambiente ======================== */
 
   bilhete_maquina: {

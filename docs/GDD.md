@@ -127,8 +127,8 @@ Regra de ouro, herdada do v1.0 e mantida: **nenhuma pista prova só uma leitura.
 | Psicológica | B | Duas mulheres de 38 anos, insones, com o mesmo remédio, escrevendo sobre uma mulher que conhecem sem ter conhecido |
 | Conspiração | C | A conta de luz paga no mês passado, o cadeado lubrificado por baixo, e a carta datilografada numa máquina trancada por dentro |
 
-**Balanceamento atual (peso total nas conexões): A=44, B=45, C=45.**
-Desvio máximo de 2,2%. Era 20,7% no fim do capítulo 6 — a leitura psicológica
+**Balanceamento atual (peso total nas conexões): A=55, B=59, C=55.**
+Desvio máximo de 6,8%. Era 20,7% no fim do capítulo 6 — a leitura psicológica
 estava significativamente mais difícil de alcançar, o que não é ambiguidade e
 sim viés. Corrigido no capítulo 7 com conexões novas, não com ajuste de números.
 
@@ -148,9 +148,9 @@ narrativas**. Os dois eixos são compatíveis e ambos úteis.
 | Prólogo — A Carta | 1. A CARTA | ✅ jogável |
 | Cap. 1 — Andar térreo | 2. A CASA · 3. HELENA | ✅ jogável |
 | Cap. 2 — O Escritório | 4. IMPOSSÍVEL · 5. A FOTOGRAFIA | ✅ jogável |
-| Cap. 3 — Quartos/banheiro | (integrado ao térreo) | ✅ jogável |
+| Cap. 3 — Quartos/banheiro | (integrado ao térreo) · 8. LAURA | ✅ jogável |
 | Cap. 4 — O Porão | 6. A PRESENÇA · 7. HELENA | ✅ jogável |
-| Cap. 5 — O Sótão e o Relógio | 8. LAURA · 9. A VISITANTE · 10. A CASA | declarados |
+| Cap. 5 — O Sótão e o Relógio | 9. A VISITANTE · 10. A CASA | declarados |
 
 **Divergência de planta:** o v1.0 prevê dois andares. O build é térreo + porão,
 com quarto e banheiro no térreo. O sótão ainda precisa existir — é o clímax — e

@@ -117,14 +117,18 @@
     "numero": 8,
     "id": "laura",
     "titulo": "LAURA",
-    "epigrafe": "A apuração muda de objeto.",
-    "objetivo": "Descobrir por que Helena sabia tanto sobre você.",
+    "epigrafe": "\"Acordei antes, e não consegui ouvir o nome.\"",
+    "objetivo": "Subir. Reler o arquivo de Helena procurando por você.",
     "nivel_realidade": 5,
-    "monologo_inicial": [],
+    "monologo_inicial": [
+      "Ela catalogou a si mesma e a descrição bateu comigo.",
+      "Eu vim para cá apurar um desaparecimento de 1998 e nas últimas horas eu parei de tomar nota sobre a Helena.",
+      "Então é isso. A partir de agora eu sou a pauta."
+    ],
     "avanca_quando": {
       "flag": "infancia"
     },
-    "implementado": false
+    "implementado": true
   },
   {
     "numero": 9,

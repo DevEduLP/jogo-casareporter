@@ -182,6 +182,34 @@ export const CLUES = {
     text: 'Seção B da pasta G, descrição física de Helena: "cicatriz fina no dorso da mão esquerda, de vidro, da infância". Eu tenho essa cicatriz. Ela estava descrevendo a si mesma.',
     tags: ['eu', 'helena', 'espelho'],
   },
+
+  /* ---------------------- capítulo 8 — LAURA --------------------------- */
+
+  sonhos_infancia: {
+    n: 35, title: 'Pasta F — os sonhos',
+    text: 'Helena registrava sonhos em terceira pessoa, sobre uma menina de nove anos numa cozinha de azulejo verde. A menina derruba uma jarra, corta o dorso da mão esquerda e escolhe não gritar. Eu nunca contei a ninguém que não gritei.',
+    tags: ['eu', 'infancia', 'helena'],
+  },
+  memoria_cozinha: {
+    n: 36, title: 'A memória da cozinha',
+    text: 'Alguém gritou o meu nome e segurou a minha mão embaixo da torneira. Com raiva por cima do susto. É a primeira vez na vida que eu me lembro disso.',
+    tags: ['eu', 'infancia', 'memoria'],
+  },
+  memoria_banheira: {
+    n: 37, title: 'A memória da casa vazia',
+    text: 'A casa da minha infância era grande e vazia e eu ficava sozinha nela desde as duas da tarde. O tamanho do silêncio é a coisa que eu mais lembro.',
+    tags: ['eu', 'infancia', 'memoria'],
+  },
+  espelho_riscos: {
+    n: 38, title: 'Riscos por dentro do espelho',
+    text: 'Grupos de cinco, o quinto atravessado, no canto inferior do vidro do banheiro — entre o vidro e o fundo do espelho. A mesma inclinação dos riscos da parede do porão.',
+    tags: ['presenca', 'porao', 'impossivel'],
+  },
+  lista_classe: {
+    n: 39, title: 'MARTINS, L. — transferida em setembro',
+    text: 'Lista de presença da 5ª série B, Escola Municipal Rui Barbosa, distrito de São Brás, 1997. Helena substituiu ali por dois meses. Eu estava na quinta série em 1997 — mas em 1997 eu ainda usava o nome da minha mãe.',
+    tags: ['eu', 'infancia', '1997', 'helena'],
+  },
 };
 
 /**
@@ -385,6 +413,53 @@ export const CONNECTIONS = [
     title: 'O único lugar onde ela não escutava',
     text: 'Helena descia ao porão porque era o único lugar silencioso da casa. Alguém morou nesse silêncio por vinte e três dias, ouvindo os passos dela por cima. As duas estavam procurando a mesma coisa em andares diferentes.',
     lean: { psicologica: 2, sobrenatural: 2, conspiracao: 1 },
+  },
+
+  /* ---------------------- capítulo 8 — LAURA --------------------------- */
+
+  {
+    // A conexão mais importante do capítulo: duas memórias que Laura teve
+    // hoje, nesta casa, e que não podem ser verdadeiras ao mesmo tempo.
+    a: 'memoria_cozinha', b: 'memoria_banheira',
+    title: 'As duas lembranças não cabem juntas',
+    text: 'Numa, alguém grita o meu nome na cozinha e segura a minha mão embaixo da torneira. Na outra, aquela casa está vazia desde as duas da tarde e sempre esteve. Eu tive as duas hoje, com quatro cômodos de distância, e as duas chegaram com a mesma textura de coisa vivida. Pelo menos uma é falsa. Eu não faço ideia de qual.',
+    lean: { psicologica: 5 },
+  },
+  {
+    a: 'sonhos_infancia', b: 'memoria_cozinha',
+    title: 'Ela sonhou primeiro',
+    text: 'Helena registrou a jarra, o corte no dorso da mão esquerda e a decisão de não gritar em novembro de 1997. Eu me lembrei disso hoje, pela primeira vez, depois de ler o que ela escreveu. Ou ela viu a minha infância, ou eu acabei de construir uma lembrança a partir de um papel.',
+    lean: { sobrenatural: 3, psicologica: 3 },
+  },
+  {
+    a: 'sonhos_infancia', b: 'secao_d',
+    title: 'A menina que ela inventou tinha dados verificáveis',
+    text: 'Helena chorou por não ter ouvido o nome de uma criança que ela mesma julgava ter inventado. E a criança inventada tinha uma cicatriz que existe, num dorso de mão que existe, pelo motivo exato pelo qual ela existe.',
+    lean: { sobrenatural: 4, psicologica: 1 },
+  },
+  {
+    a: 'lista_classe', b: 'sonhos_infancia',
+    title: 'São Brás, 1997',
+    text: 'Helena substituiu dois meses numa escola de distrito em 1997, e sonhou com a menina naquele mesmo ano. Uma aluna transferida em setembro aparece na lista com o meu sobrenome — que eu ainda não usava. Ou não é sobre mim, ou eu não sei tanto sobre a minha própria infância quanto eu achava.',
+    lean: { conspiracao: 3, psicologica: 2 },
+  },
+  {
+    a: 'espelho_riscos', b: 'onze_dias',
+    title: 'Contaram em dois lugares',
+    text: 'Riscos no porão e riscos por dentro do vidro do banheiro, na mesma mão. Quem contou os meus onze dias de hesitação contou também de pé, neste banheiro, olhando para o próprio reflexo.',
+    lean: { conspiracao: 3, sobrenatural: 2 },
+  },
+  {
+    a: 'espelho_riscos', b: 'cadeado_novo',
+    title: 'A pessoa que se olha neste espelho',
+    text: 'O espelho está limpo, com um risco de flanela no canto, numa casa com vinte e sete anos de poeira. E tem uma contagem arranhada por dentro do vidro. Alguém vem aqui, se olha, e conta.',
+    lean: { conspiracao: 4 },
+  },
+  {
+    a: 'lista_classe', b: 'helena_cicatriz',
+    title: 'Duas mulheres com a mesma mão',
+    text: 'A descrição física que Helena fez de si mesma tem a minha cicatriz. Uma lista de presença de 1997 tem o meu sobrenome. As duas coisas são fracas sozinhas e nenhuma prova nada. É exatamente isso que me impede de largar.',
+    lean: { psicologica: 3, sobrenatural: 2 },
   },
 ];
 

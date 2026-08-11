@@ -284,6 +284,68 @@ export function runScript(game, id, source) {
       return;
     }
 
+    /* ====================== capítulo 8 — LAURA ========================= */
+    // Memórias disparadas por objetos banais. Duas delas não podem ser
+    // verdadeiras ao mesmo tempo, e o jogo nunca aponta isso — quem cruzar
+    // as pistas depois é que descobre.
+
+    case 'memoria_cozinha': {
+      narrative.setFlag('memoria_cozinha');
+      narrative.say([
+        'Duas xícaras. Eu já olhei para estas xícaras hoje e anotei "duas" no caderno como quem anota um fato.',
+        'E agora eu estou vendo uma cozinha de azulejo verde até a metade da parede.',
+        'Eu em cima de uma cadeira. A jarra escorrega. Eu vejo ela escorregar e decido não gritar.',
+        'E aí tem alguém. Alguém grita o meu nome e me tira da cadeira e segura a minha mão embaixo da torneira, e eu lembro da água fria e do jeito que ela disse o meu nome, com raiva por cima do susto.',
+        'Isso é uma memória. Isso tem textura de memória. Eu tenho trinta e oito anos e essa é a primeira vez na vida que eu me lembro de alguém ter gritado o meu nome naquela cozinha.',
+      ]);
+      journal.addClue('memoria_cozinha');
+      reality.spike(0.8, 7);
+      return;
+    }
+
+    case 'memoria_banheira': {
+      narrative.setFlag('memoria_banheira');
+      narrative.say([
+        'A marca de nível na banheira, reta, escura.',
+        'Eu tomava banho de banheira até tarde na infância. Minha mãe achava perigoso e eu tomava assim mesmo, porque não tinha quem me impedisse.',
+        'A casa era grande e vazia e eu passava as tardes inteiras nela sozinha. Isso é a coisa que eu mais lembro da minha infância: o tamanho do silêncio.',
+        'Nunca teve ninguém naquela casa comigo. Eu ficava sozinha desde as duas da tarde.',
+      ]);
+      journal.addClue('memoria_banheira');
+      reality.spike(0.7, 6);
+      return;
+    }
+
+    case 'memoria_sofa': {
+      narrative.say([
+        'A depressão limpa no assento da esquerda. Eu reparei nisso hoje de manhã, o que já parece outra vida.',
+        'Eu sento na direita. Sempre sentei na direita, em qualquer sofá, em qualquer casa.',
+        'Não tem nada de errado nisso. É só que eu nunca me perguntei por quê, e agora eu me perguntei, e não tem resposta.',
+      ]);
+      return;
+    }
+
+    case 'espelho_riscado': {
+      if (narrative.hasFlag('viu_espelho_riscado')) {
+        narrative.interrupt('Continuo sem tocar no vidro.');
+        return;
+      }
+      narrative.setFlag('viu_espelho_riscado');
+      narrative.say([
+        'Certo. Eu vou olhar no espelho.',
+        'E é o meu rosto. É exatamente o meu rosto, cansado do jeito que eu esperava, e eu fico decepcionada, e a decepção é a coisa mais assustadora que eu sinto hoje.',
+        'No canto inferior direito do vidro, do lado de dentro, tem riscos.',
+        'Grupos de cinco, o quinto atravessado. Do lado de dentro. Entre o vidro e o fundo do espelho.',
+        'São os mesmos riscos da parede do porão. A mesma inclinação, a mesma mão.',
+        'Alguém contou dias aqui também. De pé, neste banheiro, na frente deste espelho, olhando para o próprio reflexo enquanto riscava.',
+      ]);
+      journal.addClue('espelho_riscos');
+      reality.spike(1, 10);
+      audio.tinnitus(6, 0.05);
+      audio.stinger(40, 0.12, 12);
+      return;
+    }
+
     /* ================ capítulo 7 — O DESTINO DE HELENA ================= */
 
     case 'poco': {
@@ -548,6 +610,44 @@ export function wireStoryEvents(game) {
       audio.whisper(2.5, 6);
       reality.spike(0.7, 5);
     }, 20000);
+  });
+
+  /* ====================== capítulo 8 — LAURA ========================== */
+
+  bus.on(EVENTS.CHAPTER_START, ({ chapter }) => {
+    if (chapter.id !== 'laura') return;
+
+    // A casa deixa de responder e passa a devolver. Objetos que Laura já
+    // examinou como repórter voltam a ela como memória — e é o mesmo objeto,
+    // no mesmo lugar, com a mesma aparência. Só o significado mudou.
+    interaction.setAction('mesa_cozinha', { type: 'script', id: 'memoria_cozinha' });
+    interaction.setAction('banheira', { type: 'script', id: 'memoria_banheira' });
+    interaction.setAction('sofa_sala', { type: 'script', id: 'memoria_sofa' });
+    interaction.setAction('espelho_banheiro', { type: 'script', id: 'espelho_riscado' });
+
+    // As gavetas do arquivo já entregaram a chave do porão; agora entregam a
+    // pasta B. E a pasta F estava numa caixa que ela nunca teve motivo de abrir.
+    interaction.setAction('arquivo_gavetas', { type: 'read', doc: 'pasta_b_escola' });
+    interaction.setHidden('arquivo_pasta_f', false);
+  });
+
+  bus.on(EVENTS.DOC_READ, ({ id }) => {
+    // A lista de presença fecha o capítulo 8. Não confirma que era Laura:
+    // confirma que ela não consegue mais afirmar que não era.
+    if (id === 'pasta_b_escola' && !narrative.hasFlag('infancia')) {
+      narrative.setFlag('infancia');
+      reality.spike(1, 14);
+      audio.stinger(34, 0.15, 16);
+      narrative.say([
+        'Eu nunca estive em São Brás.',
+        'Eu tenho certeza absoluta disso — do mesmo jeito que eu tinha certeza absoluta de que ninguém contava números no corredor da minha casa.',
+      ], 3.0);
+    }
+
+    if (id === 'pasta_f_sonhos') {
+      narrative.setFlag('leu_sonhos');
+      reality.spike(0.8, 8);
+    }
   });
 }
 

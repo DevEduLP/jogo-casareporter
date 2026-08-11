@@ -132,11 +132,17 @@ export const CHAPTERS = [
     n: 8,
     id: 'laura',
     title: 'LAURA',
-    epigraph: 'A apuração muda de objeto.',
-    objective: 'Descobrir por que Helena sabia tanto sobre você.',
+    epigraph: '"Acordei antes, e não consegui ouvir o nome."',
+    objective: 'Subir. Reler o arquivo de Helena procurando por você.',
     reality: 5,
+    onStart: {
+      monologue: [
+        'Ela catalogou a si mesma e a descrição bateu comigo.',
+        'Eu vim para cá apurar um desaparecimento de 1998 e nas últimas horas eu parei de tomar nota sobre a Helena.',
+        'Então é isso. A partir de agora eu sou a pauta.',
+      ],
+    },
     advance: { flag: 'infancia' },
-    stub: true,
   },
   {
     n: 9,

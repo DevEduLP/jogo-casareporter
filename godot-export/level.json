@@ -2069,6 +2069,28 @@
         "doc": "pasta_g",
         "clue": "pasta_g_existe"
       }
+    },
+    {
+      "id": "arquivo_pasta_f",
+      "posicao": [
+        -3.2,
+        0.45,
+        -5.2
+      ],
+      "tamanho": [
+        0.8,
+        0.9,
+        0.8
+      ],
+      "rotulo": "Caixa de papelão",
+      "verbo": "Abrir",
+      "oculto": true,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "pasta_f_sonhos"
+      }
     }
   ],
   "luzes": [
