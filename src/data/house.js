@@ -499,9 +499,14 @@ export function buildHouse() {
       { collide: false, y: 0.8, uvScale: [2, 2] }), 'caixa_musica_entrada', false),
 
     // A chave do arquivo, sobre o aparador da entrada. Não estava ali antes.
-    P.tag(P.box_(-2.14, 8.15, 0.5, 0.08, 0.012, 0.03, 'metal',
-      { collide: false, y: 0.81, tint: [0.8, 0.76, 0.62], gloss: 0.4 }),
-    'chave_arquivo_visivel', false),
+    // A chave em si tem 8 cm e some no escuro. Quem a torna visível é a
+    // etiqueta de papel amarrada nela — que o próprio item já descrevia.
+    P.tag(P.combine(
+      P.box_(-2.14, 8.15, 0.5, 0.08, 0.012, 0.03, 'metal',
+        { collide: false, y: 0.81, tint: [0.8, 0.76, 0.62], gloss: 0.4 }),
+      P.box_(-2.20, 8.22, 0.5, 0.11, 0.006, 0.07, 'paper',
+        { collide: false, y: 0.806, tint: [1.15, 1.12, 1.0], uvScale: [1, 1] }),
+    ), 'chave_arquivo_visivel', false),
   );
 
   const roomProps = P.combine(sala, cozinha, entrada, corredor, banheiro, quarto,

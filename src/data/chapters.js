@@ -100,7 +100,10 @@ export const CHAPTERS = [
     id: 'a_presenca',
     title: 'A PRESENÇA',
     epigraph: 'A casa começa a discordar de si mesma.',
-    objective: 'Descobrir o que há embaixo da casa.',
+    // O objetivo aponta para a AÇÃO possível, não para o destino final. O
+    // porão é o destino, mas está a duas chaves de distância e na direção
+    // oposta — apontar para ele trava o jogador. Achado em playtest.
+    objective: 'Refazer o caminho pela casa. Alguma coisa mudou de lugar.',
     reality: 4,
     onStart: {
       monologue: [

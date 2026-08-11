@@ -610,11 +610,26 @@ export function wireStoryEvents(game) {
   });
 
   // A chave da frente: entrar é o objetivo do capítulo 1.
+  // Cada chave obtida reaponta o objetivo para a porta que ela abre. Sem isso
+  // o jogador fica com uma chave no bolso e nenhuma pista do que ela serve —
+  // que foi exatamente onde o primeiro playtest travou.
   bus.on(EVENTS.ITEM_ADDED, ({ id }) => {
     if (id === 'chave_casa') {
       narrative.say([
         'Estava embaixo do vaso da direita. Não tentei o da esquerda. Nem me passou pela cabeça tentar o da esquerda.',
       ]);
+    }
+    if (id === 'chave_pequena') {
+      narrative.setObjective('Achar a fechadura minúscula que essa chave abre.');
+    }
+    if (id === 'chave_escritorio') {
+      narrative.setObjective('Abrir o escritório — a porta trancada do corredor, à direita.');
+    }
+    if (id === 'chave_arquivo') {
+      narrative.setObjective('Abrir o arquivo — a última porta à esquerda do corredor.');
+    }
+    if (id === 'chave_porao') {
+      narrative.setObjective('Abrir o cadeado do porão, no fim do corredor.');
     }
   });
 
@@ -672,6 +687,19 @@ export function wireStoryEvents(game) {
         reality.spike(0.8, 6);
       }
     }, 9000);
+
+    // Rede de segurança: se o som passou despercebido, Laura verbaliza. Um
+    // jogador travado por não achar a única ação disponível não está sendo
+    // desafiado, está sendo punido por um objetivo mal escrito.
+    setTimeout(() => {
+      if (narrative.hasFlag('viu_porta_aberta')) return;
+      narrative.say([
+        'Eu ouvi aquilo e continuei aqui, como se fosse encanamento.',
+        'Não era encanamento. Vem da entrada.',
+      ]);
+      narrative.setObjective('Ir até a entrada da casa.');
+      audio.knock(2, 14);
+    }, 75000);
   });
 
   // Chegar à entrada depois disso: a porta que ela trancou está aberta.
@@ -683,7 +711,9 @@ export function wireStoryEvents(game) {
         'A porta da frente está aberta.',
         'Eu tranquei. Eu lembro de trancar, porque eu pensei em não trancar — pensei "não tem ninguém a quilômetros daqui" — e tranquei mesmo assim.',
         'Lá fora não tem nada. O carro está onde eu deixei.',
+        'E tem uma coisa em cima do aparador que não estava lá quando eu revirei aquela correspondência.',
       ], 0.6);
+      narrative.setObjective('Ver o que apareceu sobre o aparador da entrada.');
       reality.spike(0.9, 7);
     }
 
