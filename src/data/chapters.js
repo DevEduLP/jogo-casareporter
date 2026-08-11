@@ -148,11 +148,16 @@ export const CHAPTERS = [
     n: 9,
     id: 'a_visitante',
     title: 'A VISITANTE',
-    epigraph: '"Ela ainda não sabe que está aqui."',
-    objective: 'Encontrar a visitante.',
+    epigraph: '"não sei se é uma previsão ou um pedido."',
+    objective: 'Subir ao sótão.',
     reality: 5,
+    onStart: {
+      monologue: [
+        'Tem um alçapão no teto do corredor. Eu passei por baixo dele umas quinze vezes hoje.',
+        'Eu reparo em tudo. É literalmente o meu trabalho reparar em tudo.',
+      ],
+    },
     advance: { flag: 'encarou_visitante' },
-    stub: true,
   },
   {
     n: 10,

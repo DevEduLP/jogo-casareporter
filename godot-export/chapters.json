@@ -134,14 +134,17 @@
     "numero": 9,
     "id": "a_visitante",
     "titulo": "A VISITANTE",
-    "epigrafe": "\"Ela ainda não sabe que está aqui.\"",
-    "objetivo": "Encontrar a visitante.",
+    "epigrafe": "\"não sei se é uma previsão ou um pedido.\"",
+    "objetivo": "Subir ao sótão.",
     "nivel_realidade": 5,
-    "monologo_inicial": [],
+    "monologo_inicial": [
+      "Tem um alçapão no teto do corredor. Eu passei por baixo dele umas quinze vezes hoje.",
+      "Eu reparo em tudo. É literalmente o meu trabalho reparar em tudo."
+    ],
     "avanca_quando": {
       "flag": "encarou_visitante"
     },
-    "implementado": false
+    "implementado": true
   },
   {
     "numero": 10,

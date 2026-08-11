@@ -3,8 +3,7 @@
 Terror psicológico investigativo em primeira pessoa, rodando direto no navegador.
 **Sem dependências externas, sem build, sem backend, sem arquivos de asset.**
 
-Jogável: **capítulos 1 a 8** — a carta, a chegada, a casa, a descoberta
-impossível, a fotografia, a presença, o destino de Helena e a identidade dela.
+Jogável: **capítulos 1 a 9** — da carta ao sótão. Falta só a decisão final.
 
 ---
 
@@ -169,14 +168,14 @@ pegou uma inversão de winding que teria feito toda peça cilíndrica desaparece
 ## Estado atual e próximos passos
 
 **Pronto:** engine, áudio, casa completa (11 cômodos + exterior + porão com
-poço), 9 portas com cadeia de chaves, 26 documentos (~4.800 palavras), 39
-pistas, 38 conexões, inventário, diário, save/load, Sistema de Realidade até o
-nível 5, eventos ambientes, 4 finais.
+poço e sótão), 9 portas com cadeia de chaves, 28 documentos (~4.900
+palavras), 44 pistas, 44 conexões, inventário, diário, save/load, Sistema de
+Realidade até o nível 5, eventos ambientes, 4 finais.
 
-As três interpretações estão equilibradas em 55/59/55 pontos — desvio de 6,8%.
+As três interpretações estão equilibradas em 65/67/68 pontos — desvio de 4,4%.
 O número é reconferido a cada `node tools/export-godot.mjs`.
 
-**Capítulos 9 e 10** estão declarados em `chapters.js` com título, epígrafe,
+**O capítulo 10** está declarado em `chapters.js` com título, epígrafe,
 objetivo, nível de realidade e condição de avanço. Expandi-los é preencher
 `documents.js`, `clues.js` e as mutações em `scripts.js` — nenhum sistema
 precisa mudar. O sótão ainda não existe como espaço.

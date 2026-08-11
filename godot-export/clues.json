@@ -121,7 +121,8 @@
     "conexoes_possiveis": [
       "secao_d",
       "chave_aparecida",
-      "helena_cicatriz"
+      "helena_cicatriz",
+      "fita_03"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -319,7 +320,8 @@
       "bilhete_geladeira",
       "fotografia",
       "casa_mexeu",
-      "onze_dias"
+      "onze_dias",
+      "relogio_sotao"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -505,7 +507,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "gaveta_g"
+      "gaveta_g",
+      "fita_03"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -626,7 +629,8 @@
     "tese": "neutra",
     "conexoes_possiveis": [
       "onze_dias",
-      "cadeado_novo"
+      "cadeado_novo",
+      "relogio_sotao"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -645,6 +649,91 @@
     "conexoes_possiveis": [
       "sonhos_infancia",
       "helena_cicatriz"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "duas_cadeiras": {
+    "id": "duas_cadeiras",
+    "numero": 40,
+    "titulo": "Duas cadeiras, uma sem poeira",
+    "corpo": "Frente a frente no sótão. Vinte e sete anos de poeira sobre uma; a outra com o assento gasto de uso. A que está gasta é a de Helena.",
+    "tags": [
+      "sotao",
+      "presenca",
+      "recente"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "folha_12"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "fita_03": {
+    "id": "fita_03",
+    "numero": 41,
+    "titulo": "A entrevista",
+    "corpo": "Helena gravou uma entrevista fazendo as duas vozes. Ela sabia que estava fazendo as duas — deixou isso na fita — e mesmo assim as respostas vinham com informação que ela não tinha. A última pergunta ficou sem resposta, com quatro minutos de fita em branco.",
+    "tags": [
+      "helena",
+      "clinico",
+      "impossivel",
+      "visitante"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "pasta_g_existe",
+      "lista_sobre_mim",
+      "sentou_na_cadeira"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "folha_12": {
+    "id": "folha_12",
+    "numero": 42,
+    "titulo": "Item 12",
+    "corpo": "\"Ela vai subir aqui. Vai entender antes de mim qual é qual. E vai sentar na minha.\" Embaixo: \"não sei se é uma previsão ou um pedido. não sei se existe diferença, para quem escreve.\"",
+    "tags": [
+      "visitante",
+      "previsao",
+      "sotao"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "duas_cadeiras"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "relogio_sotao": {
+    "id": "relogio_sotao",
+    "numero": 43,
+    "titulo": "O pêndulo amarrado",
+    "corpo": "O relógio do sótão também marca 3h47. Mas este é de pêndulo, e o pêndulo está preso com barbante, num nó de laçada. Alguém o parou com as mãos. O barbante está novo.",
+    "tags": [
+      "sotao",
+      "recente",
+      "presenca",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "relogio_parado",
+      "espelho_riscos"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "sentou_na_cadeira": {
+    "id": "sentou_na_cadeira",
+    "numero": 44,
+    "titulo": "Eu sentei",
+    "corpo": "Vinte e sete anos depois de duas cadeiras terem sido postas frente a frente neste sótão, alguém finalmente ocupou uma delas.",
+    "tags": [
+      "sotao",
+      "eu",
+      "visitante"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "fita_03"
     ],
     "textura": "res://assets/ui/card_papel.png"
   }

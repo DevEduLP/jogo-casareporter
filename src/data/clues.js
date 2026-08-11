@@ -210,6 +210,34 @@ export const CLUES = {
     text: 'Lista de presença da 5ª série B, Escola Municipal Rui Barbosa, distrito de São Brás, 1997. Helena substituiu ali por dois meses. Eu estava na quinta série em 1997 — mas em 1997 eu ainda usava o nome da minha mãe.',
     tags: ['eu', 'infancia', '1997', 'helena'],
   },
+
+  /* -------------------- capítulo 9 — A VISITANTE ----------------------- */
+
+  duas_cadeiras: {
+    n: 40, title: 'Duas cadeiras, uma sem poeira',
+    text: 'Frente a frente no sótão. Vinte e sete anos de poeira sobre uma; a outra com o assento gasto de uso. A que está gasta é a de Helena.',
+    tags: ['sotao', 'presenca', 'recente'],
+  },
+  fita_03: {
+    n: 41, title: 'A entrevista',
+    text: 'Helena gravou uma entrevista fazendo as duas vozes. Ela sabia que estava fazendo as duas — deixou isso na fita — e mesmo assim as respostas vinham com informação que ela não tinha. A última pergunta ficou sem resposta, com quatro minutos de fita em branco.',
+    tags: ['helena', 'clinico', 'impossivel', 'visitante'],
+  },
+  folha_12: {
+    n: 42, title: 'Item 12',
+    text: '"Ela vai subir aqui. Vai entender antes de mim qual é qual. E vai sentar na minha." Embaixo: "não sei se é uma previsão ou um pedido. não sei se existe diferença, para quem escreve."',
+    tags: ['visitante', 'previsao', 'sotao'],
+  },
+  relogio_sotao: {
+    n: 43, title: 'O pêndulo amarrado',
+    text: 'O relógio do sótão também marca 3h47. Mas este é de pêndulo, e o pêndulo está preso com barbante, num nó de laçada. Alguém o parou com as mãos. O barbante está novo.',
+    tags: ['sotao', 'recente', 'presenca', 'eu'],
+  },
+  sentou_na_cadeira: {
+    n: 44, title: 'Eu sentei',
+    text: 'Vinte e sete anos depois de duas cadeiras terem sido postas frente a frente neste sótão, alguém finalmente ocupou uma delas.',
+    tags: ['sotao', 'eu', 'visitante'],
+  },
 };
 
 /**
@@ -460,6 +488,45 @@ export const CONNECTIONS = [
     title: 'Duas mulheres com a mesma mão',
     text: 'A descrição física que Helena fez de si mesma tem a minha cicatriz. Uma lista de presença de 1997 tem o meu sobrenome. As duas coisas são fracas sozinhas e nenhuma prova nada. É exatamente isso que me impede de largar.',
     lean: { psicologica: 3, sobrenatural: 2 },
+  },
+
+  /* -------------------- capítulo 9 — A VISITANTE ----------------------- */
+
+  {
+    a: 'folha_12', b: 'duas_cadeiras',
+    title: 'Alguém sentou na cadeira dela',
+    text: 'A folha diz que a visitante vai sentar na cadeira de Helena. A cadeira de Helena é a única sem poeira, com o assento gasto. Então a visitante veio — e não uma vez: veio o suficiente para gastar o estofado.',
+    lean: { sobrenatural: 3, conspiracao: 3 },
+  },
+  {
+    a: 'fita_03', b: 'pasta_g_existe',
+    title: 'Ela sabia que estava fazendo as duas vozes',
+    text: 'Helena deixou gravado que sabia estar respondendo às próprias perguntas, e catalogou a si mesma com o mesmo método que usou na visitante. Não é alguém iludida: é alguém observando a própria fratura com a caneta na mão e sem conseguir fechar o caso.',
+    lean: { psicologica: 4, sobrenatural: 1 },
+  },
+  {
+    a: 'fita_03', b: 'lista_sobre_mim',
+    title: 'A voz que responde usa as minhas palavras',
+    text: 'A voz das respostas come o fim das palavras e diz "apuração" onde a pergunta disse "pesquisa". É o meu vício de linguagem, gravado numa fita de 1998 pela boca de uma mulher que dava aula.',
+    lean: { sobrenatural: 4, psicologica: 1 },
+  },
+  {
+    a: 'relogio_sotao', b: 'relogio_parado',
+    title: 'Três relógios, uma hora, um nó novo',
+    text: 'Os três relógios da casa marcam 3h47 — a hora em que eu acordo. E o do sótão foi parado à mão, com barbante, num nó que ainda não amarelou. Alguém mantém esta hora funcionando. Manutenção, não coincidência.',
+    lean: { conspiracao: 4, psicologica: 1 },
+  },
+  {
+    a: 'sentou_na_cadeira', b: 'fita_03',
+    title: 'Os quatro minutos de fita em branco',
+    text: 'A última pergunta dela ficou sem resposta e a fita continuou rodando por quatro minutos e onze segundos. Ela deixou espaço. Eu sentei dentro desse espaço vinte e sete anos depois, e não respondi nada, e o espaço continua lá.',
+    lean: { sobrenatural: 2, psicologica: 2, conspiracao: 1 },
+  },
+  {
+    a: 'relogio_sotao', b: 'espelho_riscos',
+    title: 'Manutenção',
+    text: 'Um barbante novo num pêndulo, riscos de contagem por dentro do vidro de um espelho limpo, um cadeado lubrificado, uma conta de luz paga. Alguém não está assombrando esta casa. Alguém está cuidando dela.',
+    lean: { conspiracao: 5 },
   },
 ];
 

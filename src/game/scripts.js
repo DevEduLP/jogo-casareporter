@@ -284,6 +284,97 @@ export function runScript(game, id, source) {
       return;
     }
 
+    /* ==================== capítulo 9 — A VISITANTE ===================== */
+
+    case 'subir_sotao': {
+      audio.creak(1.2, 1.5);
+      audio.door(true, false, 1.5);
+      narrative.interrupt('A escada desce sozinha quando eu puxo. As dobradiças estão azeitadas.');
+      game.transitionTo(120, 3.0, 0, () => {
+        audio.startAmbient('inside');
+        if (!narrative.hasFlag('subiu_sotao')) {
+          narrative.setFlag('subiu_sotao');
+          journal.addClue('duas_cadeiras');
+          narrative.say([
+            'Duas cadeiras. Frente a frente, no meio do sótão, a um metro e meio uma da outra.',
+            'Vinte e sete anos de poeira em cima de uma. Nenhuma em cima da outra.',
+          ], 1.2);
+          narrative.setObjective('Entender de quem é cada cadeira.');
+          reality.spike(0.9, 10);
+        }
+      });
+      return;
+    }
+
+    case 'descer_sotao': {
+      audio.creak(1.0, 1.0);
+      game.transitionTo(0, -2.2, Math.PI, () => audio.startAmbient('inside'));
+      return;
+    }
+
+    case 'relogio_sotao': {
+      narrative.say([
+        'Um relógio de parede, igual aos dois lá embaixo. Três e quarenta e sete.',
+        'Este aqui não é de corda. É a pêndulo, e o pêndulo está preso com um pedaço de barbante amarrado com nó de laçada.',
+        'Alguém parou este relógio de propósito, com as mãos, e amarrou para ele não voltar a andar.',
+        'O barbante está novo.',
+      ]);
+      journal.addClue('relogio_sotao');
+      reality.spike(0.6, 6);
+      return;
+    }
+
+    /* ------------------------- a escolha ------------------------------- */
+    // Duas cadeiras, nenhuma resposta certa. Sentar em qualquer uma fecha o
+    // capítulo; qual delas apenas inclina a leitura, como qualquer dedução.
+
+    case 'sentar_helena': {
+      if (narrative.hasFlag('encarou_visitante')) {
+        narrative.interrupt('Já sentei. Não muda nada sentar de novo.');
+        return;
+      }
+      narrative.setFlag('encarou_visitante');
+      narrative.setFlag('sentou_helena');
+      journal.addClue('sentou_na_cadeira');
+      journal.lean.sobrenatural += 2;
+      journal.lean.psicologica += 2;
+      audio.creak(0.8, 0.9);
+      audio.stinger(32, 0.14, 18);
+      narrative.say([
+        'Eu sento na cadeira dela.',
+        'O assento está gasto exatamente onde o meu peso cai. Isso não quer dizer nada — assento de cadeira gasta no meio, todo assento de cadeira gasta no meio.',
+        'Daqui eu vejo a outra cadeira. A poeira em cima do assento está lisa, sem marca nenhuma, do jeito que fica poeira em que ninguém nunca encostou.',
+        'Foi isto que ela fez. Todas as noites, provavelmente. Sentar aqui e olhar aquela cadeira vazia e esperar.',
+        'E se alguém subisse agora, ia me encontrar exatamente nesta posição, e ia escrever no caderno que a casa tem uma mulher sentada no sótão olhando uma cadeira vazia.',
+      ]);
+      reality.spike(1, 20);
+      return;
+    }
+
+    case 'sentar_visitante': {
+      if (narrative.hasFlag('encarou_visitante')) {
+        narrative.interrupt('Já sentei. Não muda nada sentar de novo.');
+        return;
+      }
+      narrative.setFlag('encarou_visitante');
+      narrative.setFlag('sentou_visitante');
+      journal.addClue('sentou_na_cadeira');
+      journal.lean.conspiracao += 2;
+      journal.lean.psicologica += 2;
+      audio.creak(0.8, 0.9);
+      audio.stinger(32, 0.14, 18);
+      narrative.say([
+        'A folha diz que eu vou sentar na dela.',
+        'Eu sento na outra.',
+        'A poeira cede com um som muito baixo e eu sinto ela no fundo da calça, e é uma sensação tão específica e tão banal que por um segundo eu quase rio.',
+        'Vinte e sete anos e eu sou a primeira pessoa a sentar aqui.',
+        'Daqui eu vejo a cadeira gasta. E ela está vazia, e continua vazia, e eu fico olhando para ela pelo tempo que for preciso para ter certeza de que vai continuar.',
+        'Eu não fiz o que estava escrito. Anota aí, quem quer que esteja anotando: eu não fiz o que estava escrito.',
+      ]);
+      reality.spike(1, 20);
+      return;
+    }
+
     /* ====================== capítulo 8 — LAURA ========================= */
     // Memórias disparadas por objetos banais. Duas delas não podem ser
     // verdadeiras ao mesmo tempo, e o jogo nunca aponta isso — quem cruzar
@@ -647,6 +738,28 @@ export function wireStoryEvents(game) {
     if (id === 'pasta_f_sonhos') {
       narrative.setFlag('leu_sonhos');
       reality.spike(0.8, 8);
+    }
+  });
+
+  /* ==================== capítulo 9 — A VISITANTE ====================== */
+
+  bus.on(EVENTS.CHAPTER_START, ({ chapter }) => {
+    if (chapter.id !== 'a_visitante') return;
+    // O alçapão sempre esteve no teto. Laura só passa a vê-lo agora — que é
+    // a piada amarga do capítulo, e ela mesma comenta.
+    interaction.setHidden('alcapao', false);
+  });
+
+  bus.on(EVENTS.DOC_READ, ({ id }) => {
+    if (id === 'folha_12' && !narrative.hasFlag('leu_folha_12')) {
+      narrative.setFlag('leu_folha_12');
+      reality.spike(0.9, 9);
+      audio.whisper(2, 6);
+    }
+    if (id === 'fita_03' && !narrative.hasFlag('ouviu_fita_03')) {
+      narrative.setFlag('ouviu_fita_03');
+      reality.spike(1, 12);
+      audio.tinnitus(7, 0.05);
     }
   });
 }

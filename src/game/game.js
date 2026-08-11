@@ -325,6 +325,45 @@ export class Game {
     }
   }
 
+  /**
+   * Leva Laura a outro ponto do mundo com um fade. Cômodos alcançados assim
+   * (o sótão) são espaços separados em coordenadas distantes, não andares
+   * contíguos — que é exatamente como o SceneFlow do Godot vai tratá-los:
+   * um cômodo é uma cena, não um pedaço de geometria vertical.
+   */
+  transitionTo(x, z, yaw, onArrive) {
+    if (this._transitioning) return;
+    this._transitioning = true;
+    this.player.canMove = false;
+
+    const fadeOut = 0.9, hold = 0.5, fadeIn = 1.4;
+    const t0 = performance.now();
+    const step = () => {
+      const t = (performance.now() - t0) / 1000;
+      if (t < fadeOut) {
+        this.renderer.post.fade = 1 - t / fadeOut;
+      } else if (t < fadeOut + hold) {
+        this.renderer.post.fade = 0;
+        if (!this._arrived) {
+          this._arrived = true;
+          this.player.teleport(x, z, yaw);
+          this.world.update(0.016, this.player.position);
+          if (onArrive) onArrive();
+        }
+      } else if (t < fadeOut + hold + fadeIn) {
+        this.renderer.post.fade = (t - fadeOut - hold) / fadeIn;
+      } else {
+        this.renderer.post.fade = 1;
+        this._transitioning = false;
+        this._arrived = false;
+        if (this.started && !this.paused) this.player.canMove = true;
+        return;
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
   onDeduction(deduction) {
     this.reality.spike(0.25, 2);
     this.narrative.say(deduction.title + '.');

@@ -127,8 +127,8 @@ Regra de ouro, herdada do v1.0 e mantida: **nenhuma pista prova só uma leitura.
 | Psicológica | B | Duas mulheres de 38 anos, insones, com o mesmo remédio, escrevendo sobre uma mulher que conhecem sem ter conhecido |
 | Conspiração | C | A conta de luz paga no mês passado, o cadeado lubrificado por baixo, e a carta datilografada numa máquina trancada por dentro |
 
-**Balanceamento atual (peso total nas conexões): A=55, B=59, C=55.**
-Desvio máximo de 6,8%. Era 20,7% no fim do capítulo 6 — a leitura psicológica
+**Balanceamento atual (peso total nas conexões): A=65, B=67, C=68.**
+Desvio máximo de 4,4%. Era 20,7% no fim do capítulo 6 — a leitura psicológica
 estava significativamente mais difícil de alcançar, o que não é ambiguidade e
 sim viés. Corrigido no capítulo 7 com conexões novas, não com ajuste de números.
 
@@ -150,11 +150,21 @@ narrativas**. Os dois eixos são compatíveis e ambos úteis.
 | Cap. 2 — O Escritório | 4. IMPOSSÍVEL · 5. A FOTOGRAFIA | ✅ jogável |
 | Cap. 3 — Quartos/banheiro | (integrado ao térreo) · 8. LAURA | ✅ jogável |
 | Cap. 4 — O Porão | 6. A PRESENÇA · 7. HELENA | ✅ jogável |
-| Cap. 5 — O Sótão e o Relógio | 9. A VISITANTE · 10. A CASA | declarados |
+| Cap. 5 — O Sótão e o Relógio | 9. A VISITANTE · 10. A CASA | 9 ✅ · 10 declarado |
 
-**Divergência de planta:** o v1.0 prevê dois andares. O build é térreo + porão,
-com quarto e banheiro no térreo. O sótão ainda precisa existir — é o clímax — e
-o sistema vertical construído para o porão já suporta.
+**Divergência de planta:** o v1.0 prevê dois andares. O build é térreo + porão
++ sótão, com quarto e banheiro no térreo.
+
+O sótão é alcançado por **transição com fade**, não por geometria contínua:
+ele fica longe da casa em coordenadas de mundo e o alçapão teleporta. Isso
+evita furar o teto do corredor e uma escada de gato impossível de subir sem
+física vertical — e é exatamente como o `SceneFlow` do Godot vai tratá-lo, já
+que lá um cômodo é uma cena e não um pedaço de geometria.
+
+**Exceção ao "a tese vem da conexão":** a escolha da cadeira no capítulo 9 soma
+tese diretamente. É a única escolha explícita do jogo e a única vez em que o
+jogador age em vez de interpretar. As duas opções somam o mesmo total (4), só
+mudam a direção.
 
 ---
 

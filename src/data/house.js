@@ -26,6 +26,9 @@ const STAIR_TOP_Z = -9.4;
 const PORAO_Y = 0.28 - STEPS * RISE;              // -2.6
 const STAIR_END_Z = STAIR_TOP_Z - STEPS * RUN;    // -13.24
 
+// Origem do sótão, deslocada para longe da casa (ver comentário em `rooms`).
+const SOTAO_X = 120;
+
 /** Segmento de parede alinhado aos eixos. */
 function wall(x1, z1, x2, z2, tex = 'plaster', thick = TI, h = WH, baseY) {
   return { x1, z1, x2, z2, tex, thick, h, baseY };
@@ -87,6 +90,13 @@ export function buildHouse() {
   // passagem livre embaixo.
   walls.push(wall(-1.4, -13.4, 1.4, -13.4, 'brick', TI, ANEXO_TOPO + 0.3, -0.3));
 
+  /* ----------------------------- sótão ---------------------------------- */
+  const SH = 2.1;
+  walls.push(wall(SOTAO_X - 3, -4, SOTAO_X + 3, -4, 'wood', TI, SH, 0));
+  walls.push(wall(SOTAO_X - 3, 4, SOTAO_X + 3, 4, 'wood', TI, SH, 0));
+  walls.push(wall(SOTAO_X - 3, -4, SOTAO_X - 3, 4, 'wood', TI, SH, 0));
+  walls.push(wall(SOTAO_X + 3, -4, SOTAO_X + 3, 4, 'wood', TI, SH, 0));
+
   // Paredes do porão (baseY explícito: aqui embaixo o piso é outro).
   const PH = 2.3;
   walls.push(wall(-6.5, -20.5, 6.5, -20.5, 'brick', TE, PH, PORAO_Y));
@@ -115,6 +125,12 @@ export function buildHouse() {
     // que não fecha é tema, não defeito. Pé-direito baixo (2.3) para que o teto
     // fique abaixo do gramado externo.
     { id: 'porao', name: 'Porão', min: [-6.5, -20.5], max: [6.5, -13.3], floor: 'floorConcrete', surface: 'concrete', baseY: PORAO_Y, height: 2.3, ceilingTex: 'wood' },
+    // O sótão fica longe de tudo em espaço de mundo e é alcançado por
+    // transição com fade, não por geometria contínua. É exatamente como o
+    // SceneFlow do Godot vai tratá-lo: um cômodo é uma cena, não um andar.
+    // Isso evita furar o teto do corredor e uma escada de gato impossível de
+    // subir sem física vertical de verdade.
+    { id: 'sotao', name: 'Sótão', min: [SOTAO_X - 3, -4], max: [SOTAO_X + 3, 4], floor: 'wood', surface: 'wood', height: 2.1, ceilingTex: 'wood' },
   ];
 
   /* --------------------------------- portas ----------------------------- */
@@ -438,6 +454,35 @@ export function buildHouse() {
     py(P.tag(P.wellSlab(-4.3, -17.4, 0.4), 'laje_deslocada', false)),
   );
 
+  /* --------------------------------- SÓTÃO ------------------------------ */
+  // Duas cadeiras, frente a frente. Uma tem vinte e sete anos de poeira; a
+  // outra tem o assento gasto de uso. Todo o capítulo 9 sai dessa diferença.
+  const sx = SOTAO_X;
+  const sotao = P.combine(
+    P.chair(sx - 0.9, 0, H),          // a de Helena — voltada para +x
+    P.chair(sx + 0.9, 0, -H),         // a da visitante — voltada para -x
+    // Camada de poeira sobre o assento da cadeira intocada.
+    P.box_(sx + 0.9, 0, 0, 0.42, 0.012, 0.42, 'white',
+      { collide: false, y: 0.5, tint: [0.62, 0.60, 0.55] }),
+    // A mesinha fica encostada na empena oeste: no meio do sótão ela fechava
+    // o único corredor entre a escada e o relógio.
+    P.table(sx - 2.1, 0.6, 0, 0.7, 0.5, 0.55),
+    P.tapeRecorder(sx - 2.1, 0.55, 0.6, H),
+    P.wallClock(sx, 1.5, -3.85, 0),
+    P.crate(sx - 2.2, -2.8, 0.3, 0.55),
+    P.crate(sx + 2.1, -3.0, -0.2, 0.5),
+    P.crate(sx + 2.2, 3.0, 0.4, 0.6),
+    P.paperStack(sx - 2.2, -2.8, 0.2, 6, 0.44),
+    P.box_(sx - 2.4, 2.6, 0, 0.5, 0.06, 0.36, 'paper',
+      { collide: false, y: 0.02, uvScale: [1, 1] }),   // a folha, no chão
+    // Vigas do telhado, à altura da cabeça: o sótão tem que apertar.
+    P.box_(sx, -2.0, 0, 6.0, 0.14, 0.16, 'wood', { collide: false, y: 1.86 }),
+    P.box_(sx, 0.0, 0, 6.0, 0.14, 0.16, 'wood', { collide: false, y: 1.86 }),
+    P.box_(sx, 2.0, 0, 6.0, 0.14, 0.16, 'wood', { collide: false, y: 1.86 }),
+    // Óculo na empena: a única luz daqui.
+    P.window_(sx, 1.1, -4.1, Math.PI, 0.7, 0.7, 0.5),
+  );
+
   /* ---------------------- objetos que trocam de lugar ------------------- */
   // Cada objeto móvel existe em duas cópias, uma por destino. O Sistema de
   // Realidade apaga uma e acende a outra enquanto o jogador está em outro
@@ -460,7 +505,7 @@ export function buildHouse() {
   );
 
   const roomProps = P.combine(sala, cozinha, entrada, corredor, banheiro, quarto,
-    escritorio, arquivo, porao, mutaveis);
+    escritorio, arquivo, porao, sotao, mutaveis);
   props.push(...roomProps.parts);
 
   const colliders = [
@@ -800,6 +845,44 @@ export function buildHouse() {
       id: 'arquivo_pasta_f', pos: [-3.2, 0.45, -5.2], size: [0.8, 0.9, 0.8],
       label: 'Caixa de papelão', verb: 'Abrir', hidden: true,
       action: { type: 'read', doc: 'pasta_f_sonhos' },
+    },
+
+    /* ---------- capítulo 9: o sótão ---------- */
+    {
+      // No teto do corredor. Só é notado quando Laura passa a procurar por si.
+      id: 'alcapao', pos: [0, 2.86, -3.0], size: [1.1, 0.4, 1.1],
+      label: 'Alçapão no teto', verb: 'Abrir', hidden: true,
+      action: { type: 'script', id: 'subir_sotao' },
+    },
+    {
+      id: 'sotao_descer', pos: [SOTAO_X, 0.4, 3.4], size: [1.2, 0.9, 1.0],
+      label: 'A escada', verb: 'Descer',
+      action: { type: 'script', id: 'descer_sotao' },
+    },
+    {
+      id: 'sotao_cadeira_helena', pos: [SOTAO_X - 0.9, 0.55, 0], size: [0.75, 1.1, 0.75],
+      label: 'A cadeira gasta', verb: 'Sentar',
+      action: { type: 'script', id: 'sentar_helena' },
+    },
+    {
+      id: 'sotao_cadeira_visitante', pos: [SOTAO_X + 0.9, 0.55, 0], size: [0.75, 1.1, 0.75],
+      label: 'A cadeira com poeira', verb: 'Sentar',
+      action: { type: 'script', id: 'sentar_visitante' },
+    },
+    {
+      id: 'sotao_gravador', pos: [SOTAO_X - 2.1, 0.62, 0.6], size: [0.4, 0.24, 0.4],
+      label: 'Gravador', verb: 'Ouvir a fita',
+      action: { type: 'tape', tape: 'fita_03' },
+    },
+    {
+      id: 'sotao_folha', pos: [SOTAO_X - 2.4, 0.12, 2.6], size: [0.6, 0.3, 0.5],
+      label: 'Folha no chão', verb: 'Pegar',
+      action: { type: 'read', doc: 'folha_12' },
+    },
+    {
+      id: 'sotao_relogio', pos: [SOTAO_X, 1.55, -3.7], size: [0.4, 0.45, 0.4],
+      label: 'Relógio', verb: 'Examinar',
+      action: { type: 'script', id: 'relogio_sotao' },
     },
   );
 

@@ -372,5 +372,65 @@
       "B": 3,
       "A": 2
     }
+  },
+  {
+    "a": "folha_12",
+    "b": "duas_cadeiras",
+    "titulo": "Alguém sentou na cadeira dela",
+    "corpo": "A folha diz que a visitante vai sentar na cadeira de Helena. A cadeira de Helena é a única sem poeira, com o assento gasto. Então a visitante veio — e não uma vez: veio o suficiente para gastar o estofado.",
+    "teses": {
+      "A": 3,
+      "C": 3
+    }
+  },
+  {
+    "a": "fita_03",
+    "b": "pasta_g_existe",
+    "titulo": "Ela sabia que estava fazendo as duas vozes",
+    "corpo": "Helena deixou gravado que sabia estar respondendo às próprias perguntas, e catalogou a si mesma com o mesmo método que usou na visitante. Não é alguém iludida: é alguém observando a própria fratura com a caneta na mão e sem conseguir fechar o caso.",
+    "teses": {
+      "B": 4,
+      "A": 1
+    }
+  },
+  {
+    "a": "fita_03",
+    "b": "lista_sobre_mim",
+    "titulo": "A voz que responde usa as minhas palavras",
+    "corpo": "A voz das respostas come o fim das palavras e diz \"apuração\" onde a pergunta disse \"pesquisa\". É o meu vício de linguagem, gravado numa fita de 1998 pela boca de uma mulher que dava aula.",
+    "teses": {
+      "A": 4,
+      "B": 1
+    }
+  },
+  {
+    "a": "relogio_sotao",
+    "b": "relogio_parado",
+    "titulo": "Três relógios, uma hora, um nó novo",
+    "corpo": "Os três relógios da casa marcam 3h47 — a hora em que eu acordo. E o do sótão foi parado à mão, com barbante, num nó que ainda não amarelou. Alguém mantém esta hora funcionando. Manutenção, não coincidência.",
+    "teses": {
+      "C": 4,
+      "B": 1
+    }
+  },
+  {
+    "a": "sentou_na_cadeira",
+    "b": "fita_03",
+    "titulo": "Os quatro minutos de fita em branco",
+    "corpo": "A última pergunta dela ficou sem resposta e a fita continuou rodando por quatro minutos e onze segundos. Ela deixou espaço. Eu sentei dentro desse espaço vinte e sete anos depois, e não respondi nada, e o espaço continua lá.",
+    "teses": {
+      "A": 2,
+      "B": 2,
+      "C": 1
+    }
+  },
+  {
+    "a": "relogio_sotao",
+    "b": "espelho_riscos",
+    "titulo": "Manutenção",
+    "corpo": "Um barbante novo num pêndulo, riscos de contagem por dentro do vidro de um espelho limpo, um cadeado lubrificado, uma conta de luz paga. Alguém não está assombrando esta casa. Alguém está cuidando dela.",
+    "teses": {
+      "C": 5
+    }
   }
 ]

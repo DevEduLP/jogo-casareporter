@@ -896,6 +896,98 @@ Eu nunca estive em São Brás. Eu tenho certeza absoluta disso do mesmo jeito qu
     clue: 'lista_classe',
   },
 
+  /* ==================== CAPÍTULO 9 — A VISITANTE ========================= */
+
+  fita_03: {
+    id: 'fita_03',
+    type: 'tape',
+    title: 'Fita 03 — "a entrevista"',
+    meta: 'Sótão. Dentro do gravador, rebobinada até o começo.',
+    pages: [
+`[chiado curto. a fita já estava no início — alguém rebobinou depois de ouvir.]
+
+— Vinte e dois de setembro. Vou fazer isto de uma vez e depois vou parar de me envergonhar.
+
+— Eu não sei entrevistar. Nunca entrevistei ninguém. Mas ela sabe, e talvez o formato ajude, então eu vou fazer as perguntas e vou deixar o espaço.
+
+[pausa de cerca de dez segundos.]
+
+— Primeira. Por que você veio?`,
+
+`[pausa longa. quinze, vinte segundos. o gravador pega a casa: um cano, o vento.]
+
+— ...porque alguém tinha que vir.
+
+[a voz da resposta é a de Helena. É a mesma voz. Mas ela responde mais rápido do que pergunta, e come o fim das palavras, e usa "apuração" onde perguntou "pesquisa".]
+
+— Segunda. Você sabe o que aconteceu comigo?
+
+[pausa.]
+
+— Sei o que vão dizer que aconteceu. Não é a mesma coisa e eu vou passar a vida sabendo que não é a mesma coisa.`,
+
+`— Terceira. Você acha que eu estou doente?
+
+[pausa muito longa. quase quarenta segundos.]
+
+— Acho que essa não é a pergunta certa e acho que você sabe disso. A pergunta é se estar doente e estar certa são coisas que não podem acontecer juntas. E podem. Eu já escrevi sobre gente assim.
+
+[silêncio. depois, mais baixo, quase fora do alcance do microfone:]
+
+— ...eu não escrevi sobre gente assim. Eu não escrevo. Eu dou aula.`,
+
+`— Quarta.
+
+[a voz volta ao registro normal — o de perguntar.]
+
+— Eu estou fazendo as duas vozes. Eu sei que estou fazendo as duas vozes. Quero deixar isso na fita porque se eu não deixar, alguém vai achar que eu não percebi, e eu percebi, e perceber não fez a menor diferença.
+
+— As respostas continuam vindo com coisas que eu não sei.
+
+[pausa.]
+
+— Última pergunta. E essa eu não vou responder, porque essa não é minha.`,
+
+`— Quando você chegar aqui em cima, e ouvir isto, e entender de quem é cada cadeira:
+
+— o que é que você vai fazer com o resto da sua vida?
+
+[silêncio.]
+
+[o gravador continua rodando. quatro minutos e onze segundos de chiado e de casa, sem nenhuma voz, até a fita acabar sozinha.]`,
+    ],
+    lauraNote: 'Ela deixou quatro minutos de espaço para a resposta.\n\nEu estou de pé no meio desse espaço, vinte e sete anos depois, e o gravador ainda está aqui, e a fita ainda tem lugar.',
+    clue: 'fita_03',
+  },
+
+  folha_12: {
+    id: 'folha_12',
+    type: 'note',
+    title: 'Folha solta — item 12',
+    meta: 'Sótão. No chão, encostada na parede, com a dobra virada para cima.',
+    pages: [
+`A lista tinha onze itens. Eu li os onze no armário do corredor, hoje de manhã, quando isto ainda era uma pauta.
+
+Este é o décimo segundo, na mesma letra, escrito com mais espaço entre as linhas — do jeito que a gente escreve quando não tem pressa e quer que fique legível.
+
+"12. Ela vai subir aqui.
+
+Vai reparar nas duas cadeiras. Vai levar uns segundos e vai entender antes de mim qual é qual, porque ela é rápida nisso, é o trabalho dela.
+
+E vai sentar na minha."`,
+
+`Embaixo, um espaço de quatro linhas em branco. E depois:
+
+"eu escrevi isso e fiquei olhando a frase durante muito tempo.
+
+não sei se é uma previsão ou um pedido.
+
+não sei se existe diferença, para quem escreve."`,
+    ],
+    lauraNote: 'A cadeira dela é a que tem o assento gasto. Vinte e sete anos de poeira em cima da outra e nenhuma em cima daquela.\n\nAlguém subiu aqui e sentou na cadeira da Helena. Muitas vezes. Durante anos.\n\nE não foi a Helena, porque a Helena não está.',
+    clue: 'folha_12',
+  },
+
   /* ===================== notas curtas de ambiente ======================== */
 
   bilhete_maquina: {

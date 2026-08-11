@@ -195,6 +195,23 @@
       "base_y": -2.5999999999999996,
       "altura": 2.3,
       "externo": false
+    },
+    {
+      "id": "sotao",
+      "nome": "Sótão",
+      "min": [
+        117,
+        -4
+      ],
+      "max": [
+        123,
+        4
+      ],
+      "piso": "wood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": 2.1,
+      "externo": false
     }
   ],
   "paredes": [
@@ -436,6 +453,46 @@
       "thick": 0.16,
       "h": 2.9,
       "baseY": -0.3
+    },
+    {
+      "x1": 117,
+      "z1": -4,
+      "x2": 123,
+      "z2": -4,
+      "tex": "wood",
+      "thick": 0.16,
+      "h": 2.1,
+      "baseY": 0
+    },
+    {
+      "x1": 117,
+      "z1": 4,
+      "x2": 123,
+      "z2": 4,
+      "tex": "wood",
+      "thick": 0.16,
+      "h": 2.1,
+      "baseY": 0
+    },
+    {
+      "x1": 117,
+      "z1": -4,
+      "x2": 117,
+      "z2": 4,
+      "tex": "wood",
+      "thick": 0.16,
+      "h": 2.1,
+      "baseY": 0
+    },
+    {
+      "x1": 123,
+      "z1": -4,
+      "x2": 123,
+      "z2": 4,
+      "tex": "wood",
+      "thick": 0.16,
+      "h": 2.1,
+      "baseY": 0
     },
     {
       "x1": -6.5,
@@ -2090,6 +2147,160 @@
       "acao": {
         "type": "read",
         "doc": "pasta_f_sonhos"
+      }
+    },
+    {
+      "id": "alcapao",
+      "posicao": [
+        0,
+        2.86,
+        -3
+      ],
+      "tamanho": [
+        1.1,
+        0.4,
+        1.1
+      ],
+      "rotulo": "Alçapão no teto",
+      "verbo": "Abrir",
+      "oculto": true,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "subir_sotao"
+      }
+    },
+    {
+      "id": "sotao_descer",
+      "posicao": [
+        120,
+        0.4,
+        3.4
+      ],
+      "tamanho": [
+        1.2,
+        0.9,
+        1
+      ],
+      "rotulo": "A escada",
+      "verbo": "Descer",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "descer_sotao"
+      }
+    },
+    {
+      "id": "sotao_cadeira_helena",
+      "posicao": [
+        119.1,
+        0.55,
+        0
+      ],
+      "tamanho": [
+        0.75,
+        1.1,
+        0.75
+      ],
+      "rotulo": "A cadeira gasta",
+      "verbo": "Sentar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "sentar_helena"
+      }
+    },
+    {
+      "id": "sotao_cadeira_visitante",
+      "posicao": [
+        120.9,
+        0.55,
+        0
+      ],
+      "tamanho": [
+        0.75,
+        1.1,
+        0.75
+      ],
+      "rotulo": "A cadeira com poeira",
+      "verbo": "Sentar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "sentar_visitante"
+      }
+    },
+    {
+      "id": "sotao_gravador",
+      "posicao": [
+        117.9,
+        0.62,
+        0.6
+      ],
+      "tamanho": [
+        0.4,
+        0.24,
+        0.4
+      ],
+      "rotulo": "Gravador",
+      "verbo": "Ouvir a fita",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "tape",
+        "tape": "fita_03"
+      }
+    },
+    {
+      "id": "sotao_folha",
+      "posicao": [
+        117.6,
+        0.12,
+        2.6
+      ],
+      "tamanho": [
+        0.6,
+        0.3,
+        0.5
+      ],
+      "rotulo": "Folha no chão",
+      "verbo": "Pegar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "folha_12"
+      }
+    },
+    {
+      "id": "sotao_relogio",
+      "posicao": [
+        120,
+        1.55,
+        -3.7
+      ],
+      "tamanho": [
+        0.4,
+        0.45,
+        0.4
+      ],
+      "rotulo": "Relógio",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "relogio_sotao"
       }
     }
   ],
