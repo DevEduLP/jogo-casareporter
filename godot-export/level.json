@@ -879,8 +879,8 @@
       "exige": null,
       "texto_bloqueado": "",
       "acao": {
-        "type": "examine",
-        "text": "Deixei o motor esfriar. As chaves estão no meu bolso. Não sei por que confiro isso três vezes."
+        "type": "script",
+        "id": "partir"
       }
     },
     {

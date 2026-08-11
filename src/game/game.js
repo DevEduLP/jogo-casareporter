@@ -91,9 +91,9 @@ export class Game {
     };
 
     this.bus.on(EVENTS.CHAPTER_START, ({ chapter }) => {
-      // A vertical slice termina onde o conteúdo termina — e mostra ao jogador
-      // para onde a apuração dele estava indo.
-      if (chapter.stub) setTimeout(() => this.showSliceEnd(), 3200);
+      // Rede de segurança: se algum capítulo futuro entrar sem conteúdo, o
+      // jogo fecha com o final que o jogador construiu em vez de travar.
+      if (chapter.stub) setTimeout(() => this.finishGame(), 3200);
     });
 
     this.bus.on(EVENTS.DOOR_TOGGLE, ({ open, position }) => {
@@ -375,30 +375,43 @@ export class Game {
 
   /* --------------------------------- final ------------------------------ */
 
-  showSliceEnd() {
-    const dom = this.journal.dominantInterpretation();
-    const ending = dom.key && dom.decisive
-      ? ENDINGS[{ sobrenatural: 'helena', psicologica: 'laura', conspiracao: 'verdade' }[dom.key]]
-      : ENDINGS.incerto;
+  /**
+   * Encerra o jogo. Sem `forcedId`, o final sai da leitura que o jogador
+   * construiu cruzando pistas — e se nenhuma interpretação abriu vantagem
+   * clara, sai o incerto, que honra a divisão em vez de fingir um veredito.
+   */
+  finishGame(forcedId) {
+    if (this._finished) return;
+    this._finished = true;
 
+    let ending;
+    if (forcedId) {
+      ending = ENDINGS[forcedId];
+    } else {
+      const dom = this.journal.dominantInterpretation();
+      ending = dom.key && dom.decisive
+        ? ENDINGS[{ sobrenatural: 'helena', psicologica: 'laura', conspiracao: 'verdade' }[dom.key]]
+        : ENDINGS.incerto;
+    }
+
+    // Nunca mostrar os pesos: o jogador não deve saber que havia um placar.
     const stats = [
-      `Pistas encontradas: ${this.journal.clues.size}`,
+      `Pistas encontradas: ${this.journal.clues.size} de 44`,
       `Deduções: ${this.journal.deductions.length}`,
-      `Documentos lidos: ${this.journal.readDocuments.size}`,
-      `Nível de realidade: ${this.reality.level}`,
-      '',
-      'Fim do conteúdo atual — capítulos 1 a 6.',
-      'Os capítulos 7 a 10 estão estruturados em src/data/chapters.js.',
-    ].join('<br>');
+      `Documentos lidos: ${this.journal.readDocuments.size} de 28`,
+      this.narrative.hasFlag('sentou_helena') ? 'Você sentou na cadeira dela.'
+        : this.narrative.hasFlag('sentou_visitante') ? 'Você sentou na cadeira vazia.' : '',
+    ].filter(Boolean).join('<br>');
 
     this.paused = true;
     this.player.canMove = false;
     this._intentionalUnlock = true;
     this.input.releaseLock();
-    this.audio.stopAmbient(3);
-    this.audio.stinger(44, 0.1, 14);
+    this.audio.stopAmbient(4);
+    this.audio.stinger(30, 0.12, 20);
     this.bus.emit(EVENTS.ENDING, { ending });
-    this.ui.showEnding(ending, stats);
+    // Deixa a última fala de Laura respirar antes do corte para preto.
+    setTimeout(() => this.ui.showEnding(ending, stats), 2600);
   }
 
   /* ------------------------------ persistência -------------------------- */

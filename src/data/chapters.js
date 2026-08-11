@@ -163,11 +163,17 @@ export const CHAPTERS = [
     n: 10,
     id: 'a_casa_final',
     title: 'A CASA',
-    epigraph: 'Decidir é a única coisa que sobra.',
-    objective: 'Decidir.',
+    epigraph: '"o que é que você vai fazer com o resto da sua vida?"',
+    objective: 'Fechar o caso na máquina do escritório — ou voltar para o carro.',
     reality: 5,
+    onStart: {
+      monologue: [
+        'Não tem mais nada para achar nesta casa. Eu sei disso do jeito que a gente sabe que uma apuração acabou: as fontes começam a se repetir.',
+        'O que sobrou é o que eu faço com isso.',
+        'Tem uma máquina de escrever no escritório com uma frase pela metade. E tem um carro do lado de fora da porteira com o tanque cheio.',
+      ],
+    },
     advance: { flag: 'final_escolhido' },
-    stub: true,
   },
 ];
 
@@ -209,6 +215,21 @@ export const ENDINGS = {
     ],
     splinter: 'Na última página do caderno de Helena, numa folha que Laura jura ter fotografado em branco, está escrito: "ela vai achar a empresa. deixa ela achar. é mais fácil do que a outra coisa."',
   },
+  // Final de recusa: não depende da leitura acumulada, e sim de Laura sair.
+  // É o único que o jogador escolhe sabendo que escolheu.
+  partir: {
+    id: 'partir',
+    title: 'FINAL D — PARTIR',
+    lean: null,
+    text: [
+      'Laura fecha a porta do carro e fica com a mão na chave por mais tempo do que precisaria.',
+      'A casa some no retrovisor em três curvas. Não some de uma vez: aparece de novo na segunda curva, menor, e depois não aparece mais.',
+      'Ela não escreve a matéria. Não porque tenha medo do que aconteceria — porque toda versão que ela ensaia em voz alta na estrada começa com "eu não consigo provar, mas".',
+      'Em algum momento perto do amanhecer ela percebe que está dirigindo devagar demais, e acelera, e não volta a pensar nisso.',
+    ],
+    splinter: 'Três semanas depois, arrumando o porta-luvas, ela encontra uma chave que não é dela, embrulhada num plástico dobrado com cuidado. O plástico não tem vinte e sete anos.',
+  },
+
   incerto: {
     id: 'incerto',
     title: 'FINAL — A VISITANTE',

@@ -284,6 +284,54 @@ export function runScript(game, id, source) {
       return;
     }
 
+    /* ====================== capítulo 10 — A CASA ======================= */
+    // Dois caminhos, em direções literalmente opostas: entrar mais fundo até
+    // o escritório, ou atravessar o quintal até o carro.
+
+    case 'escrever_final': {
+      if (!narrative.hasFlag('sentou_maquina')) {
+        narrative.setFlag('sentou_maquina');
+        narrative.setObjective('Terminar a frase.');
+        audio.creak(1.0, 0.8);
+        narrative.say([
+          'Eu puxo a cadeira e sento na frente da máquina.',
+          'A folha ainda está no rolo, com o carro travado à direita, do jeito que ela deixou quando levantou no meio da palavra.',
+          '"quando ela ler isto eu quero que ela saiba que eu não estava com me"',
+          'Medo. Memória. Meia dúzia de outras coisas que começam com "me".',
+          'Eu levo a mão até a tecla e ela responde. As teclas ainda respondem, depois de tudo isso.',
+        ]);
+        reality.spike(1, 12);
+        return;
+      }
+      // Segunda interação: é aqui que o jogo acaba.
+      narrative.setFlag('final_escolhido');
+      audio.click(1.2, 0.24);
+      game.finishGame();
+      return;
+    }
+
+    case 'partir': {
+      // Antes da casa virar, o carro é só um carro.
+      if (reality.level < 4) {
+        narrative.interrupt('Deixei o motor esfriar. As chaves estão no meu bolso. Não sei por que confiro isso três vezes.');
+        return;
+      }
+      if (!narrative.hasFlag('pensou_em_partir')) {
+        narrative.setFlag('pensou_em_partir');
+        narrative.say([
+          'O carro está onde eu deixei. O tanque dá para chegar ao posto e o posto dá para chegar em casa.',
+          'Eu podia ir embora agora. Podia dirigir quatro horas e tomar banho e dormir e não voltar nunca mais, e ninguém no mundo saberia que eu desisti, porque ninguém no mundo sabe que eu vim.',
+          'Se eu abrir esta porta e entrar, eu não volto. Eu me conheço o suficiente para saber disso.',
+        ]);
+        reality.spike(0.8, 8);
+        return;
+      }
+      narrative.setFlag('final_escolhido');
+      audio.click(0.9, 0.2);
+      game.finishGame('partir');
+      return;
+    }
+
     /* ==================== capítulo 9 — A VISITANTE ===================== */
 
     case 'subir_sotao': {
@@ -748,6 +796,39 @@ export function wireStoryEvents(game) {
     // O alçapão sempre esteve no teto. Laura só passa a vê-lo agora — que é
     // a piada amarga do capítulo, e ela mesma comenta.
     interaction.setHidden('alcapao', false);
+  });
+
+  /* ====================== capítulo 10 — A CASA ======================== */
+
+  bus.on(EVENTS.CHAPTER_START, ({ chapter }) => {
+    if (chapter.id !== 'a_casa_final') return;
+
+    // A máquina de escrever deixa de ser uma pista e vira a saída.
+    interaction.setAction('maquina_escrever', { type: 'script', id: 'escrever_final' });
+
+    // A casa em dissolução. Tudo enfileirado por cômodo, como sempre: mesmo
+    // no último capítulo, nada muda debaixo do olho do jogador.
+    reality.mutate('final_portas', 'corredor', () => {
+      world.setDoorSilent('porta_quarto', false);
+      world.setDoorSilent('porta_banheiro', false);
+      world.setDoorSilent('porta_arquivo', true);
+      world.setDoorSilent('porta_escritorio', true);
+    });
+    reality.mutate('final_entrada', 'entrada', () => {
+      world.setDoorSilent('porta_frente', true);
+      world.setGroupVisible('caixa_musica_entrada', false);
+    });
+    reality.mutate('final_cadeira', 'corredor', () => {
+      world.setGroupVisible('cadeira_corredor', false);
+      world.setGroupVisible('cadeira_cozinha', true);
+    });
+
+    setTimeout(() => {
+      if (narrative.hasFlag('final_escolhido')) return;
+      audio.knock(3, 10);
+      narrative.interrupt('Três batidas na porta da frente. A terceira demorou.');
+      reality.spike(1, 12);
+    }, 25000);
   });
 
   bus.on(EVENTS.DOC_READ, ({ id }) => {

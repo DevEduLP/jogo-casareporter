@@ -150,13 +150,17 @@
     "numero": 10,
     "id": "a_casa_final",
     "titulo": "A CASA",
-    "epigrafe": "Decidir é a única coisa que sobra.",
-    "objetivo": "Decidir.",
+    "epigrafe": "\"o que é que você vai fazer com o resto da sua vida?\"",
+    "objetivo": "Fechar o caso na máquina do escritório — ou voltar para o carro.",
     "nivel_realidade": 5,
-    "monologo_inicial": [],
+    "monologo_inicial": [
+      "Não tem mais nada para achar nesta casa. Eu sei disso do jeito que a gente sabe que uma apuração acabou: as fontes começam a se repetir.",
+      "O que sobrou é o que eu faço com isso.",
+      "Tem uma máquina de escrever no escritório com uma frase pela metade. E tem um carro do lado de fora da porteira com o tanque cheio."
+    ],
     "avanca_quando": {
       "flag": "final_escolhido"
     },
-    "implementado": false
+    "implementado": true
   }
 ]

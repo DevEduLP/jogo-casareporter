@@ -11,7 +11,7 @@ Copie o conteúdo desta pasta para `/data/` no projeto Godot.
 | `connections.json` | 44 conexões válidas e seus pesos de tese | `InvestigationBoard` |
 | `documents.json` + `documents/*.json` | 28 documentos | `DocumentViewer` |
 | `chapters.json` | 10 capítulos | `GameState` |
-| `endings.json` | 4 finais | `EndingManager` |
+| `endings.json` | 5 finais | `EndingManager` |
 | `items.json` | 9 itens | inventário |
 | `level.json` | planta, portas, interativos, luzes | montagem das cenas |
 

@@ -150,7 +150,7 @@ narrativas**. Os dois eixos são compatíveis e ambos úteis.
 | Cap. 2 — O Escritório | 4. IMPOSSÍVEL · 5. A FOTOGRAFIA | ✅ jogável |
 | Cap. 3 — Quartos/banheiro | (integrado ao térreo) · 8. LAURA | ✅ jogável |
 | Cap. 4 — O Porão | 6. A PRESENÇA · 7. HELENA | ✅ jogável |
-| Cap. 5 — O Sótão e o Relógio | 9. A VISITANTE · 10. A CASA | 9 ✅ · 10 declarado |
+| Cap. 5 — O Sótão e o Relógio | 9. A VISITANTE · 10. A CASA | ✅ jogável |
 
 **Divergência de planta:** o v1.0 prevê dois andares. O build é térreo + porão
 + sótão, com quarto e banheiro no térreo.
@@ -241,9 +241,25 @@ Mantidos do v1.0, com uma adoção e uma adição.
 | C — A Verdade | Conspiração | Na última página do caderno, numa folha que ela jura ter fotografado em branco: *"deixa ela achar a empresa. é mais fácil do que a outra coisa."* |
 | Incerto — A Visitante | — | 27 anos é a distância entre 1998 e hoje. É também a distância entre hoje e o dia em que outra pessoa vai encontrar esta casa. |
 
-**A adotar do v1.0: Final D — "Partir".** Voltar à porta da frente após o Cap. 2
-e sair sem terminar. É a melhor ideia do documento original e é barata. Ainda
-não implementado.
+**Final D — "Partir"** (adotado do v1.0): voltar ao carro e ir embora depois
+que a realidade passa do nível 4. Duas interações — a primeira é Laura
+avisando a si mesma que se sair não volta. Não depende de placar: é o único
+final que o jogador escolhe sabendo que escolheu.
+
+### Quando um final é entregue
+
+Não basta somar mais pontos numa tese. São duas exigências:
+
+- **engajamento**: pelo menos 5 deduções;
+- **concentração**: margem ≥ 25% do próprio placar (mínimo 3).
+
+Sem as duas, sai o incerto. Isso resolve dois defeitos encontrados em teste:
+uma única conexão de peso alto decidia o desfecho de uma investigação inteira,
+e quem cruzava tudo — o completista — recebia um veredito quando deveria
+receber exatamente a divisão que construiu.
+
+Esforço mínimo medido: **5 deduções concentradas** para cada uma das três
+leituras. Simétrico.
 
 ---
 

@@ -75,17 +75,32 @@ export class Journal {
     return n;
   }
 
-  /** Interpretação dominante — e se ela é dominante de verdade. */
+  /**
+   * Interpretação dominante — e se ela é dominante de verdade.
+   *
+   * Um final só é entregue quando o jogador demonstrou uma LEITURA, não um
+   * acidente. São duas exigências:
+   *
+   *  - engajamento: pelo menos 5 deduções. Uma conexão isolada com peso alto
+   *    não pode decidir o desfecho de uma investigação inteira.
+   *  - concentração: a margem precisa ser relevante em relação ao próprio
+   *    placar, não só maior que um número fixo. Quem cruza tudo acumula
+   *    muito em todas as teses e continua, corretamente, dividido.
+   *
+   * Sem os dois, sai o final incerto — que honra a divisão em vez de fingir
+   * um veredito que o jogador não emitiu.
+   */
   dominantInterpretation() {
     const entries = Object.entries(this.lean).sort((x, y) => y[1] - x[1]);
     const [top, topScore] = entries[0];
     const [, secondScore] = entries[1];
+    const margem = topScore - secondScore;
     return {
       key: topScore === 0 ? null : top,
       score: topScore,
-      // Margem pequena = o jogador está genuinamente dividido. O final leva
-      // isso em conta em vez de fingir uma certeza que ela não tem.
-      decisive: topScore - secondScore >= 3,
+      margin: margem,
+      decisive: this.deductions.length >= 5
+        && margem >= Math.max(3, topScore * 0.25),
     };
   }
 

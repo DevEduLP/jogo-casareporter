@@ -523,9 +523,11 @@ export function buildHouse() {
   interactables.push(
     /* ---------- exterior ---------- */
     {
+      // Vira a saída do jogo (Final D) quando a realidade passa do nível 4.
+      // Até lá, é só um carro.
       id: 'carro', pos: [-0.2, 0.9, 24.5], size: [4.4, 1.6, 2.0],
       label: 'O carro', verb: 'Examinar',
-      action: { type: 'examine', text: 'Deixei o motor esfriar. As chaves estão no meu bolso. Não sei por que confiro isso três vezes.' },
+      action: { type: 'script', id: 'partir' },
     },
     {
       id: 'caixa_correio', pos: [1.9, 1.05, 20.6], size: [0.4, 0.35, 0.3],

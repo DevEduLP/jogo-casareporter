@@ -3,7 +3,7 @@
 Terror psicológico investigativo em primeira pessoa, rodando direto no navegador.
 **Sem dependências externas, sem build, sem backend, sem arquivos de asset.**
 
-Jogável: **capítulos 1 a 9** — da carta ao sótão. Falta só a decisão final.
+**Jogável do começo ao fim** — capítulos 1 a 10, com cinco finais.
 
 ---
 
@@ -132,8 +132,16 @@ Cada dedução carrega um peso oculto para **sobrenatural**, **psicológica** ou
 esses números e nunca escolhe um final explicitamente: ele constrói uma leitura
 do caso, e o jogo devolve a leitura dele.
 
-Se nenhuma interpretação abre vantagem de 3 pontos, o final é o **incerto** —
-que é, provavelmente, o final verdadeiro.
+Um final só é entregue quando o jogador demonstrou uma **leitura**, não um
+acidente: pelo menos 5 deduções, e a margem precisa ser relevante em relação
+ao próprio placar. Uma conexão isolada com peso alto nunca decide.
+
+Quem cruza tudo acumula muito em todas as teses e termina, corretamente, sem
+veredito — o final **incerto**, que é provavelmente o final verdadeiro.
+
+Há ainda o **Final D — Partir**: voltar ao carro e ir embora depois que a casa
+vira. Não depende de placar nenhum. É o único final que o jogador escolhe
+sabendo que escolheu.
 
 ### As três interpretações
 
@@ -170,15 +178,15 @@ pegou uma inversão de winding que teria feito toda peça cilíndrica desaparece
 **Pronto:** engine, áudio, casa completa (11 cômodos + exterior + porão com
 poço e sótão), 9 portas com cadeia de chaves, 28 documentos (~4.900
 palavras), 44 pistas, 44 conexões, inventário, diário, save/load, Sistema de
-Realidade até o nível 5, eventos ambientes, 4 finais.
+Realidade até o nível 5, eventos ambientes, 5 finais.
 
 As três interpretações estão equilibradas em 65/67/68 pontos — desvio de 4,4%.
 O número é reconferido a cada `node tools/export-godot.mjs`.
 
-**O capítulo 10** está declarado em `chapters.js` com título, epígrafe,
-objetivo, nível de realidade e condição de avanço. Expandi-los é preencher
-`documents.js`, `clues.js` e as mutações em `scripts.js` — nenhum sistema
-precisa mudar. O sótão ainda não existe como espaço.
+A narrativa está **completa**. O que falta é tudo do lado da engine e da
+arte, e está descrito em [docs/GDD.md](docs/GDD.md) e no GDD v1.0:
+quadro de investigação com arrastar e traçar linhas, modelos, texturas,
+áudio gravado, iluminação assada e a portagem para Godot.
 
 ## Ponte para o Godot
 
