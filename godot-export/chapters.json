@@ -100,17 +100,18 @@
     "numero": 7,
     "id": "o_destino_de_helena",
     "titulo": "HELENA",
-    "epigrafe": "Nenhuma das respostas exclui as outras.",
+    "epigrafe": "\"poço seco não é buraco, é ouvido.\"",
     "objetivo": "Descobrir o que aconteceu com Helena Vasques.",
     "nivel_realidade": 5,
     "monologo_inicial": [
-      "Tem um colchão no chão e uma cadeira virada para a parede.",
-      "Alguém esteve aqui embaixo. Contando os dias. Sabendo que tinha gente em cima."
+      "Alguém morou aqui embaixo. Contando os dias, sabendo que tinha gente em cima, e nunca subiu.",
+      "Vinte e sete anos de gente entrando e saindo desta casa que a polícia deu por vazia.",
+      "Certo, Helena. Onde é que você foi parar."
     ],
     "avanca_quando": {
       "flag": "destino_helena"
     },
-    "implementado": false
+    "implementado": true
   },
   {
     "numero": 8,

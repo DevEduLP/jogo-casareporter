@@ -125,7 +125,14 @@ export class World {
       if (part.photoOf) this.photosById.set(part.photoOf, obj);
       if (part.galleryPhoto) this.galleryPhotos.push(obj);
       if (part.id) this.partsById.set(part.id, obj);
-      if (part.group) this._group(part.group).parts.push(obj);
+      if (part.group) {
+        const g = this._group(part.group);
+        g.parts.push(obj);
+        // O estado do grupo vem das peças, não do padrão: um grupo que nasce
+        // oculto precisa se reportar oculto, senão isGroupVisible mente e o
+        // save grava o contrário do que está na tela.
+        if (part.visible === false) g.visible = false;
+      }
     }
     // Colisores marcados com grupo entram no mesmo índice, para que um objeto
     // invisível também deixe de bloquear a passagem.

@@ -3,8 +3,8 @@
 Terror psicológico investigativo em primeira pessoa, rodando direto no navegador.
 **Sem dependências externas, sem build, sem backend, sem arquivos de asset.**
 
-Jogável: **capítulos 1 a 6** — a carta, a chegada, a casa, a descoberta
-impossível, a fotografia e a presença.
+Jogável: **capítulos 1 a 7** — a carta, a chegada, a casa, a descoberta
+impossível, a fotografia, a presença e o destino de Helena.
 
 ---
 
@@ -168,12 +168,20 @@ pegou uma inversão de winding que teria feito toda peça cilíndrica desaparece
 
 ## Estado atual e próximos passos
 
-**Pronto:** engine, áudio, casa completa (11 cômodos + exterior + porão em
-nível inferior), 9 portas com cadeia de chaves, 21 documentos (~3.000
-palavras), 28 pistas, 20 conexões, inventário, diário, save/load, Sistema de
-Realidade até o nível 4, eventos ambientes, 4 finais.
+**Pronto:** engine, áudio, casa completa (11 cômodos + exterior + porão com
+poço), 9 portas com cadeia de chaves, 24 documentos (~3.800 palavras), 34
+pistas, 31 conexões, inventário, diário, save/load, Sistema de Realidade até o
+nível 5, eventos ambientes, 4 finais.
 
-**Capítulos 7–10** estão declarados em `chapters.js` com título, epígrafe,
+As três interpretações estão equilibradas em 44/45/45 pontos — desvio de 2,2%.
+O número é reconferido a cada `node tools/export-godot.mjs`.
+
+**Capítulos 8–10** estão declarados em `chapters.js` com título, epígrafe,
 objetivo, nível de realidade e condição de avanço. Expandi-los é preencher
 `documents.js`, `clues.js` e as mutações em `scripts.js` — nenhum sistema
-precisa mudar. O sótão e o quintal ainda não existem como espaço.
+precisa mudar. O sótão ainda não existe como espaço.
+
+## Ponte para o Godot
+
+`node tools/export-godot.mjs` converte `src/data/` para o formato que o GDD
+especifica em `/data/`. O cânone e os sistemas estão em [docs/GDD.md](docs/GDD.md).

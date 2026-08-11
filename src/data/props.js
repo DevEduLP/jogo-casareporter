@@ -488,6 +488,28 @@ export function staircase(x, z, steps, run, rise, width = 2.2) {
   return p;
 }
 
+/**
+ * Poço de alvenaria com a boca tampada por uma laje de concreto. A laje sai
+ * como peça separada e marcada, para que o Sistema de Realidade possa
+ * "abrir" o poço trocando a visibilidade em vez de mover geometria.
+ */
+export function well(x, z, rot = 0) {
+  const p = new Prop(x, 0, z, rot);
+  p.cyl(0.66, 0.52, 0, 0, 0, 'brick', { uvScale: [1.2, 1.2], segments: 14 });
+  // Boca: cilindro preto embutido. Sem fundo visível — a profundidade é
+  // sugerida pela ausência de qualquer coisa para o olho segurar.
+  p.cyl(0.54, 0.5, 0, 0.02, 0, 'black', { tint: [0.06, 0.06, 0.07], segments: 14 });
+  p.solid(1.34, 1.34, 0, 0, 0.52);
+  return p;
+}
+
+/** A laje que tampa o poço, deslocada de lado (alguém já a moveu antes). */
+export function wellSlab(x, z, rot = 0) {
+  const p = new Prop(x, 0, z, rot);
+  p.cyl(0.58, 0.09, 0, 0.5, 0, 'floorConcrete', { uvScale: [1.4, 1.4], segments: 14 });
+  return p;
+}
+
 /** Combina vários props num só conjunto — açúcar sintático para os cômodos. */
 export function combine(...props) {
   const out = { parts: [], colliders: [], lights: [] };

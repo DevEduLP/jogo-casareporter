@@ -9,7 +9,7 @@ import { EVENTS } from '../core/bus.js';
 import { makeRNG } from '../core/math.js';
 
 export function runScript(game, id, source) {
-  const { world, narrative, journal, audio, reality, inventory } = game;
+  const { world, narrative, journal, audio, reality, inventory, interaction } = game;
 
   switch (id) {
 
@@ -250,8 +250,24 @@ export function runScript(game, id, source) {
     }
 
     case 'porao_parede': {
+      // Segunda passada: ela volta e conta direito. É o capítulo 7 cobrando
+      // a promessa que o capítulo 6 deixou no ar.
       if (narrative.hasFlag('viu_parede_porao')) {
-        narrative.interrupt('Continuo sem conseguir contar.');
+        if (narrative.hasFlag('contou_riscos')) {
+          narrative.interrupt('Onze. Continuam onze.');
+          return;
+        }
+        narrative.setFlag('contou_riscos');
+        narrative.say([
+          'Certo. Devagar. Da camada de cima para baixo.',
+          'A camada mais recente está mais à direita e mais alta que as outras, e a tinta do lápis ainda tem brilho.',
+          'Onze riscos. Dois grupos de cinco e um sozinho.',
+          'Eu fiquei onze dias com aquela carta antes de decidir vir. Onze. Eu contei porque eu conto tudo.',
+          'Alguém aqui embaixo estava contando a minha demora enquanto eu ainda estava a quatrocentos quilômetros daqui.',
+        ]);
+        journal.addClue('onze_dias');
+        reality.spike(1, 9);
+        audio.whisper(3, 5);
         return;
       }
       narrative.setFlag('viu_parede_porao');
@@ -265,6 +281,42 @@ export function runScript(game, id, source) {
       journal.addClue('bilhete_lampiao');
       reality.spike(1, 10);
       audio.stinger(43, 0.14, 12);
+      return;
+    }
+
+    /* ================ capítulo 7 — O DESTINO DE HELENA ================= */
+
+    case 'poco': {
+      if (narrative.hasFlag('poco_aberto')) {
+        narrative.interrupt('Nove metros de nada. Continuo sem conseguir ficar de costas.');
+        return;
+      }
+      narrative.setFlag('poco_aberto');
+      // A laje sai de cima e vai para o lado — a mesma técnica de "objeto que
+      // muda de lugar" usada no capítulo 6.
+      world.moveObject('laje_poco', 'laje_deslocada');
+      // A boca do poço e a caixa lá dentro ocupam o mesmo volume: com as duas
+      // ativas, a mira sempre pega o poço e a caixa fica inalcançável. Enquanto
+      // a caixa está lá, ela é o que se vê ao olhar para baixo.
+      interaction.setHidden('porao_poco', true);
+      interaction.setHidden('porao_caixa_g', false);
+      audio.creak(1.5, 1.4);
+      audio.door(false, false, 2);
+
+      const sabeDoPoco = journal.hasClue('poco_lacrado');
+      narrative.say(sabeDoPoco ? [
+        'A laje. Reassentada em novembro de 1998 e movida outra vez desde então — a marca de arrasto no concreto tem duas direções.',
+        'Sai com o ombro. Pesa menos do que devia, e isso me diz que já saiu muitas vezes.',
+        'Um buraco de alvenaria. Seco. Degraus de ferro descendo pela parede.',
+        'A dois metros da boca, apoiada num degrau, uma caixa de metal. Seca também.',
+      ] : [
+        'Uma laje de concreto redonda, no chão do porão, do tamanho de uma tampa de bueiro.',
+        'Tem marca de arrasto no cimento em volta. Duas direções: ela já saiu e voltou.',
+        'Sai com o ombro. Embaixo tem um poço — alvenaria antiga, seco, com degraus de ferro descendo pela parede.',
+        'E, a dois metros da boca, apoiada num degrau, uma caixa de metal que alguém colocou ali para ser achada por quem levantasse a laje.',
+      ]);
+      reality.spike(0.9, 8);
+      audio.tinnitus(5, 0.045);
       return;
     }
 
@@ -459,6 +511,43 @@ export function wireStoryEvents(game) {
       narrative.setFlag('porao_aberto');
       narrative.say(['O cadeado abre no primeiro giro. Está lubrificado.']);
     }
+  });
+
+  /* ================ capítulo 7 — O DESTINO DE HELENA ================== */
+
+  bus.on(EVENTS.DOC_READ, ({ id }) => {
+    // A pasta G é o fim do capítulo 7. Não responde o que houve com Helena:
+    // oferece três respostas que não se excluem, que é a promessa do jogo.
+    if (id === 'pasta_g' && !narrative.hasFlag('destino_helena')) {
+      narrative.setFlag('destino_helena');
+      journal.addClue('helena_cicatriz');
+      // Ela tira a caixa do poço: o buraco volta a ser só um buraco.
+      interaction.setHidden('porao_caixa_g', true);
+      interaction.setHidden('porao_poco', false);
+      reality.spike(1, 14);
+      audio.stinger(36, 0.15, 16);
+      narrative.say([
+        'Eu tenho três hipóteses e nenhuma delas exclui as outras duas.',
+        'É a primeira vez na minha vida profissional que eu escrevo essa frase sem sentir que falhei.',
+      ], 3.0);
+    }
+
+    // A Fita 02 rende a pista mesmo se a estante for revisitada.
+    if (id === 'fita_02' && !journal.hasClue('fita_02')) {
+      journal.addClue('fita_02');
+    }
+  });
+
+  // A pasta G é achada dentro do poço: sem abrir, não existe.
+  bus.on(EVENTS.CHAPTER_START, ({ chapter }) => {
+    if (chapter.id !== 'o_destino_de_helena') return;
+    narrative.setObjective('Vasculhar o porão. Helena escondeu alguma coisa aqui.');
+    // Nível 5: a lanterna passa a hesitar de vez.
+    setTimeout(() => {
+      if (narrative.hasFlag('destino_helena')) return;
+      audio.whisper(2.5, 6);
+      reality.spike(0.7, 5);
+    }, 20000);
   });
 }
 

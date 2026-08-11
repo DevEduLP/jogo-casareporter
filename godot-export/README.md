@@ -7,9 +7,9 @@ Copie o conteúdo desta pasta para `/data/` no projeto Godot.
 
 | Arquivo | Conteúdo | Consumido por |
 |---|---|---|
-| `clues.json` | 28 pistas | `ClueManager` |
-| `connections.json` | 20 conexões válidas e seus pesos de tese | `InvestigationBoard` |
-| `documents.json` + `documents/*.json` | 21 documentos | `DocumentViewer` |
+| `clues.json` | 34 pistas | `ClueManager` |
+| `connections.json` | 31 conexões válidas e seus pesos de tese | `InvestigationBoard` |
+| `documents.json` + `documents/*.json` | 24 documentos | `DocumentViewer` |
 | `chapters.json` | 10 capítulos | `GameState` |
 | `endings.json` | 4 finais | `EndingManager` |
 | `items.json` | 9 itens | inventário |

@@ -149,6 +149,39 @@ export const CLUES = {
     text: 'O caderno do porão tem a inclinação de Helena e o "t" alto de Helena. Mas o "g" desce reto, e o dela tem uma volta.',
     tags: ['helena', 'segunda_pessoa', 'eu'],
   },
+
+  /* --------------------- capítulo 7 — HELENA --------------------------- */
+
+  poco_lacrado: {
+    n: 29, title: 'O poço reassentado',
+    text: 'A casa foi construída sobre um poço. Seco desde 1993, tampado com laje. Alguém pagou pelo "reassentamento" da laje em 12 de novembro de 1998 — quarenta e um dias depois de Helena desaparecer.',
+    tags: ['poco', 'recente', 'conspiracao', '1998'],
+  },
+  fita_02: {
+    n: 30, title: 'A pedra que caiu de dois jeitos',
+    text: 'Helena jogou uma pedra no poço duas vezes e contou tempos diferentes. "A mesma pedra não pode cair de dois jeitos. Eu sou uma mulher adulta e eu sei disso."',
+    tags: ['poco', 'impossivel', 'helena', 'clinico'],
+  },
+  pasta_g_existe: {
+    n: 31, title: 'A pasta G existe',
+    text: 'Ela escreveu no índice que tinha decidido não escrever a G. A pasta G tem cento e poucas folhas e é a mais grossa de todas. E é sobre ela mesma.',
+    tags: ['helena', 'metodo', 'contradicao'],
+  },
+  helena_depois: {
+    n: 32, title: '"conferido. tudo bate. 3 de novembro"',
+    text: 'A última folha da pasta G foi escrita com outra caneta, e a data não tem ano. Em 3 de novembro de 1998, uma mulher retirou o material de Helena na delegacia dizendo ser da família.',
+    tags: ['helena', 'depois', 'segunda_pessoa'],
+  },
+  onze_dias: {
+    n: 33, title: 'A última camada tem onze riscos',
+    text: 'Os riscos na parede do porão vão em camadas de décadas. A camada de cima, a mais recente, tem onze. Eu fiquei onze dias com aquela carta antes de vir.',
+    tags: ['porao', 'previsao', 'recente', 'eu'],
+  },
+  helena_cicatriz: {
+    n: 34, title: 'A cicatriz na descrição dela',
+    text: 'Seção B da pasta G, descrição física de Helena: "cicatriz fina no dorso da mão esquerda, de vidro, da infância". Eu tenho essa cicatriz. Ela estava descrevendo a si mesma.',
+    tags: ['eu', 'helena', 'espelho'],
+  },
 };
 
 /**
@@ -278,6 +311,80 @@ export const CONNECTIONS = [
     title: 'Item 3',
     text: '"Não vai bater na porta. Vai olhar embaixo do vaso primeiro." Helena sabia onde eu procuraria uma chave. E hoje uma chave apareceu exatamente no lugar onde eu já tinha procurado, e não estava.',
     lean: { sobrenatural: 3, conspiracao: 2 },
+  },
+
+  /* --------------------- capítulo 7 — HELENA ---------------------------
+   * As conexões deste capítulo pendem deliberadamente para a leitura
+   * psicológica: até o capítulo 6 ela acumulava 23 pontos contra 29 das
+   * outras duas, e uma interpretação mais difícil de alcançar que as demais
+   * não é ambiguidade, é viés.
+   * ------------------------------------------------------------------- */
+
+  {
+    a: 'helena_cicatriz', b: 'lista_sobre_mim',
+    title: 'Ela descreveu a mim ou a si mesma?',
+    text: 'A cicatriz de vidro na mão esquerda está na lista sobre a visitante E na descrição física que Helena fez de si mesma. Os dois documentos descrevem a mesma mão. Um deles está errado sobre de quem ela é — e não há nada no papel que diga qual.',
+    lean: { psicologica: 3, sobrenatural: 2 },
+  },
+  {
+    a: 'fita_02', b: 'secao_d',
+    title: 'A pedra e o método',
+    text: 'Ela mediu a queda de uma pedra duas vezes e obteve tempos diferentes, e a resposta dela a isso foi a mesma que deu à visitante: conferir. Vinte e duas afirmações, dezenove confirmadas. Quem inventa uma anomalia não a cronometra duas vezes esperando que ela suma.',
+    lean: { sobrenatural: 4, psicologica: 1 },
+  },
+  {
+    a: 'poco_lacrado', b: 'bilhete_lampiao',
+    title: 'Quarenta e um dias, vinte e sete anos',
+    text: 'A laje foi reassentada quarenta e um dias depois de Helena sumir, e o bilhete sob o lampião diz "eu esperei vinte e sete anos". Alguém fechou este poço sabendo exatamente quanto tempo ia levar até alguém abri-lo de novo.',
+    lean: { sobrenatural: 3, conspiracao: 2 },
+  },
+  {
+    a: 'pasta_g_existe', b: 'gaveta_g',
+    title: 'Ela escreveu a pasta que jurou não escrever',
+    text: '"Decidi hoje que não vou escrever a G." E a G tem cento e poucas folhas, e é a mais grossa de todas, e estava no fundo de um poço. Ou ela mentiu no índice, ou escreveu depois de escrever o índice — ou não foi ela quem escreveu.',
+    lean: { psicologica: 3, conspiracao: 2 },
+  },
+  {
+    a: 'helena_depois', b: 'mulher_da_familia',
+    title: 'A mulher da delegacia',
+    text: 'A última folha da pasta G diz "3 de novembro" sem ano. Em 3 de novembro de 1998, uma mulher retirou o material de Helena alegando parentesco. Se for a mesma data, Helena estava viva um mês depois de desaparecer — ou alguém estava escrevendo no lugar dela com a mão firme.',
+    lean: { conspiracao: 3, psicologica: 2 },
+  },
+  {
+    a: 'helena_depois', b: 'letra_diferente',
+    title: 'A caneta azul',
+    text: 'A última anotação da pasta G foi feita com a caneta cujo "g" desce reto — a mesma do caderno de quem contou vinte e três dias no porão. Quem terminou o arquivo de Helena foi quem morou embaixo da casa dela.',
+    lean: { psicologica: 3, conspiracao: 2 },
+  },
+  {
+    a: 'fita_02', b: 'mesmo_remedio',
+    title: '"Eu sou uma mulher adulta e eu sei disso"',
+    text: 'Ela jogou a mesma pedra duas vezes e contou tempos diferentes, e a frase seguinte foi uma pessoa se agarrando à própria sanidade em voz alta. Paralisia do sono, cinco meses de insônia, lorazepam. Eu escreveria esse laudo de olhos fechados se fosse sobre outra pessoa.',
+    lean: { psicologica: 4 },
+  },
+  {
+    a: 'poco_lacrado', b: 'conta_paga',
+    title: 'Alguém paga as contas desta casa desde 1998',
+    text: 'Uma laje reassentada quarenta e um dias depois do desaparecimento, e energia paga no mês passado. Não é uma casa esquecida: é uma casa administrada, sem interrupção, por vinte e sete anos.',
+    lean: { conspiracao: 4 },
+  },
+  {
+    a: 'onze_dias', b: 'carta_recebida',
+    title: 'Onze riscos',
+    text: 'A camada mais recente de riscos na parede do porão tem onze. Eu fiquei onze dias com a carta antes de vir. Alguém aqui embaixo contou a minha hesitação, dia por dia, enquanto eu ainda estava a quatrocentos quilômetros daqui.',
+    lean: { sobrenatural: 3, conspiracao: 2 },
+  },
+  {
+    a: 'onze_dias', b: 'relogio_parado',
+    title: 'Os números que são meus',
+    text: 'Onze dias. Três e quarenta e sete. Trinta e oito anos. Esta casa está cheia dos meus números, e eu sou a única pessoa aqui que poderia tê-los trazido.',
+    lean: { psicologica: 4, sobrenatural: 1 },
+  },
+  {
+    a: 'fita_02', b: 'caderno_porao',
+    title: 'O único lugar onde ela não escutava',
+    text: 'Helena descia ao porão porque era o único lugar silencioso da casa. Alguém morou nesse silêncio por vinte e três dias, ouvindo os passos dela por cima. As duas estavam procurando a mesma coisa em andares diferentes.',
+    lean: { psicologica: 2, sobrenatural: 2, conspiracao: 1 },
   },
 ];
 

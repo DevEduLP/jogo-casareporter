@@ -670,6 +670,149 @@ não precisa ter pressa. eu esperei vinte e sete anos, você pode esperar dez mi
     clue: 'bilhete_lampiao',
   },
 
+  /* ================== CAPÍTULO 7 — O DESTINO DE HELENA =================== */
+
+  pasta_c_poco: {
+    id: 'pasta_c_poco',
+    type: 'report',
+    title: 'Pasta C — casa',
+    meta: 'Porão. Arquivo de aço, gaveta única. Etiqueta datilografada.',
+    pages: [
+`Contas de água até 1994, quando a rede chegou à estrada. Um orçamento de telhado de 1996 que ela não aceitou. Recibo de dedetização. A vida administrativa de uma casa, guardada com a mesma disciplina com que ela guardou o resto.
+
+E, no fim, uma subpasta fina: POÇO.
+
+"O poço fica no porão porque a casa foi construída em cima dele. Isso não é comum e me disseram que é perigoso. Não é. A água acabou em 1993 e desde então é só um buraco seco de nove metros com uma tampa de concreto."`,
+
+`"Mandei tampar em 93. Custou mais caro do que refazer o telhado, o que me diz alguma coisa sobre este país.
+
+O homem que fez o serviço disse uma frase que eu anotei porque me pareceu bonita e agora me parece outra coisa: 'poço seco não é buraco, é ouvido'."`,
+
+`Debaixo de tudo, grampeado, um segundo recibo.
+
+SERVIÇO: reassentamento de laje — poço interno
+LOCAL: Estrada do Cedro s/n
+VALOR: pago à vista
+DATA: 12/11/1998
+
+Helena desapareceu em 2 de outubro de 1998.
+
+Alguém pagou para fechar este poço quarenta e um dias depois.`,
+    ],
+    lauraNote: 'Reassentamento. Não "fechamento": reassentamento. Você só reassenta uma laje que foi levantada.',
+    clue: 'poco_lacrado',
+  },
+
+  fita_02: {
+    id: 'fita_02',
+    type: 'tape',
+    title: 'Fita 02 — sem etiqueta',
+    meta: 'Porão. Estava dentro de um livro oco, na estante.',
+    pages: [
+`[chiado. mais longo que o da outra fita. quase um minuto antes de qualquer coisa.]
+
+— ...não sei mais se estou gravando para você ou para mim. Acho que parou de fazer diferença faz umas semanas.
+
+[pausa.]
+
+— Eu desci aqui porque aqui é o único lugar da casa onde eu não escuto.
+
+— Isso soa mal. Deixa eu dizer melhor. A casa inteira faz barulho o tempo todo, madeira, cano, vento. Aqui embaixo não tem nada. E é no silêncio que eu consigo ouvir se tem alguém.`,
+
+`— Hoje eu tirei a laje.
+
+[som de arrasto, longo, pesado. dois minutos de respiração.]
+
+— Nove metros. Seco. Joguei uma pedra e contei. Um, dois, e o barulho.
+
+— Depois joguei outra e contei de novo, porque eu preciso conferir as coisas duas vezes, e da segunda vez foram três segundos.
+
+[silêncio.]
+
+— A mesma pedra não pode cair de dois jeitos. Eu sei disso. Eu sou uma mulher adulta e eu sei disso.`,
+
+`— Vou dizer uma coisa e depois vou desligar, porque se eu continuar eu apago.
+
+— Não tem nada lá embaixo. Eu olhei com a lanterna, eu desci três degraus de ferro, eu cheirei. Não tem nada. Não é um lugar assustador. É um buraco seco na terra e é a coisa mais banal desta casa.
+
+— E eu não consigo ficar de costas para ele.
+
+[clique.]`,
+    ],
+    lauraNote: 'A voz dela é firme até "três segundos". Depois ela fala mais devagar, e mais alto, do jeito que a gente fala quando quer que a própria voz ocupe o espaço.',
+    clue: 'fita_02',
+  },
+
+  pasta_g: {
+    id: 'pasta_g',
+    type: 'report',
+    title: 'Pasta G',
+    meta: 'Dentro do poço, numa caixa de metal apoiada num degrau, a dois metros da boca. Seca.',
+    pages: [
+`A pasta G existe.
+
+Ela escreveu, na folha do índice, que tinha decidido não escrever a G. Eu li aquilo há três horas. Eu me lembro da frase inteira: "escrever fixa, e enquanto não estiver escrito ainda dá para ser outra coisa."
+
+A pasta G tem cento e poucas folhas. É a mais grossa de todas.
+
+E não é sobre a visitante.
+
+Na capa, datilografado, com a fita já gasta:
+
+G — VASQUES, HELENA`,
+
+`Ela se catalogou.
+
+O mesmo método que usou com a visitante, virado para dentro. Aparições, descrição física revisada quatro vezes, falas ouvidas, verificações.
+
+Ler isso é ver uma pessoa tentando provar que ela mesma existe, com o rigor de quem prepara uma tese, e concluir que os dados são insuficientes.
+
+SEÇÃO B — descrição física:
+"1,64. Cabelo escuro, na altura do ombro. Cicatriz fina no dorso da mão esquerda, de vidro, da infância."
+
+Eu tenho uma cicatriz fina no dorso da mão esquerda. De vidro. Da infância.
+
+Eu já sabia disso. Está no caderno de março. Eu já tinha lido e já tinha decidido que não queria dizer nada.`,
+
+`SEÇÃO D — verificações (sobre mim mesma)
+
+Vinte e duas afirmações, outra vez. As mesmas vinte e duas.
+
+Mas a coluna da direita está preenchida com outra caneta. Azul, mais fina, apoiada com mais força.
+
+Dezenove ✓. Duas ✗. Uma ?.
+
+Idênticas às da outra pasta. Item por item. Inclusive a que dizia "está grávida" ✗ e a que dizia "chegou de manhã" ✗.
+
+E a que recebeu ?:
+
+"Diz que se chama Helena."`,
+
+`A última folha é uma anotação de rodapé, sem cabeçalho, com a mesma caneta azul:
+
+"conferido. tudo bate.
+não sei o que isso resolve.
+
+3 de novembro"
+
+Sem ano.
+
+Em 3 de novembro de 1998, uma mulher entrou na delegacia de Vale das Pedras, disse que era da família de Helena Vasques, e retirou todo o material apreendido.`,
+
+`Existem três coisas que isso pode significar e eu vou escrever as três agora, aqui, com a mão firme, antes que eu escolha uma sem perceber que escolhi.
+
+Um: Helena estava viva em novembro. Não desapareceu — saiu. E voltou.
+
+Dois: outra pessoa continuou o arquivo dela. Alguém que sabia o método, que tinha a chave, e que conferiu vinte e duas afirmações sobre uma mulher desaparecida com uma caneta azul.
+
+Três: a data não tem ano porque não é 1998.
+
+Eu prefiro a dois. Quero deixar registrado que eu prefiro a dois, e que preferir não é apurar.`,
+    ],
+    lauraNote: 'O "g" desta caneta azul desce reto. Sem volta.\n\nÉ a letra do caderno do porão. É a letra de quem contou vinte e três dias aqui embaixo.',
+    clue: 'helena_depois',
+  },
+
   /* ===================== notas curtas de ambiente ======================== */
 
   bilhete_maquina: {

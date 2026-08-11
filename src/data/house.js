@@ -431,6 +431,11 @@ export function buildHouse() {
     py(P.chair(1.2, -16.6, Math.PI)),
     py(P.box_(-1.6, -17.4, 0, 0.2, 0.3, 0.2, 'metal',
       { collide: false, tint: [0.5, 0.46, 0.4] })),
+    // O poço — prometido lá atrás no índice de Helena, em "C — casa
+    // (reformas, contas, o poço)". A laje está de lado: alguém já a moveu.
+    py(P.well(-3.2, -17.0)),
+    py(P.tag(P.wellSlab(-3.2, -17.0), 'laje_poco', true)),
+    py(P.tag(P.wellSlab(-4.3, -17.4, 0.4), 'laje_deslocada', false)),
   );
 
   /* ---------------------- objetos que trocam de lugar ------------------- */
@@ -763,6 +768,29 @@ export function buildHouse() {
       id: 'porao_parede', pos: [1.2, PORAO_Y + 1.1, -20.32], size: [3.6, 1.8, 0.3],
       label: 'A parede do fundo', verb: 'Olhar',
       action: { type: 'script', id: 'porao_parede' },
+    },
+
+    /* ---------- capítulo 7: o destino de Helena ---------- */
+    {
+      id: 'porao_arquivo_c', pos: [-6.1, PORAO_Y + 0.55, -18.6], size: [0.7, 1.2, 0.8],
+      label: 'Arquivo de aço', verb: 'Abrir',
+      action: { type: 'read', doc: 'pasta_c_poco', clue: 'poco_lacrado' },
+    },
+    {
+      id: 'porao_estante', pos: [-6.2, PORAO_Y + 1.0, -16.0], size: [0.6, 1.8, 1.5],
+      label: 'Estante', verb: 'Examinar',
+      action: { type: 'tape', tape: 'fita_02' },
+    },
+    {
+      id: 'porao_poco', pos: [-3.2, PORAO_Y + 0.4, -17.0], size: [1.5, 0.9, 1.5],
+      label: 'Tampa de concreto no chão', verb: 'Examinar',
+      action: { type: 'script', id: 'poco' },
+    },
+    {
+      // Só aparece depois que o poço é aberto.
+      id: 'porao_caixa_g', pos: [-3.2, PORAO_Y + 0.45, -17.0], size: [1.0, 0.7, 1.0],
+      label: 'Caixa dentro do poço', verb: 'Retirar', hidden: true,
+      action: { type: 'read', doc: 'pasta_g', clue: 'pasta_g_existe' },
     },
   );
 

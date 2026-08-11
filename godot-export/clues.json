@@ -9,7 +9,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "mesma_maquina"
+      "mesma_maquina",
+      "onze_dias"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -39,7 +40,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "cadeado_novo"
+      "cadeado_novo",
+      "poco_lacrado"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -118,7 +120,8 @@
     "tese": "neutra",
     "conexoes_possiveis": [
       "secao_d",
-      "chave_aparecida"
+      "chave_aparecida",
+      "helena_cicatriz"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -134,7 +137,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "mesma_idade"
+      "mesma_idade",
+      "fita_02"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -214,7 +218,8 @@
     "conexoes_possiveis": [
       "lista_sobre_mim",
       "remedios",
-      "gaveta_g"
+      "gaveta_g",
+      "fita_02"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -311,7 +316,8 @@
     "conexoes_possiveis": [
       "bilhete_geladeira",
       "fotografia",
-      "casa_mexeu"
+      "casa_mexeu",
+      "onze_dias"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -375,7 +381,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "mesma_maquina"
+      "mesma_maquina",
+      "helena_depois"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -390,7 +397,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "secao_d"
+      "secao_d",
+      "pasta_g_existe"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -407,7 +415,8 @@
     "tese": "neutra",
     "conexoes_possiveis": [
       "letra_diferente",
-      "mesa_para_dois"
+      "mesa_para_dois",
+      "fita_02"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -423,7 +432,8 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
-      "carta_impossivel"
+      "carta_impossivel",
+      "poco_lacrado"
     ],
     "textura": "res://assets/ui/card_papel.png"
   },
@@ -439,7 +449,112 @@
     ],
     "tese": "neutra",
     "conexoes_possiveis": [
+      "caderno_porao",
+      "helena_depois"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "poco_lacrado": {
+    "id": "poco_lacrado",
+    "numero": 29,
+    "titulo": "O poço reassentado",
+    "corpo": "A casa foi construída sobre um poço. Seco desde 1993, tampado com laje. Alguém pagou pelo \"reassentamento\" da laje em 12 de novembro de 1998 — quarenta e um dias depois de Helena desaparecer.",
+    "tags": [
+      "poco",
+      "recente",
+      "conspiracao",
+      "1998"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "bilhete_lampiao",
+      "conta_paga"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "fita_02": {
+    "id": "fita_02",
+    "numero": 30,
+    "titulo": "A pedra que caiu de dois jeitos",
+    "corpo": "Helena jogou uma pedra no poço duas vezes e contou tempos diferentes. \"A mesma pedra não pode cair de dois jeitos. Eu sou uma mulher adulta e eu sei disso.\"",
+    "tags": [
+      "poco",
+      "impossivel",
+      "helena",
+      "clinico"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "secao_d",
+      "mesmo_remedio",
       "caderno_porao"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "pasta_g_existe": {
+    "id": "pasta_g_existe",
+    "numero": 31,
+    "titulo": "A pasta G existe",
+    "corpo": "Ela escreveu no índice que tinha decidido não escrever a G. A pasta G tem cento e poucas folhas e é a mais grossa de todas. E é sobre ela mesma.",
+    "tags": [
+      "helena",
+      "metodo",
+      "contradicao"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "gaveta_g"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "helena_depois": {
+    "id": "helena_depois",
+    "numero": 32,
+    "titulo": "\"conferido. tudo bate. 3 de novembro\"",
+    "corpo": "A última folha da pasta G foi escrita com outra caneta, e a data não tem ano. Em 3 de novembro de 1998, uma mulher retirou o material de Helena na delegacia dizendo ser da família.",
+    "tags": [
+      "helena",
+      "depois",
+      "segunda_pessoa"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mulher_da_familia",
+      "letra_diferente"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "onze_dias": {
+    "id": "onze_dias",
+    "numero": 33,
+    "titulo": "A última camada tem onze riscos",
+    "corpo": "Os riscos na parede do porão vão em camadas de décadas. A camada de cima, a mais recente, tem onze. Eu fiquei onze dias com aquela carta antes de vir.",
+    "tags": [
+      "porao",
+      "previsao",
+      "recente",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "carta_recebida",
+      "relogio_parado"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "helena_cicatriz": {
+    "id": "helena_cicatriz",
+    "numero": 34,
+    "titulo": "A cicatriz na descrição dela",
+    "corpo": "Seção B da pasta G, descrição física de Helena: \"cicatriz fina no dorso da mão esquerda, de vidro, da infância\". Eu tenho essa cicatriz. Ela estava descrevendo a si mesma.",
+    "tags": [
+      "eu",
+      "helena",
+      "espelho"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "lista_sobre_mim"
     ],
     "textura": "res://assets/ui/card_papel.png"
   }

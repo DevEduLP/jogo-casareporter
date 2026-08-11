@@ -116,17 +116,17 @@ export const CHAPTERS = [
     n: 7,
     id: 'o_destino_de_helena',
     title: 'HELENA',
-    epigraph: 'Nenhuma das respostas exclui as outras.',
+    epigraph: '"poço seco não é buraco, é ouvido."',
     objective: 'Descobrir o que aconteceu com Helena Vasques.',
     reality: 5,
     onStart: {
       monologue: [
-        'Tem um colchão no chão e uma cadeira virada para a parede.',
-        'Alguém esteve aqui embaixo. Contando os dias. Sabendo que tinha gente em cima.',
+        'Alguém morou aqui embaixo. Contando os dias, sabendo que tinha gente em cima, e nunca subiu.',
+        'Vinte e sete anos de gente entrando e saindo desta casa que a polícia deu por vazia.',
+        'Certo, Helena. Onde é que você foi parar.',
       ],
     },
     advance: { flag: 'destino_helena' },
-    stub: true,
   },
   {
     n: 8,
