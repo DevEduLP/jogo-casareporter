@@ -1,0 +1,154 @@
+[
+  {
+    "numero": 1,
+    "id": "a_carta",
+    "titulo": "A CARTA",
+    "epigrafe": "\"A chave está onde ela sempre deixou.\"",
+    "objetivo": "Entrar na casa de Helena Vasques.",
+    "nivel_realidade": 0,
+    "monologo_inicial": [
+      "Estrada do Cedro. Terceira porteira. Onze dias para eu decidir vir, e quatro horas de estrada para eu decidir que foi burrice.",
+      "A casa está exatamente onde a carta disse que estaria. Isso não deveria me surpreender e me surpreende assim mesmo."
+    ],
+    "avanca_quando": {
+      "flag": "entrou_casa"
+    },
+    "implementado": true
+  },
+  {
+    "numero": 2,
+    "id": "a_casa",
+    "titulo": "A CASA",
+    "epigrafe": "Vinte e sete anos de portas fechadas, e nenhuma teia na maçaneta.",
+    "objetivo": "Explorar a casa. Encontrar os registros de Helena.",
+    "nivel_realidade": 0,
+    "monologo_inicial": [
+      "Cheiro de casa fechada, mas não de casa morta. Casa morta cheira a mofo e a bicho. Esta cheira a poeira parada e a alguma coisa que alguém cozinhou. Faz tempo. Não faz tanto tempo.",
+      "Vou fazer isso do jeito certo. Cômodo por cômodo. Anotar tudo. É só um trabalho."
+    ],
+    "avanca_quando": {
+      "clues": 6
+    },
+    "implementado": true
+  },
+  {
+    "numero": 3,
+    "id": "helena",
+    "titulo": "HELENA",
+    "epigrafe": "\"Comecei a escrever tudo porque comecei a esquecer tudo.\"",
+    "objetivo": "Reconstruir a vida de Helena. Encontrar a chave do escritório.",
+    "nivel_realidade": 1,
+    "monologo_inicial": [
+      "Ela escrevia. Meu Deus, como ela escrevia. Isso não é o caderno de uma mulher perdendo o juízo — é o arquivo de alguém tentando desesperadamente não perder.",
+      "Eu conheço esse impulso. Eu ganho a vida com esse impulso."
+    ],
+    "avanca_quando": {
+      "flag": "escritorio_aberto"
+    },
+    "implementado": true
+  },
+  {
+    "numero": 4,
+    "id": "impossivel",
+    "titulo": "IMPOSSÍVEL",
+    "epigrafe": "\"Você chegou hoje.\"",
+    "objetivo": "Ler o que Helena guardou no escritório.",
+    "nivel_realidade": 2,
+    "monologo_inicial": [
+      "Trancada por dentro. Com chave. E a chave escondida onde alguém quer que seja achada.",
+      "Isso é arrumação. Alguém arrumou esta sala para uma visita."
+    ],
+    "avanca_quando": {
+      "flag": "leu_carta_1998"
+    },
+    "implementado": true
+  },
+  {
+    "numero": 5,
+    "id": "a_fotografia",
+    "titulo": "A FOTOGRAFIA",
+    "epigrafe": "\"casa. março.\"",
+    "objetivo": "Sair do escritório. Depois voltar e olhar a fotografia outra vez.",
+    "nivel_realidade": 3,
+    "monologo_inicial": [
+      "Certo. Certo. Respira.",
+      "Uma carta datilografada numa máquina que está nesta casa, descrevendo coisas que qualquer pessoa que me seguisse desde o posto teria visto. Isso tem explicação e a explicação tem nome, endereço e motivo.",
+      "É isso que eu vou fazer. Vou achar o nome."
+    ],
+    "avanca_quando": {
+      "flag": "viu_foto_alterada"
+    },
+    "implementado": true
+  },
+  {
+    "numero": 6,
+    "id": "a_presenca",
+    "titulo": "A PRESENÇA",
+    "epigrafe": "A casa começa a discordar de si mesma.",
+    "objetivo": "Descobrir o que há embaixo da casa.",
+    "nivel_realidade": 4,
+    "monologo_inicial": [
+      "Certo. Vou fazer o que eu sei fazer. Vou parar de tentar explicar e vou registrar.",
+      "Registrar é o que sobra quando explicar não dá mais. Foi exatamente isso que a Helena fez, e eu passei o dia inteiro achando que era sintoma."
+    ],
+    "avanca_quando": {
+      "flag": "viu_parede_porao"
+    },
+    "implementado": true
+  },
+  {
+    "numero": 7,
+    "id": "o_destino_de_helena",
+    "titulo": "HELENA",
+    "epigrafe": "Nenhuma das respostas exclui as outras.",
+    "objetivo": "Descobrir o que aconteceu com Helena Vasques.",
+    "nivel_realidade": 5,
+    "monologo_inicial": [
+      "Tem um colchão no chão e uma cadeira virada para a parede.",
+      "Alguém esteve aqui embaixo. Contando os dias. Sabendo que tinha gente em cima."
+    ],
+    "avanca_quando": {
+      "flag": "destino_helena"
+    },
+    "implementado": false
+  },
+  {
+    "numero": 8,
+    "id": "laura",
+    "titulo": "LAURA",
+    "epigrafe": "A apuração muda de objeto.",
+    "objetivo": "Descobrir por que Helena sabia tanto sobre você.",
+    "nivel_realidade": 5,
+    "monologo_inicial": [],
+    "avanca_quando": {
+      "flag": "infancia"
+    },
+    "implementado": false
+  },
+  {
+    "numero": 9,
+    "id": "a_visitante",
+    "titulo": "A VISITANTE",
+    "epigrafe": "\"Ela ainda não sabe que está aqui.\"",
+    "objetivo": "Encontrar a visitante.",
+    "nivel_realidade": 5,
+    "monologo_inicial": [],
+    "avanca_quando": {
+      "flag": "encarou_visitante"
+    },
+    "implementado": false
+  },
+  {
+    "numero": 10,
+    "id": "a_casa_final",
+    "titulo": "A CASA",
+    "epigrafe": "Decidir é a única coisa que sobra.",
+    "objetivo": "Decidir.",
+    "nivel_realidade": 5,
+    "monologo_inicial": [],
+    "avanca_quando": {
+      "flag": "final_escolhido"
+    },
+    "implementado": false
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "id": "receita_medica",
+  "tipo": "report",
+  "titulo": "Receituário",
+  "procedencia": "Armário do banheiro, atrás de um vidro de água oxigenada.",
+  "paginas": [
+    "CLÍNICA SÃO BRÁS — RECEITUÁRIO DE CONTROLE ESPECIAL\n\nPaciente: H. VASQUES\nData: 12/08/1998\n\n- Lorazepam 2mg — 1 comprimido ao deitar\n- (ilegível) 25mg — se necessário\n\nObservação do médico, à caneta:\n\"Paciente relata paralisia do sono e alucinações hipnagógicas há 5 meses. Nega uso de álcool. Insiste que os episódios são 'informação, não sintoma'. Encaminhada.\"",
+    "Debaixo da receita, dobrado em quatro, um segundo papel. Não é receita. É a folha de encaminhamento, nunca entregue.\n\nO campo do diagnóstico presumido está preenchido com uma única palavra, escrita devagar, com a caneta apoiada duas vezes:\n\n\"lucidez\"\n\nNão sei se foi o médico que escreveu."
+  ],
+  "corpo": "CLÍNICA SÃO BRÁS — RECEITUÁRIO DE CONTROLE ESPECIAL\n\nPaciente: H. VASQUES\nData: 12/08/1998\n\n- Lorazepam 2mg — 1 comprimido ao deitar\n- (ilegível) 25mg — se necessário\n\nObservação do médico, à caneta:\n\"Paciente relata paralisia do sono e alucinações hipnagógicas há 5 meses. Nega uso de álcool. Insiste que os episódios são 'informação, não sintoma'. Encaminhada.\"\n\nDebaixo da receita, dobrado em quatro, um segundo papel. Não é receita. É a folha de encaminhamento, nunca entregue.\n\nO campo do diagnóstico presumido está preenchido com uma única palavra, escrita devagar, com a caneta apoiada duas vezes:\n\n\"lucidez\"\n\nNão sei se foi o médico que escreveu.",
+  "nota_laura": "Lorazepam. Eu tomei lorazepam por quatro meses este ano. Isso é comum. Isso é a coisa mais comum do mundo. Metade da minha redação toma.",
+  "pista": "mesmo_remedio"
+}

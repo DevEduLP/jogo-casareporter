@@ -1,0 +1,2178 @@
+{
+  "altura_pe_direito": 2.8,
+  "spawn": {
+    "position": [
+      0,
+      1.68,
+      26
+    ],
+    "yaw": 0
+  },
+  "comodos": [
+    {
+      "id": "entrada",
+      "nome": "Entrada",
+      "min": [
+        -2.5,
+        4.5
+      ],
+      "max": [
+        2.5,
+        9
+      ],
+      "piso": "floorWood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "sala",
+      "nome": "Sala",
+      "min": [
+        -8,
+        1.5
+      ],
+      "max": [
+        -2.5,
+        9
+      ],
+      "piso": "floorWood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "cozinha",
+      "nome": "Cozinha",
+      "min": [
+        2.5,
+        2.5
+      ],
+      "max": [
+        8,
+        9
+      ],
+      "piso": "floorTile",
+      "superficie": "tile",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "corredor",
+      "nome": "Corredor",
+      "min": [
+        -2.5,
+        -9
+      ],
+      "max": [
+        2.5,
+        4.5
+      ],
+      "piso": "floorWood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "banheiro",
+      "nome": "Banheiro",
+      "min": [
+        2.5,
+        -1.5
+      ],
+      "max": [
+        8,
+        2.5
+      ],
+      "piso": "floorTile",
+      "superficie": "tile",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "escritorio",
+      "nome": "Escritório",
+      "min": [
+        2.5,
+        -9
+      ],
+      "max": [
+        8,
+        -1.5
+      ],
+      "piso": "floorWood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "quarto",
+      "nome": "Quarto de Helena",
+      "min": [
+        -8,
+        -4.5
+      ],
+      "max": [
+        -2.5,
+        1.5
+      ],
+      "piso": "floorWood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "arquivo",
+      "nome": "Arquivo",
+      "min": [
+        -8,
+        -9
+      ],
+      "max": [
+        -2.5,
+        -4.5
+      ],
+      "piso": "floorConcrete",
+      "superficie": "concrete",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "varanda",
+      "nome": "Varanda",
+      "min": [
+        -3.2,
+        9
+      ],
+      "max": [
+        3.2,
+        11
+      ],
+      "piso": "wood",
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": true
+    },
+    {
+      "id": "escada",
+      "nome": "Escada do porão",
+      "min": [
+        -1.3,
+        -13.3
+      ],
+      "max": [
+        1.3,
+        -9.4
+      ],
+      "piso": null,
+      "superficie": "wood",
+      "base_y": null,
+      "altura": null,
+      "externo": false
+    },
+    {
+      "id": "porao",
+      "nome": "Porão",
+      "min": [
+        -6.5,
+        -20.5
+      ],
+      "max": [
+        6.5,
+        -13.3
+      ],
+      "piso": "floorConcrete",
+      "superficie": "concrete",
+      "base_y": -2.5999999999999996,
+      "altura": 2.3,
+      "externo": false
+    }
+  ],
+  "paredes": [
+    {
+      "x1": -8,
+      "z1": 9,
+      "x2": -0.65,
+      "z2": 9,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": 0.65,
+      "z1": 9,
+      "x2": 8,
+      "z2": 9,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": -8,
+      "z1": -9,
+      "x2": -0.6,
+      "z2": -9,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": 0.6,
+      "z1": -9,
+      "x2": 8,
+      "z2": -9,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": -8,
+      "z1": -9,
+      "x2": -8,
+      "z2": 9,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": 8,
+      "z1": -9,
+      "x2": 8,
+      "z2": 4.3,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": 8,
+      "z1": 5.7,
+      "x2": 8,
+      "z2": 9,
+      "tex": "plaster",
+      "thick": 0.32,
+      "h": 2.8
+    },
+    {
+      "x1": -2.5,
+      "z1": -9,
+      "x2": -2.5,
+      "z2": -7.2,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -2.5,
+      "z1": -6.1,
+      "x2": -2.5,
+      "z2": -2.2,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -2.5,
+      "z1": -1.1,
+      "x2": -2.5,
+      "z2": 6,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -2.5,
+      "z1": 7.1,
+      "x2": -2.5,
+      "z2": 9,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 2.5,
+      "z1": -9,
+      "x2": 2.5,
+      "z2": -4.6,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 2.5,
+      "z1": -3.5,
+      "x2": 2.5,
+      "z2": 0.2,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 2.5,
+      "z1": 1.3,
+      "x2": 2.5,
+      "z2": 6,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 2.5,
+      "z1": 7.1,
+      "x2": 2.5,
+      "z2": 9,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -2.5,
+      "z1": 4.5,
+      "x2": -1.3,
+      "z2": 4.5,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 1.3,
+      "z1": 4.5,
+      "x2": 2.5,
+      "z2": 4.5,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -8,
+      "z1": 1.5,
+      "x2": -2.5,
+      "z2": 1.5,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -8,
+      "z1": -4.5,
+      "x2": -2.5,
+      "z2": -4.5,
+      "tex": "wallpaper",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 2.5,
+      "z1": 2.5,
+      "x2": 8,
+      "z2": 2.5,
+      "tex": "plaster",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": 2.5,
+      "z1": -1.5,
+      "x2": 8,
+      "z2": -1.5,
+      "tex": "plaster",
+      "thick": 0.16,
+      "h": 2.8
+    },
+    {
+      "x1": -1.4,
+      "z1": -9.16,
+      "x2": -1.4,
+      "z2": -13.4,
+      "tex": "brick",
+      "thick": 0.16,
+      "h": 5.199999999999999,
+      "baseY": -2.5999999999999996
+    },
+    {
+      "x1": 1.4,
+      "z1": -9.16,
+      "x2": 1.4,
+      "z2": -13.4,
+      "tex": "brick",
+      "thick": 0.16,
+      "h": 5.199999999999999,
+      "baseY": -2.5999999999999996
+    },
+    {
+      "x1": -1.4,
+      "z1": -9.16,
+      "x2": -0.6,
+      "z2": -9.16,
+      "tex": "brick",
+      "thick": 0.16,
+      "h": 2.3200000000000003,
+      "baseY": 0.28
+    },
+    {
+      "x1": 0.6,
+      "z1": -9.16,
+      "x2": 1.4,
+      "z2": -9.16,
+      "tex": "brick",
+      "thick": 0.16,
+      "h": 2.3200000000000003,
+      "baseY": 0.28
+    },
+    {
+      "x1": -1.4,
+      "z1": -13.4,
+      "x2": 1.4,
+      "z2": -13.4,
+      "tex": "brick",
+      "thick": 0.16,
+      "h": 2.9,
+      "baseY": -0.3
+    },
+    {
+      "x1": -6.5,
+      "z1": -20.5,
+      "x2": 6.5,
+      "z2": -20.5,
+      "tex": "brick",
+      "thick": 0.32,
+      "h": 2.3,
+      "baseY": -2.5999999999999996
+    },
+    {
+      "x1": -6.5,
+      "z1": -20.5,
+      "x2": -6.5,
+      "z2": -13.24,
+      "tex": "brick",
+      "thick": 0.32,
+      "h": 2.3,
+      "baseY": -2.5999999999999996
+    },
+    {
+      "x1": 6.5,
+      "z1": -20.5,
+      "x2": 6.5,
+      "z2": -13.24,
+      "tex": "brick",
+      "thick": 0.32,
+      "h": 2.3,
+      "baseY": -2.5999999999999996
+    },
+    {
+      "x1": -6.5,
+      "z1": -13.24,
+      "x2": -1.4,
+      "z2": -13.24,
+      "tex": "brick",
+      "thick": 0.32,
+      "h": 2.3,
+      "baseY": -2.5999999999999996
+    },
+    {
+      "x1": 1.4,
+      "z1": -13.24,
+      "x2": 6.5,
+      "z2": -13.24,
+      "tex": "brick",
+      "thick": 0.32,
+      "h": 2.3,
+      "baseY": -2.5999999999999996
+    }
+  ],
+  "plataformas": [
+    {
+      "min": [
+        -8.4,
+        -9.4
+      ],
+      "max": [
+        8.4,
+        9.4
+      ],
+      "y": 0.28
+    },
+    {
+      "min": [
+        -3.2,
+        9
+      ],
+      "max": [
+        3.2,
+        11.1
+      ],
+      "y": 0.28
+    },
+    {
+      "min": [
+        -1.7,
+        11.1
+      ],
+      "max": [
+        1.7,
+        11.7
+      ],
+      "y": 0.14
+    },
+    {
+      "min": [
+        -1.4,
+        -9.72
+      ],
+      "max": [
+        1.4,
+        -9.4
+      ],
+      "y": 0.040000000000000036
+    },
+    {
+      "min": [
+        -1.4,
+        -10.040000000000001
+      ],
+      "max": [
+        1.4,
+        -9.72
+      ],
+      "y": -0.19999999999999996
+    },
+    {
+      "min": [
+        -1.4,
+        -10.36
+      ],
+      "max": [
+        1.4,
+        -10.040000000000001
+      ],
+      "y": -0.43999999999999995
+    },
+    {
+      "min": [
+        -1.4,
+        -10.68
+      ],
+      "max": [
+        1.4,
+        -10.36
+      ],
+      "y": -0.6799999999999999
+    },
+    {
+      "min": [
+        -1.4,
+        -11
+      ],
+      "max": [
+        1.4,
+        -10.68
+      ],
+      "y": -0.9199999999999999
+    },
+    {
+      "min": [
+        -1.4,
+        -11.32
+      ],
+      "max": [
+        1.4,
+        -11
+      ],
+      "y": -1.16
+    },
+    {
+      "min": [
+        -1.4,
+        -11.64
+      ],
+      "max": [
+        1.4,
+        -11.32
+      ],
+      "y": -1.4
+    },
+    {
+      "min": [
+        -1.4,
+        -11.96
+      ],
+      "max": [
+        1.4,
+        -11.64
+      ],
+      "y": -1.64
+    },
+    {
+      "min": [
+        -1.4,
+        -12.280000000000001
+      ],
+      "max": [
+        1.4,
+        -11.96
+      ],
+      "y": -1.8800000000000001
+    },
+    {
+      "min": [
+        -1.4,
+        -12.600000000000001
+      ],
+      "max": [
+        1.4,
+        -12.280000000000001
+      ],
+      "y": -2.12
+    },
+    {
+      "min": [
+        -1.4,
+        -12.92
+      ],
+      "max": [
+        1.4,
+        -12.600000000000001
+      ],
+      "y": -2.3599999999999994
+    },
+    {
+      "min": [
+        -1.4,
+        -13.24
+      ],
+      "max": [
+        1.4,
+        -12.92
+      ],
+      "y": -2.5999999999999996
+    },
+    {
+      "min": [
+        -6.6,
+        -20.6
+      ],
+      "max": [
+        6.6,
+        -13.24
+      ],
+      "y": -2.5999999999999996
+    }
+  ],
+  "portas": [
+    {
+      "id": "porta_frente",
+      "dobradica": [
+        -0.65,
+        9
+      ],
+      "largura": 1.3,
+      "rot_fechada": 0,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": false,
+      "trancada": true,
+      "chave": "chave_casa",
+      "rotulo": "Porta da frente",
+      "texto_trancada": "Trancada. O trinco não cede — e a fechadura não parece nova."
+    },
+    {
+      "id": "porta_sala",
+      "dobradica": [
+        -2.5,
+        6
+      ],
+      "largura": 1.1,
+      "rot_fechada": -1.5707963267948966,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": true,
+      "trancada": false,
+      "chave": null,
+      "rotulo": "Porta da sala",
+      "texto_trancada": ""
+    },
+    {
+      "id": "porta_cozinha",
+      "dobradica": [
+        2.5,
+        7.1
+      ],
+      "largura": 1.1,
+      "rot_fechada": 1.5707963267948966,
+      "delta_abertura": -1.5707963267948966,
+      "aberta": true,
+      "trancada": false,
+      "chave": null,
+      "rotulo": "Porta da cozinha",
+      "texto_trancada": ""
+    },
+    {
+      "id": "porta_banheiro",
+      "dobradica": [
+        2.5,
+        0.2
+      ],
+      "largura": 1.1,
+      "rot_fechada": -1.5707963267948966,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": false,
+      "trancada": false,
+      "chave": null,
+      "rotulo": "Porta do banheiro",
+      "texto_trancada": ""
+    },
+    {
+      "id": "porta_quarto",
+      "dobradica": [
+        -2.5,
+        -2.2
+      ],
+      "largura": 1.1,
+      "rot_fechada": -1.5707963267948966,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": false,
+      "trancada": false,
+      "chave": null,
+      "rotulo": "Porta do quarto",
+      "texto_trancada": ""
+    },
+    {
+      "id": "porta_escritorio",
+      "dobradica": [
+        2.5,
+        -4.6
+      ],
+      "largura": 1.1,
+      "rot_fechada": -1.5707963267948966,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": false,
+      "trancada": true,
+      "chave": "chave_escritorio",
+      "rotulo": "Porta do escritório",
+      "texto_trancada": "Trancada por dentro da fechadura, com chave. Alguém quis fechar esta sala."
+    },
+    {
+      "id": "porta_arquivo",
+      "dobradica": [
+        -2.5,
+        -7.2
+      ],
+      "largura": 1.1,
+      "rot_fechada": -1.5707963267948966,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": false,
+      "trancada": true,
+      "chave": "chave_arquivo",
+      "rotulo": "Porta do arquivo",
+      "texto_trancada": "Trancada. Há uma etiqueta colada acima da maçaneta, ilegível de tão desbotada."
+    },
+    {
+      "id": "porta_fundos",
+      "dobradica": [
+        8,
+        4.3
+      ],
+      "largura": 1.4,
+      "rot_fechada": -1.5707963267948966,
+      "delta_abertura": -1.5707963267948966,
+      "aberta": false,
+      "trancada": true,
+      "chave": null,
+      "rotulo": "Porta dos fundos",
+      "texto_trancada": "Emperrada. A madeira inchou com a umidade e não se move um milímetro."
+    },
+    {
+      "id": "porta_porao",
+      "dobradica": [
+        -0.6,
+        -9
+      ],
+      "largura": 1.2,
+      "rot_fechada": 0,
+      "delta_abertura": 1.5707963267948966,
+      "aberta": false,
+      "trancada": true,
+      "chave": "chave_porao",
+      "rotulo": "Porta do porão",
+      "texto_trancada": "Um cadeado. Enferrujado por fora, limpo na parte de baixo — foi aberto há pouco tempo."
+    }
+  ],
+  "interativos": [
+    {
+      "id": "carro",
+      "posicao": [
+        -0.2,
+        0.9,
+        24.5
+      ],
+      "tamanho": [
+        4.4,
+        1.6,
+        2
+      ],
+      "rotulo": "O carro",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "Deixei o motor esfriar. As chaves estão no meu bolso. Não sei por que confiro isso três vezes."
+      }
+    },
+    {
+      "id": "caixa_correio",
+      "posicao": [
+        1.9,
+        1.05,
+        20.6
+      ],
+      "tamanho": [
+        0.4,
+        0.35,
+        0.3
+      ],
+      "rotulo": "Caixa de correio",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "Vazia. Mas não tem uma folha sequer de mato crescendo no poste — alguém andou por aqui."
+      }
+    },
+    {
+      "id": "carta_mao",
+      "posicao": [
+        0,
+        1.2,
+        18.5
+      ],
+      "tamanho": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "rotulo": "A carta",
+      "verbo": "Ler",
+      "oculto": true,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "carta_convite"
+      }
+    },
+    {
+      "id": "vaso_varanda",
+      "posicao": [
+        2.2,
+        0.2,
+        10.3
+      ],
+      "tamanho": [
+        0.45,
+        0.5,
+        0.45
+      ],
+      "rotulo": "Vaso de planta",
+      "verbo": "Olhar embaixo",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "pickup",
+        "item": "chave_casa",
+        "clue": "chave_no_lugar"
+      }
+    },
+    {
+      "id": "vaso_varanda2",
+      "posicao": [
+        -2.4,
+        0.2,
+        10.3
+      ],
+      "tamanho": [
+        0.45,
+        0.5,
+        0.45
+      ],
+      "rotulo": "Vaso de planta",
+      "verbo": "Olhar embaixo",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "Terra seca e um caramujo vazio. Nada mais."
+      }
+    },
+    {
+      "id": "placa_varanda",
+      "posicao": [
+        -1,
+        1.9,
+        9.2
+      ],
+      "tamanho": [
+        0.5,
+        0.3,
+        0.1
+      ],
+      "rotulo": "Placa na parede",
+      "verbo": "Ler",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "\"VASQUES\". Esmaltada, torta, presa com um prego só. Ninguém tira a placa de uma casa que ainda espera alguém."
+      }
+    },
+    {
+      "id": "interruptor_entrada",
+      "posicao": [
+        2.38,
+        1.3,
+        8.3
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_entrada"
+      }
+    },
+    {
+      "id": "correspondencia",
+      "posicao": [
+        -1.62,
+        0.92,
+        8.2
+      ],
+      "tamanho": [
+        0.46,
+        0.3,
+        0.36
+      ],
+      "rotulo": "Correspondência",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "conta_luz"
+      }
+    },
+    {
+      "id": "espelho_entrada",
+      "posicao": [
+        -2.42,
+        1.7,
+        8.2
+      ],
+      "tamanho": [
+        0.12,
+        0.8,
+        0.6
+      ],
+      "rotulo": "Espelho",
+      "verbo": "Olhar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "espelho_entrada"
+      }
+    },
+    {
+      "id": "interruptor_sala",
+      "posicao": [
+        -2.62,
+        1.3,
+        5
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_sala"
+      }
+    },
+    {
+      "id": "radio_sala",
+      "posicao": [
+        -3.2,
+        1,
+        8.4
+      ],
+      "tamanho": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "rotulo": "Rádio",
+      "verbo": "Ligar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "radio"
+      }
+    },
+    {
+      "id": "estante_sala",
+      "posicao": [
+        -7.5,
+        1.2,
+        7.2
+      ],
+      "tamanho": [
+        0.5,
+        2,
+        1.5
+      ],
+      "rotulo": "Estante",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "recorte_jornal"
+      }
+    },
+    {
+      "id": "mesa_sala",
+      "posicao": [
+        -5.2,
+        0.5,
+        5.6
+      ],
+      "tamanho": [
+        1.1,
+        0.4,
+        0.7
+      ],
+      "rotulo": "Papéis sobre a mesa",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "ficha_policial"
+      }
+    },
+    {
+      "id": "sofa_sala",
+      "posicao": [
+        -5.2,
+        0.5,
+        3.4
+      ],
+      "tamanho": [
+        2,
+        1,
+        0.9
+      ],
+      "rotulo": "Sofá",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "A poeira está uniforme no encosto, mas o assento da esquerda tem uma depressão limpa. Alguém sentou aqui. Não há vinte e sete anos."
+      }
+    },
+    {
+      "id": "relogio_sala",
+      "posicao": [
+        -2.66,
+        1.9,
+        4
+      ],
+      "tamanho": [
+        0.3,
+        0.4,
+        0.4
+      ],
+      "rotulo": "Relógio de parede",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "relogio"
+      }
+    },
+    {
+      "id": "quadro_luz",
+      "posicao": [
+        2.66,
+        1.5,
+        4.5
+      ],
+      "tamanho": [
+        0.24,
+        0.55,
+        0.45
+      ],
+      "rotulo": "Quadro de energia",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "energia"
+      }
+    },
+    {
+      "id": "geladeira",
+      "posicao": [
+        3.2,
+        1.3,
+        8.4
+      ],
+      "tamanho": [
+        0.85,
+        1.7,
+        0.8
+      ],
+      "rotulo": "Geladeira",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "bilhete_geladeira",
+        "clue": "bilhete_geladeira"
+      }
+    },
+    {
+      "id": "pia_cozinha",
+      "posicao": [
+        4.2,
+        0.95,
+        8.6
+      ],
+      "tamanho": [
+        0.8,
+        0.4,
+        0.7
+      ],
+      "rotulo": "Pia",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "pia"
+      }
+    },
+    {
+      "id": "mesa_cozinha",
+      "posicao": [
+        5.4,
+        0.8,
+        5.4
+      ],
+      "tamanho": [
+        1.4,
+        0.3,
+        0.9
+      ],
+      "rotulo": "Mesa da cozinha",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "Duas xícaras. Uma virada para baixo, escorrida há muito tempo. A outra em pé, com um anel escuro seco no fundo. Duas."
+      }
+    },
+    {
+      "id": "interruptor_cozinha",
+      "posicao": [
+        2.66,
+        1.3,
+        5.6
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_cozinha"
+      }
+    },
+    {
+      "id": "galeria_corredor",
+      "posicao": [
+        -2.42,
+        1.7,
+        1.2
+      ],
+      "tamanho": [
+        0.15,
+        1.2,
+        4.6
+      ],
+      "rotulo": "Retratos no corredor",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "galeria"
+      }
+    },
+    {
+      "id": "interruptor_corredor",
+      "posicao": [
+        2.38,
+        1.3,
+        3.8
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_corredor_1"
+      }
+    },
+    {
+      "id": "armario_corredor",
+      "posicao": [
+        -2.2,
+        0.5,
+        3
+      ],
+      "tamanho": [
+        0.5,
+        0.9,
+        0.9
+      ],
+      "rotulo": "Armário do corredor",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "lista_helena"
+      }
+    },
+    {
+      "id": "espelho_banheiro",
+      "posicao": [
+        3.5,
+        1.7,
+        2.42
+      ],
+      "tamanho": [
+        0.6,
+        0.8,
+        0.15
+      ],
+      "rotulo": "Espelho do banheiro",
+      "verbo": "Olhar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "espelho_banheiro"
+      }
+    },
+    {
+      "id": "banheira",
+      "posicao": [
+        6.6,
+        0.4,
+        -0.6
+      ],
+      "tamanho": [
+        0.9,
+        0.8,
+        1.8
+      ],
+      "rotulo": "Banheira",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "examine",
+        "text": "Seca. Uma marca de nível a meia altura, escura, perfeitamente reta. Ficou cheia por muito tempo antes de alguém puxar a válvula."
+      }
+    },
+    {
+      "id": "armario_banheiro",
+      "posicao": [
+        3.2,
+        0.5,
+        -1.1
+      ],
+      "tamanho": [
+        0.65,
+        0.8,
+        0.5
+      ],
+      "rotulo": "Armário",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "receita_medica",
+        "clue": "remedios"
+      }
+    },
+    {
+      "id": "interruptor_quarto",
+      "posicao": [
+        -2.62,
+        1.3,
+        -2.6
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_quarto"
+      }
+    },
+    {
+      "id": "criado_mudo",
+      "posicao": [
+        -6.4,
+        0.4,
+        0.4
+      ],
+      "tamanho": [
+        0.55,
+        0.7,
+        0.5
+      ],
+      "rotulo": "Criado-mudo",
+      "verbo": "Abrir a gaveta",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "diario_helena_1"
+      }
+    },
+    {
+      "id": "cama_helena",
+      "posicao": [
+        -6.4,
+        0.4,
+        -1.2
+      ],
+      "tamanho": [
+        2.2,
+        0.8,
+        1.6
+      ],
+      "rotulo": "A cama",
+      "verbo": "Olhar embaixo do colchão",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "pickup",
+        "item": "chave_pequena"
+      }
+    },
+    {
+      "id": "guarda_roupa",
+      "posicao": [
+        -3.3,
+        1,
+        -3.6
+      ],
+      "tamanho": [
+        0.7,
+        2,
+        1.3
+      ],
+      "rotulo": "Guarda-roupa",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "guarda_roupa"
+      }
+    },
+    {
+      "id": "caixa_musica",
+      "posicao": [
+        -3.55,
+        0.85,
+        0.6
+      ],
+      "tamanho": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "rotulo": "Caixa de música",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": {
+        "item": "chave_pequena"
+      },
+      "texto_bloqueado": "Tem uma fechadura minúscula. Precisa de uma chave do tamanho de uma unha.",
+      "acao": {
+        "type": "script",
+        "id": "caixa_musica"
+      }
+    },
+    {
+      "id": "escrivaninha_quarto",
+      "posicao": [
+        -3.4,
+        0.4,
+        0.6
+      ],
+      "tamanho": [
+        0.9,
+        0.5,
+        1.7
+      ],
+      "rotulo": "Escrivaninha",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "diario_helena_2"
+      }
+    },
+    {
+      "id": "retrato_quarto",
+      "posicao": [
+        -7.78,
+        1.8,
+        -0.2
+      ],
+      "tamanho": [
+        0.18,
+        0.5,
+        0.4
+      ],
+      "rotulo": "Retrato na parede",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "photo",
+        "photo": "retrato_quarto",
+        "doc": "foto_parede"
+      }
+    },
+    {
+      "id": "interruptor_escritorio",
+      "posicao": [
+        2.66,
+        1.3,
+        -3.2
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_escritorio"
+      }
+    },
+    {
+      "id": "carta_escrivaninha",
+      "posicao": [
+        5.45,
+        0.84,
+        -6.22
+      ],
+      "tamanho": [
+        0.42,
+        0.16,
+        0.34
+      ],
+      "rotulo": "Carta sobre a escrivaninha",
+      "verbo": "Ler",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "carta_1998",
+        "clue": "carta_impossivel"
+      }
+    },
+    {
+      "id": "maquina_escrever",
+      "posicao": [
+        6.05,
+        0.92,
+        -6.42
+      ],
+      "tamanho": [
+        0.38,
+        0.3,
+        0.32
+      ],
+      "rotulo": "Máquina de escrever",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "maquina"
+      }
+    },
+    {
+      "id": "gravador",
+      "posicao": [
+        5.42,
+        0.84,
+        -6.62
+      ],
+      "tamanho": [
+        0.32,
+        0.16,
+        0.26
+      ],
+      "rotulo": "Gravador",
+      "verbo": "Ouvir a fita",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "tape",
+        "tape": "fita_01"
+      }
+    },
+    {
+      "id": "fotografia",
+      "posicao": [
+        6.62,
+        0.93,
+        -6.62
+      ],
+      "tamanho": [
+        0.32,
+        0.3,
+        0.28
+      ],
+      "rotulo": "Fotografia",
+      "verbo": "Pegar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "photo",
+        "photo": "foto_escrivaninha",
+        "doc": "foto_escrivaninha"
+      }
+    },
+    {
+      "id": "arquivo_aco_1",
+      "posicao": [
+        3.1,
+        0.7,
+        -8.3
+      ],
+      "tamanho": [
+        0.6,
+        1.5,
+        0.7
+      ],
+      "rotulo": "Arquivo de aço",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "pasta_visitante"
+      }
+    },
+    {
+      "id": "gaveta_escrivaninha",
+      "posicao": [
+        6.5,
+        0.4,
+        -6.4
+      ],
+      "tamanho": [
+        0.6,
+        0.66,
+        0.8
+      ],
+      "rotulo": "Gaveta da escrivaninha",
+      "verbo": "Abrir",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "gaveta_escritorio"
+      }
+    },
+    {
+      "id": "chave_arquivo_aparece",
+      "posicao": [
+        -2.14,
+        0.87,
+        8.15
+      ],
+      "tamanho": [
+        0.22,
+        0.18,
+        0.24
+      ],
+      "rotulo": "Chave sobre o aparador",
+      "verbo": "Pegar",
+      "oculto": true,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "pickup",
+        "item": "chave_arquivo",
+        "clue": "chave_aparecida"
+      }
+    },
+    {
+      "id": "caixa_musica_entrada",
+      "posicao": [
+        -1.55,
+        0.87,
+        8.2
+      ],
+      "tamanho": [
+        0.3,
+        0.24,
+        0.26
+      ],
+      "rotulo": "Caixa de música",
+      "verbo": "Examinar",
+      "oculto": true,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "caixa_musica_mudou"
+      }
+    },
+    {
+      "id": "cadeira_corredor",
+      "posicao": [
+        0,
+        0.75,
+        -6.6
+      ],
+      "tamanho": [
+        0.7,
+        1.1,
+        0.7
+      ],
+      "rotulo": "Cadeira no corredor",
+      "verbo": "Examinar",
+      "oculto": true,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "cadeira_corredor"
+      }
+    },
+    {
+      "id": "arquivo_gavetas",
+      "posicao": [
+        -6.9,
+        0.98,
+        -8.4
+      ],
+      "tamanho": [
+        2.3,
+        1.5,
+        0.75
+      ],
+      "rotulo": "Arquivos de aço",
+      "verbo": "Abrir as gavetas",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "arquivo_gavetas"
+      }
+    },
+    {
+      "id": "arquivo_mesa",
+      "posicao": [
+        -4.4,
+        0.9,
+        -8
+      ],
+      "tamanho": [
+        1.7,
+        0.4,
+        1
+      ],
+      "rotulo": "Caixas sobre a mesa",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "material_devolvido"
+      }
+    },
+    {
+      "id": "arquivo_estante",
+      "posicao": [
+        -7.6,
+        1.2,
+        -6
+      ],
+      "tamanho": [
+        0.55,
+        2,
+        1.7
+      ],
+      "rotulo": "Estante do arquivo",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "indice_helena"
+      }
+    },
+    {
+      "id": "interruptor_arquivo",
+      "posicao": [
+        -2.62,
+        1.3,
+        -5.4
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_arquivo"
+      }
+    },
+    {
+      "id": "interruptor_porao",
+      "posicao": [
+        2,
+        -1.3999999999999997,
+        -13.45
+      ],
+      "tamanho": [
+        0.16,
+        0.24,
+        0.2
+      ],
+      "rotulo": "Interruptor",
+      "verbo": "Acionar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "switch",
+        "light": "luz_porao"
+      }
+    },
+    {
+      "id": "porao_colchao",
+      "posicao": [
+        0.4,
+        -2.3999999999999995,
+        -18.8
+      ],
+      "tamanho": [
+        2,
+        0.6,
+        1.1
+      ],
+      "rotulo": "Colchão no chão",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "porao_colchao"
+      }
+    },
+    {
+      "id": "porao_cadeira",
+      "posicao": [
+        1.2,
+        -2.0999999999999996,
+        -16.6
+      ],
+      "tamanho": [
+        0.7,
+        1.1,
+        0.7
+      ],
+      "rotulo": "Cadeira",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "porao_cadeira"
+      }
+    },
+    {
+      "id": "porao_lampiao",
+      "posicao": [
+        -1.6,
+        -2.3999999999999995,
+        -17.4
+      ],
+      "tamanho": [
+        0.34,
+        0.44,
+        0.34
+      ],
+      "rotulo": "Lampião",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "porao_lampiao"
+      }
+    },
+    {
+      "id": "porao_mesa",
+      "posicao": [
+        4.6,
+        -1.7499999999999996,
+        -15.4
+      ],
+      "tamanho": [
+        1.7,
+        0.4,
+        0.9
+      ],
+      "rotulo": "Papéis sobre a mesa",
+      "verbo": "Examinar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "read",
+        "doc": "caderno_porao",
+        "clue": "letra_diferente"
+      }
+    },
+    {
+      "id": "porao_parede",
+      "posicao": [
+        1.2,
+        -1.4999999999999996,
+        -20.32
+      ],
+      "tamanho": [
+        3.6,
+        1.8,
+        0.3
+      ],
+      "rotulo": "A parede do fundo",
+      "verbo": "Olhar",
+      "oculto": false,
+      "exige": null,
+      "texto_bloqueado": "",
+      "acao": {
+        "type": "script",
+        "id": "porao_parede"
+      }
+    }
+  ],
+  "luzes": [
+    {
+      "id": "luz_sala_pe",
+      "posicao": [
+        -7,
+        1.45,
+        4.2
+      ],
+      "cor": [
+        1,
+        0.78,
+        0.5
+      ],
+      "alcance": 4.2,
+      "intensidade": 0.7,
+      "acesa": false
+    },
+    {
+      "id": "luz_sala",
+      "posicao": [
+        -5.2,
+        2.2199999999999998,
+        5.2
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_cozinha",
+      "posicao": [
+        5.4,
+        2.2199999999999998,
+        6
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_entrada",
+      "posicao": [
+        0,
+        2.2199999999999998,
+        7
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_corredor_1",
+      "posicao": [
+        0,
+        2.2199999999999998,
+        1.5
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_corredor_2",
+      "posicao": [
+        0,
+        2.2199999999999998,
+        -5.5
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_banheiro",
+      "posicao": [
+        5.4,
+        2.2199999999999998,
+        0.6
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_quarto",
+      "posicao": [
+        -5.2,
+        2.2199999999999998,
+        -1.5
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_escritorio",
+      "posicao": [
+        5.4,
+        2.2199999999999998,
+        -5.2
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_escritorio_pe",
+      "posicao": [
+        3.3,
+        1.45,
+        -2.6
+      ],
+      "cor": [
+        1,
+        0.78,
+        0.5
+      ],
+      "alcance": 4.2,
+      "intensidade": 0.7,
+      "acesa": false
+    },
+    {
+      "id": "luz_arquivo",
+      "posicao": [
+        -5.2,
+        2.2199999999999998,
+        -6.8
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    },
+    {
+      "id": "luz_porao",
+      "posicao": [
+        0,
+        -0.7499999999999998,
+        -16.5
+      ],
+      "cor": [
+        1,
+        0.82,
+        0.58
+      ],
+      "alcance": 5.2,
+      "intensidade": 0.85,
+      "acesa": false
+    }
+  ]
+}

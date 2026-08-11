@@ -1,0 +1,446 @@
+{
+  "carta_recebida": {
+    "id": "carta_recebida",
+    "numero": 1,
+    "titulo": "A carta sem remetente",
+    "corpo": "Alguém sabe do meu divórcio, da minha insônia e do horário exato em que eu acordo. Postada em Vale das Pedras.",
+    "tags": [
+      "carta"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mesma_maquina"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "chave_no_lugar": {
+    "id": "chave_no_lugar",
+    "numero": 2,
+    "titulo": "A chave embaixo do vaso",
+    "corpo": "Exatamente onde a carta disse que estaria. O vaso da direita. Eu nem cheguei a tentar o da esquerda.",
+    "tags": [
+      "casa",
+      "previsao"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "carta_impossivel"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "conta_paga": {
+    "id": "conta_paga",
+    "numero": 3,
+    "titulo": "A conta de luz está paga",
+    "corpo": "Consumo de 41 kWh no mês passado, numa casa vazia há vinte e sete anos. Alguém mantém esta casa viva.",
+    "tags": [
+      "presenca",
+      "recente"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "cadeado_novo"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "mesa_para_dois": {
+    "id": "mesa_para_dois",
+    "numero": 4,
+    "titulo": "A mesa posta para duas pessoas",
+    "corpo": "Inquérito de 1998: comida para dois, decomposição de 72 horas. A segunda pessoa nunca foi identificada.",
+    "tags": [
+      "1998",
+      "segunda_pessoa"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "duas_xicaras",
+      "fotografia",
+      "caderno_porao"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "mesma_idade": {
+    "id": "mesma_idade",
+    "numero": 5,
+    "titulo": "Trinta e oito anos",
+    "corpo": "A idade de Helena quando desapareceu. A minha idade agora.",
+    "tags": [
+      "helena",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mesmo_remedio"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "bilhete_geladeira": {
+    "id": "bilhete_geladeira",
+    "numero": 6,
+    "titulo": "\"não deixar o corredor no escuro\"",
+    "corpo": "Última linha de uma lista de compras banal. Eu tenho a mesma regra. Sempre tive.",
+    "tags": [
+      "helena",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "relogio_parado"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "visitante_existe": {
+    "id": "visitante_existe",
+    "numero": 7,
+    "titulo": "A visitante que ainda viria",
+    "corpo": "Desde março de 1998, Helena escreve sobre uma mulher que ainda vai chegar. Casaco escuro, comprido demais para o calor.",
+    "tags": [
+      "visitante",
+      "casaco"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "casaco"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "lista_sobre_mim": {
+    "id": "lista_sobre_mim",
+    "numero": 8,
+    "titulo": "A lista de onze itens",
+    "corpo": "Helena listou o que sabia sobre a visitante. Sete acertos sobre mim, incluindo a cicatriz na mão esquerda, que eu nunca contei a ninguém.",
+    "tags": [
+      "visitante",
+      "eu",
+      "previsao"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "secao_d",
+      "chave_aparecida"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "mesmo_remedio": {
+    "id": "mesmo_remedio",
+    "numero": 9,
+    "titulo": "Lorazepam",
+    "corpo": "Receitado a Helena em agosto de 1998 para paralisia do sono. Eu tomei o mesmo por quatro meses este ano.",
+    "tags": [
+      "helena",
+      "eu",
+      "clinico"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mesma_idade"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "remedios": {
+    "id": "remedios",
+    "numero": 10,
+    "titulo": "\"lucidez\"",
+    "corpo": "A palavra escrita no campo de diagnóstico presumido do encaminhamento que nunca foi entregue.",
+    "tags": [
+      "clinico"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "secao_d"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "medo_de_helena": {
+    "id": "medo_de_helena",
+    "numero": 11,
+    "titulo": "O medo de Helena",
+    "corpo": "\"Não tenho medo dela. Tenho medo de que ela chegue e eu não esteja mais aqui para explicar.\"",
+    "tags": [
+      "helena",
+      "visitante"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "fita_helena"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "fita_helena": {
+    "id": "fita_helena",
+    "numero": 12,
+    "titulo": "A gravação de 30 de agosto",
+    "corpo": "Helena antecipa as duas versões oficiais — fuga e suicídio — e nega as duas. \"Eu não sei o que é a terceira coisa.\"",
+    "tags": [
+      "helena",
+      "1998",
+      "desaparecimento"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "medo_de_helena"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "carta_impossivel": {
+    "id": "carta_impossivel",
+    "numero": 13,
+    "titulo": "A carta de 21 de julho de 1998",
+    "corpo": "Descreve a minha chegada de hoje: o carro parado antes da porteira, o vaso, a lanterna acesa antes de precisar. Termina com \"Ela ainda não sabe que está aqui.\"",
+    "tags": [
+      "impossivel",
+      "previsao",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "chave_no_lugar",
+      "bilhete_lampiao"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "secao_d": {
+    "id": "secao_d",
+    "numero": 14,
+    "titulo": "Seção D — as verificações",
+    "corpo": "Helena testou a própria alucinação com vinte e duas afirmações verificáveis. Dezenove se confirmaram, incluindo uma cidade que só existiria a partir de 2004.",
+    "tags": [
+      "impossivel",
+      "metodo",
+      "previsao"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "lista_sobre_mim",
+      "remedios",
+      "gaveta_g"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "mesma_maquina": {
+    "id": "mesma_maquina",
+    "numero": 15,
+    "titulo": "A mesma máquina de escrever",
+    "corpo": "O \"a\" com o vinco e o \"s\" alto. A carta que me trouxe até aqui foi datilografada na máquina do escritório de Helena.",
+    "tags": [
+      "carta",
+      "presenca",
+      "recente"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "carta_recebida",
+      "mulher_da_familia"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "casaco": {
+    "id": "casaco",
+    "numero": 16,
+    "titulo": "O casaco no guarda-roupa",
+    "corpo": "Lã grossa, escuro, comprido, errado para o clima daqui. Igual ao que eu estou usando.",
+    "tags": [
+      "visitante",
+      "casaco",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "visitante_existe"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "fotografia": {
+    "id": "fotografia",
+    "numero": 17,
+    "titulo": "A fotografia",
+    "corpo": "Helena na frente desta casa, em março. Quando eu voltei à sala, havia uma segunda pessoa no enquadramento.",
+    "tags": [
+      "impossivel",
+      "segunda_pessoa",
+      "fotografia"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mesa_para_dois",
+      "relogio_parado"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "cadeado_novo": {
+    "id": "cadeado_novo",
+    "numero": 18,
+    "titulo": "O cadeado do porão",
+    "corpo": "Enferrujado por cima, limpo por baixo. Foi aberto recentemente, e mais de uma vez.",
+    "tags": [
+      "presenca",
+      "recente"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "conta_paga"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "duas_xicaras": {
+    "id": "duas_xicaras",
+    "numero": 19,
+    "titulo": "Duas xícaras",
+    "corpo": "Uma escorrida há muito tempo. A outra com um anel de café seco no fundo. Duas.",
+    "tags": [
+      "segunda_pessoa",
+      "presenca"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mesa_para_dois"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "relogio_parado": {
+    "id": "relogio_parado",
+    "numero": 20,
+    "titulo": "Os relógios",
+    "corpo": "O relógio da sala e o do corredor marcam 3h47. Os dois. É a hora em que eu acordo todas as noites.",
+    "tags": [
+      "eu",
+      "impossivel"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "bilhete_geladeira",
+      "fotografia",
+      "casa_mexeu"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "chave_aparecida": {
+    "id": "chave_aparecida",
+    "numero": 21,
+    "titulo": "A chave que apareceu",
+    "corpo": "Etiqueta \"ARQ\", sobre o aparador da entrada. Eu revirei aquela pilha de correspondência no meu primeiro quarto de hora nesta casa.",
+    "tags": [
+      "presenca",
+      "impossivel",
+      "recente"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "porta_aberta",
+      "lista_sobre_mim"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "casa_mexeu": {
+    "id": "casa_mexeu",
+    "numero": 22,
+    "titulo": "As coisas mudaram de lugar",
+    "corpo": "A cadeira da cozinha está no corredor, virada para a porta do porão. A caixa de música saiu do quarto e está na entrada. Nada disso é discutível: eu fotografei os dois cômodos.",
+    "tags": [
+      "presenca",
+      "impossivel"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "relogio_parado"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "porta_aberta": {
+    "id": "porta_aberta",
+    "numero": 23,
+    "titulo": "A porta da frente",
+    "corpo": "Eu tranquei. Tenho certeza de que tranquei, porque pensei em não trancar e decidi trancar. Estava aberta.",
+    "tags": [
+      "presenca",
+      "recente",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "chave_aparecida"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "mulher_da_familia": {
+    "id": "mulher_da_familia",
+    "numero": 24,
+    "titulo": "\"veio uma mulher. disse que era da família.\"",
+    "corpo": "Em 3 de novembro de 1998, alguém retirou o material apreendido de Helena alegando parentesco — de uma mulher sem parentes — e o devolveu à casa, organizado por ano.",
+    "tags": [
+      "conspiracao",
+      "presenca",
+      "1998"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "mesma_maquina"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "gaveta_g": {
+    "id": "gaveta_g",
+    "numero": 25,
+    "titulo": "A gaveta G",
+    "corpo": "O índice de Helena vai de A a G. A pasta G nunca foi escrita. A gaveta existe, está vazia, e o fundo não tem poeira.",
+    "tags": [
+      "helena",
+      "metodo"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "secao_d"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "caderno_porao": {
+    "id": "caderno_porao",
+    "numero": 26,
+    "titulo": "Vinte e três dias no porão",
+    "corpo": "Alguém morou aqui embaixo sabendo que havia outra pessoa na casa, e nunca subiu. \"a porta abre pelo lado de dentro. eu conferi todos os dias.\"",
+    "tags": [
+      "porao",
+      "segunda_pessoa",
+      "helena"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "letra_diferente",
+      "mesa_para_dois"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "bilhete_lampiao": {
+    "id": "bilhete_lampiao",
+    "numero": 27,
+    "titulo": "\"eu esperei vinte e sete anos\"",
+    "corpo": "Bilhete sob o lampião do porão, com a dobra gasta de tanto ser aberta e fechada. Vinte e sete anos é exatamente a distância entre 1998 e hoje.",
+    "tags": [
+      "porao",
+      "impossivel",
+      "previsao"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "carta_impossivel"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  },
+  "letra_diferente": {
+    "id": "letra_diferente",
+    "numero": 28,
+    "titulo": "A letra quase igual",
+    "corpo": "O caderno do porão tem a inclinação de Helena e o \"t\" alto de Helena. Mas o \"g\" desce reto, e o dela tem uma volta.",
+    "tags": [
+      "helena",
+      "segunda_pessoa",
+      "eu"
+    ],
+    "tese": "neutra",
+    "conexoes_possiveis": [
+      "caderno_porao"
+    ],
+    "textura": "res://assets/ui/card_papel.png"
+  }
+}

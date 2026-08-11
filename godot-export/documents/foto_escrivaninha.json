@@ -1,0 +1,28 @@
+{
+  "id": "foto_escrivaninha",
+  "tipo": "photo",
+  "titulo": "Fotografia emoldurada",
+  "procedencia": "Escritório, sobre a escrivaninha. Papel fosco, cantos gastos de manuseio.",
+  "paginas": [
+    "Helena, na frente desta casa. Meia-idade, casaco escuro, mãos cruzadas na frente do corpo. O sol está alto e ela está apertando os olhos.\n\nÉ a primeira vez que vejo o rosto dela fora de uma fotocópia de jornal.\n\nEla parece cansada e parece bem. As duas coisas ao mesmo tempo, do jeito que só acontece com gente de verdade.\n\nNo verso, a lápis: \"casa. março.\""
+  ],
+  "corpo": "Helena, na frente desta casa. Meia-idade, casaco escuro, mãos cruzadas na frente do corpo. O sol está alto e ela está apertando os olhos.\n\nÉ a primeira vez que vejo o rosto dela fora de uma fotocópia de jornal.\n\nEla parece cansada e parece bem. As duas coisas ao mesmo tempo, do jeito que só acontece com gente de verdade.\n\nNo verso, a lápis: \"casa. março.\"",
+  "nota_laura": "",
+  "pista": "",
+  "variantes": {
+    "2": {
+      "paginas": [
+        "Helena, na frente desta casa.\n\nE, meio passo atrás dela, à direita, uma segunda pessoa.\n\nEstá desfocada — moveu-se durante a exposição, ou a lente não a pegou. Dá para ver o casaco escuro. Dá para ver o comprimento do cabelo. Dá para ver o jeito de segurar a mão direita, um pouco fechada, como quem tem alguma coisa entre os dedos e não vai acender.\n\nNo verso, a lápis, a mesma letra: \"casa. março.\"\n\nSó isso. Nada sobre a segunda pessoa.",
+        "Eu coloquei esta fotografia de volta na mesa há dez minutos.\n\nHavia uma pessoa nela.\n\nExistem explicações. Eu sei que existem, eu ganho a vida com elas: eu vi errado da primeira vez, a luz estava pior, eu estava com a lanterna na mão e olhei rápido. A memória preenche. A memória é uma mentirosa profissional e eu sou a última pessoa do mundo que deveria confiar nela hoje.\n\nExistem explicações.\n\nEu só não estou conseguindo escolher uma."
+      ],
+      "corpo": "Helena, na frente desta casa.\n\nE, meio passo atrás dela, à direita, uma segunda pessoa.\n\nEstá desfocada — moveu-se durante a exposição, ou a lente não a pegou. Dá para ver o casaco escuro. Dá para ver o comprimento do cabelo. Dá para ver o jeito de segurar a mão direita, um pouco fechada, como quem tem alguma coisa entre os dedos e não vai acender.\n\nNo verso, a lápis, a mesma letra: \"casa. março.\"\n\nSó isso. Nada sobre a segunda pessoa.\n\nEu coloquei esta fotografia de volta na mesa há dez minutos.\n\nHavia uma pessoa nela.\n\nExistem explicações. Eu sei que existem, eu ganho a vida com elas: eu vi errado da primeira vez, a luz estava pior, eu estava com a lanterna na mão e olhei rápido. A memória preenche. A memória é uma mentirosa profissional e eu sou a última pessoa do mundo que deveria confiar nela hoje.\n\nExistem explicações.\n\nEu só não estou conseguindo escolher uma."
+    },
+    "4": {
+      "paginas": [
+        "A segunda pessoa está nítida.\n\nHelena é que está desfocada agora, apagada, como se a emulsão tivesse cedido só naquele ponto do papel.\n\nEu não vou escrever aqui de quem é o rosto.\n\nEu vou colocar a fotografia com a face para baixo, e vou sair desta sala, e vou continuar trabalhando, porque é isso que eu faço."
+      ],
+      "corpo": "A segunda pessoa está nítida.\n\nHelena é que está desfocada agora, apagada, como se a emulsão tivesse cedido só naquele ponto do papel.\n\nEu não vou escrever aqui de quem é o rosto.\n\nEu vou colocar a fotografia com a face para baixo, e vou sair desta sala, e vou continuar trabalhando, porque é isso que eu faço."
+    }
+  },
+  "foto_id": "foto_escrivaninha"
+}

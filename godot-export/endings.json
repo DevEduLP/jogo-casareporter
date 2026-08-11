@@ -1,0 +1,47 @@
+{
+  "helena": {
+    "id": "helena",
+    "titulo": "FINAL A — HELENA",
+    "tese": "A",
+    "paragrafos": [
+      "Laura fecha a porta da frente por fora e devolve a chave para debaixo do vaso da direita, porque é ali que ela fica.",
+      "Ela dirige até o posto desativado antes de perceber que não conferiu a hora nenhuma vez na estrada.",
+      "Na caixa de correio da casa, dois dias depois, o carteiro deposita um envelope sem remetente, endereçado com uma letra firme, inclinada para a direita, com o \"t\" cortado bem alto."
+    ],
+    "farpa": "O laudo do Instituto de Criminalística, anexado ao processo seis meses depois, conclui que a fotografia apresenta sinais de manipulação química compatíveis com técnicas de laboratório disponíveis em 1998."
+  },
+  "laura": {
+    "id": "laura",
+    "titulo": "FINAL B — LAURA",
+    "tese": "B",
+    "paragrafos": [
+      "Laura senta no degrau da varanda até o céu clarear, porque dirigir naquele estado seria irresponsável, e ser irresponsável é a única coisa que ela ainda consegue evitar.",
+      "Ela liga para o irmão. Ele atende no quinto toque, e a primeira coisa que ele diz é o nome dela, e a segunda é: \"de novo?\".",
+      "Ela não pergunta o que ele quis dizer com \"de novo\". Fica com a pergunta na garganta por toda a viagem de volta e por todos os anos seguintes."
+    ],
+    "farpa": "A caixa de papelão que Laura leva embora contém dezenove folhas manuscritas. Quando ela as espalha sobre a mesa do apartamento, três semanas depois, são vinte e duas."
+  },
+  "verdade": {
+    "id": "verdade",
+    "titulo": "FINAL C — A VERDADE",
+    "tese": "C",
+    "paragrafos": [
+      "O nome no débito automático é de uma empresa aberta em 1999, encerrada em 2016 e reaberta em 2021 no mesmo CNPJ.",
+      "Laura leva quatro meses para chegar ao endereço, e quando chega, é uma sala comercial com uma secretária que sorri, oferece café e diz que o titular está viajando.",
+      "A matéria sai em fevereiro. Onze mil palavras, nome, CNPJ, datas. É o melhor texto que ela já escreveu. Ninguém é preso."
+    ],
+    "farpa": "Na última página do caderno de Helena, numa folha que Laura jura ter fotografado em branco, está escrito: \"ela vai achar a empresa. deixa ela achar. é mais fácil do que a outra coisa.\""
+  },
+  "incerto": {
+    "id": "incerto",
+    "titulo": "FINAL — A VISITANTE",
+    "tese": "neutra",
+    "paragrafos": [
+      "Laura não escolhe.",
+      "Ela guarda os cadernos, as fitas e a fotografia numa caixa, e a caixa num armário, e não conta a ninguém — nem por medo, nem por vergonha, mas porque toda versão que ela ensaia em voz alta soa como a versão de uma pessoa que precisa de ajuda.",
+      "Ela volta à casa em outubro. Depois em março. Depois sem contar.",
+      "Em algum momento ela para de trancar a porta ao sair."
+    ],
+    "farpa": "Vinte e sete anos é exatamente a distância entre 1998 e hoje. É também, se alguém estiver contando, a distância entre hoje e o dia em que outra pessoa vai encontrar esta casa."
+  }
+}

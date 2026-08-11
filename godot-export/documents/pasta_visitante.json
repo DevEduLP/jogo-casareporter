@@ -1,0 +1,14 @@
+{
+  "id": "pasta_visitante",
+  "tipo": "report",
+  "titulo": "Pasta — \"A VISITANTE\"",
+  "procedencia": "Primeira gaveta do arquivo de aço. A etiqueta foi datilografada.",
+  "paginas": [
+    "A pasta é grossa. Não é um delírio rabiscado num guardanapo: é um trabalho. Índice, subdivisões, referência cruzada entre folhas numeradas.\n\nHelena catalogou a própria alucinação com o rigor de quem prepara uma tese.\n\nSEÇÃO A — Aparições (datas, duração, condições de luz)\nSEÇÃO B — Descrição física (revisada 4x)\nSEÇÃO C — Falas ouvidas\nSEÇÃO D — Verificações",
+    "A SEÇÃO D é a que me interrompe.\n\nHelena não acreditou em si mesma. Ela testou.\n\n\"Se é produção da minha cabeça, então não pode conter informação que eu não possua. Método: registrar afirmações verificáveis e conferir depois.\"\n\nVinte e duas afirmações. Vinte e duas.\n\nAo lado de cada uma, a lápis, uma marca posterior: ✓ ou ✗ ou ?",
+    "Dezenove receberam ✓.\n\nEntre elas:\n\n\"Fala em 'apuração' quando quer dizer 'pesquisa'.\" ✓\n\"Diz o nome de uma cidade que não existe no mapa de 1998.\" ✓ — nota: \"consultei o atlas na escola. não existe. anotar de novo em 5 anos.\"\n\"Tem um irmão de quem não fala.\" ✓\n\nDuas receberam ✗:\n\n\"Está grávida.\" ✗\n\"Chegou de manhã.\" ✗\n\nE uma recebeu ?:\n\n\"Diz que se chama Helena.\""
+  ],
+  "corpo": "A pasta é grossa. Não é um delírio rabiscado num guardanapo: é um trabalho. Índice, subdivisões, referência cruzada entre folhas numeradas.\n\nHelena catalogou a própria alucinação com o rigor de quem prepara uma tese.\n\nSEÇÃO A — Aparições (datas, duração, condições de luz)\nSEÇÃO B — Descrição física (revisada 4x)\nSEÇÃO C — Falas ouvidas\nSEÇÃO D — Verificações\n\nA SEÇÃO D é a que me interrompe.\n\nHelena não acreditou em si mesma. Ela testou.\n\n\"Se é produção da minha cabeça, então não pode conter informação que eu não possua. Método: registrar afirmações verificáveis e conferir depois.\"\n\nVinte e duas afirmações. Vinte e duas.\n\nAo lado de cada uma, a lápis, uma marca posterior: ✓ ou ✗ ou ?\n\nDezenove receberam ✓.\n\nEntre elas:\n\n\"Fala em 'apuração' quando quer dizer 'pesquisa'.\" ✓\n\"Diz o nome de uma cidade que não existe no mapa de 1998.\" ✓ — nota: \"consultei o atlas na escola. não existe. anotar de novo em 5 anos.\"\n\"Tem um irmão de quem não fala.\" ✓\n\nDuas receberam ✗:\n\n\"Está grávida.\" ✗\n\"Chegou de manhã.\" ✗\n\nE uma recebeu ?:\n\n\"Diz que se chama Helena.\"",
+  "nota_laura": "Eu tenho um irmão. Nós não nos falamos desde o enterro do meu pai. Isso não está em lugar nenhum. Isso não está no meu Instagram, não está numa matéria, não está numa ficha de RH.\n\nE a cidade. Existe. Foi emancipada em 2004.",
+  "pista": "secao_d"
+}

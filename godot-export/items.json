@@ -1,0 +1,56 @@
+{
+  "lanterna": {
+    "id": "lanterna",
+    "nome": "Lanterna",
+    "descricao": "Comprada num posto na estrada. Pilhas novas. Foi a única decisão prática que eu tomei hoje.",
+    "legivel": ""
+  },
+  "carta_convite": {
+    "id": "carta_convite",
+    "nome": "A carta",
+    "descricao": "Papel comum, datilografado. Onze dias comigo.",
+    "legivel": "carta_convite"
+  },
+  "chave_casa": {
+    "id": "chave_casa",
+    "nome": "Chave da casa",
+    "descricao": "Estava embaixo do vaso da direita, embrulhada num plástico dobrado com cuidado. O plástico não tem vinte e sete anos.",
+    "legivel": ""
+  },
+  "chave_pequena": {
+    "id": "chave_pequena",
+    "nome": "Chave miúda",
+    "descricao": "Do tamanho de uma unha. Estava entre o colchão e o estrado, do lado direito da cama.",
+    "legivel": ""
+  },
+  "chave_escritorio": {
+    "id": "chave_escritorio",
+    "nome": "Chave do escritório",
+    "descricao": "Estava dentro da caixa de música, sob o mecanismo. \"No lugar onde a gente esconde chave quando quer que seja encontrada.\"",
+    "legivel": ""
+  },
+  "chave_arquivo": {
+    "id": "chave_arquivo",
+    "nome": "Chave do arquivo",
+    "descricao": "Etiqueta de papel presa com barbante: \"ARQ\".",
+    "legivel": ""
+  },
+  "chave_porao": {
+    "id": "chave_porao",
+    "nome": "Chave do cadeado",
+    "descricao": "Pesada. O dente está polido de uso recente.",
+    "legivel": ""
+  },
+  "fita_01": {
+    "id": "fita_01",
+    "nome": "Fita 01",
+    "descricao": "\"casa (quarto/corredor)\". Escrito à mão na etiqueta.",
+    "legivel": ""
+  },
+  "fotografia": {
+    "id": "fotografia",
+    "nome": "Fotografia",
+    "descricao": "Helena na frente desta casa. Março.",
+    "legivel": "foto_escrivaninha"
+  }
+}

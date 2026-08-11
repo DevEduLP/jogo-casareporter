@@ -1,0 +1,318 @@
+{
+  "carta_convite": {
+    "id": "carta_convite",
+    "tipo": "letter",
+    "titulo": "A carta",
+    "procedencia": "Sem remetente. Postada em Vale das Pedras, há onze dias.",
+    "paginas": [
+      "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Não do jeito que todo mundo diz que parou de dormir — sei que você acorda às 3h47 e fica olhando o teto até clarear, e que já são quatro meses assim. Sei que você não desfez as caixas do apartamento novo. Sei que ainda existe uma escova de dentes que não é sua no copo do banheiro e que você não teve coragem de jogar fora.\n\nNão escrevo para assustar você. Escrevo porque você é a única pessoa que ainda faz perguntas sobre Helena Vasques.",
+      "O caso foi arquivado em outubro de 1998 como desaparecimento voluntário. Você sabe disso. Você escreveu duas páginas sobre isso em 2019 e o jornal cortou para seis parágrafos.\n\nO que você não sabe é que a casa continua lá. Inteira. Ninguém vendeu, ninguém demoliu, ninguém entrou.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou.",
+      "Uma última coisa, e depois eu paro.\n\nHelena escreveu sobre uma visitante. Escreveu durante meses, quase todos os dias, sobre uma mulher que ainda viria. Descreveu o cabelo, o casaco, o jeito de segurar o cigarro sem fumar.\n\nTodo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nVá ver."
+    ],
+    "corpo": "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Não do jeito que todo mundo diz que parou de dormir — sei que você acorda às 3h47 e fica olhando o teto até clarear, e que já são quatro meses assim. Sei que você não desfez as caixas do apartamento novo. Sei que ainda existe uma escova de dentes que não é sua no copo do banheiro e que você não teve coragem de jogar fora.\n\nNão escrevo para assustar você. Escrevo porque você é a única pessoa que ainda faz perguntas sobre Helena Vasques.\n\nO caso foi arquivado em outubro de 1998 como desaparecimento voluntário. Você sabe disso. Você escreveu duas páginas sobre isso em 2019 e o jornal cortou para seis parágrafos.\n\nO que você não sabe é que a casa continua lá. Inteira. Ninguém vendeu, ninguém demoliu, ninguém entrou.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou.\n\nUma última coisa, e depois eu paro.\n\nHelena escreveu sobre uma visitante. Escreveu durante meses, quase todos os dias, sobre uma mulher que ainda viria. Descreveu o cabelo, o casaco, o jeito de segurar o cigarro sem fumar.\n\nTodo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nVá ver.",
+    "nota_laura": "Onze dias. Li essa carta trinta vezes em onze dias e continuo sem saber o que me irrita mais: o que ela sabe, ou o fato de eu ter vindo mesmo assim.",
+    "pista": "carta_recebida",
+    "variantes": {
+      "4": {
+        "paginas": [
+          "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Sei que você acorda às 3h47 e fica olhando o teto até clarear.\n\nSei que você já leu esta carta trinta e uma vezes.",
+          "O caso foi arquivado em outubro de 1998 como desaparecimento voluntário.\n\nA casa continua lá. Inteira.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou. A do porão está no arquivo, e a do arquivo você já achou, ou vai achar em alguns minutos, dependendo de quando você estiver lendo isto.",
+          "Helena escreveu sobre uma visitante. Todo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nDesce."
+        ],
+        "corpo": "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Sei que você acorda às 3h47 e fica olhando o teto até clarear.\n\nSei que você já leu esta carta trinta e uma vezes.\n\nO caso foi arquivado em outubro de 1998 como desaparecimento voluntário.\n\nA casa continua lá. Inteira.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou. A do porão está no arquivo, e a do arquivo você já achou, ou vai achar em alguns minutos, dependendo de quando você estiver lendo isto.\n\nHelena escreveu sobre uma visitante. Todo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nDesce."
+      }
+    }
+  },
+  "conta_luz": {
+    "id": "conta_luz",
+    "tipo": "note",
+    "titulo": "Correspondência acumulada",
+    "procedencia": "Entrada, sobre o aparador.",
+    "paginas": [
+      "Anos de papel. Propaganda de supermercado que fechou, três avisos de recadastramento, um catálogo de sementes de 2003.\n\nE, em cima de tudo, aberta, uma conta de energia.\n\nVASQUES, H. — Estrada do Cedro s/n.\nConsumo: 41 kWh.\nVencimento: mês passado.\nSituação: PAGA.",
+      "Alguém está pagando a luz de uma casa vazia há vinte e sete anos.\n\nOu alguém pagou este mês.\n\nIsso não é assombração. Isso é um débito automático, um envelope, uma pessoa com um nome e um CPF. É a coisa mais tranquilizadora que eu vi hoje.\n\nEntão por que meu peito está assim."
+    ],
+    "corpo": "Anos de papel. Propaganda de supermercado que fechou, três avisos de recadastramento, um catálogo de sementes de 2003.\n\nE, em cima de tudo, aberta, uma conta de energia.\n\nVASQUES, H. — Estrada do Cedro s/n.\nConsumo: 41 kWh.\nVencimento: mês passado.\nSituação: PAGA.\n\nAlguém está pagando a luz de uma casa vazia há vinte e sete anos.\n\nOu alguém pagou este mês.\n\nIsso não é assombração. Isso é um débito automático, um envelope, uma pessoa com um nome e um CPF. É a coisa mais tranquilizadora que eu vi hoje.\n\nEntão por que meu peito está assim.",
+    "nota_laura": "",
+    "pista": "conta_paga"
+  },
+  "bilhete_geladeira": {
+    "id": "bilhete_geladeira",
+    "tipo": "note",
+    "titulo": "Bilhete na porta da geladeira",
+    "procedencia": "Papel quadriculado, preso com um ímã de propaganda de farmácia.",
+    "paginas": [
+      "café\nsal grosso\npilhas (as pequenas)\nfita para o gravador — 3, se tiver\nlâmpada da varanda\n\nperguntar ao Nelson sobre o cachorro\n\nnão deixar o corredor no escuro",
+      "A letra é firme, inclinada para a direita, com o \"t\" cortado bem alto. Letra de quem escreve muito e rápido.\n\nAs quatro primeiras linhas são de uma mulher fazendo compras.\n\nA última não é."
+    ],
+    "corpo": "café\nsal grosso\npilhas (as pequenas)\nfita para o gravador — 3, se tiver\nlâmpada da varanda\n\nperguntar ao Nelson sobre o cachorro\n\nnão deixar o corredor no escuro\n\nA letra é firme, inclinada para a direita, com o \"t\" cortado bem alto. Letra de quem escreve muito e rápido.\n\nAs quatro primeiras linhas são de uma mulher fazendo compras.\n\nA última não é.",
+    "nota_laura": "Também não deixo o corredor no escuro. Nunca deixei. Isso não quer dizer nada. Metade do mundo não deixa.",
+    "pista": ""
+  },
+  "recorte_jornal": {
+    "id": "recorte_jornal",
+    "tipo": "clipping",
+    "titulo": "Recorte de jornal",
+    "procedencia": "Gazeta do Vale, 14 de outubro de 1998. Guardado entre dois livros.",
+    "paginas": [
+      "PROFESSORA DESAPARECE NA ZONA RURAL\n\nHelena Vasques, 38 anos, professora substituta da rede municipal, não é vista desde a noite de 2 de outubro. A Polícia Civil informou que não há sinais de arrombamento ou luta na residência da desaparecida, na Estrada do Cedro.\n\nSegundo vizinhos, Vasques vivia sozinha havia sete anos e mantinha pouco contato com a comunidade. \"Ela era educada, mas não era de conversa\", disse o proprietário do armazém local, Nelson Braga, 61.\n\nA residência foi encontrada com as portas destrancadas e a mesa posta. Nenhum documento pessoal, roupa ou valor foi levado.",
+      "O delegado responsável, Aírton Sequeira, declarou que \"tudo indica um afastamento voluntário\" e que o caso seguirá aberto por prazo regulamentar.\n\nFamiliares não foram localizados."
+    ],
+    "corpo": "PROFESSORA DESAPARECE NA ZONA RURAL\n\nHelena Vasques, 38 anos, professora substituta da rede municipal, não é vista desde a noite de 2 de outubro. A Polícia Civil informou que não há sinais de arrombamento ou luta na residência da desaparecida, na Estrada do Cedro.\n\nSegundo vizinhos, Vasques vivia sozinha havia sete anos e mantinha pouco contato com a comunidade. \"Ela era educada, mas não era de conversa\", disse o proprietário do armazém local, Nelson Braga, 61.\n\nA residência foi encontrada com as portas destrancadas e a mesa posta. Nenhum documento pessoal, roupa ou valor foi levado.\n\nO delegado responsável, Aírton Sequeira, declarou que \"tudo indica um afastamento voluntário\" e que o caso seguirá aberto por prazo regulamentar.\n\nFamiliares não foram localizados.",
+    "nota_laura": "Trinta e oito anos. Eu tenho trinta e oito anos. Já reparei nisso em 2019, escrevi no meu caderno, achei uma coincidência elegante e usei na abertura da matéria. O editor cortou.",
+    "pista": "mesma_idade"
+  },
+  "ficha_policial": {
+    "id": "ficha_policial",
+    "tipo": "report",
+    "titulo": "Cópia de inquérito",
+    "procedencia": "Fotocópia de terceira geração, quase ilegível nas bordas. Sobre a mesa da sala.",
+    "paginas": [
+      "INQUÉRITO 1.184/98 — DESAPARECIMENTO\nVítima: VASQUES, Helena. 38a. Solteira.\n\nDILIGÊNCIA DE 05/10/1998:\nResidência vistoriada. Portas destrancadas. Ausência de sinais de violência. Encontrados na sala: mesa posta para duas pessoas, alimentos em estado de decomposição compatível com 72h.\n\nOBS.: Não foi possível identificar a segunda pessoa. A desaparecida não recebia visitas segundo os vizinhos ouvidos.",
+      "DILIGÊNCIA DE 11/10/1998:\nRecolhido do escritório material manuscrito em grande volume (cadernos, folhas avulsas, fitas magnéticas). Conteúdo de natureza pessoal, parcialmente incoerente.\n\nVerificada menção reiterada a pessoa não identificada, referida apenas como \"a visitante\".\n\nSolicitada avaliação psiquiátrica póstuma do material. INDEFERIDA por ausência de corpo.",
+      "DESPACHO FINAL — 22/10/1998:\nAusentes indícios de crime. Arquive-se.\n\na) Aírton Sequeira, Delegado.\n\n—\n\nNo rodapé, a lápis, com outra letra:\n\n\"o material devolvido à residência em 03/11. por ordem de quem?\""
+    ],
+    "corpo": "INQUÉRITO 1.184/98 — DESAPARECIMENTO\nVítima: VASQUES, Helena. 38a. Solteira.\n\nDILIGÊNCIA DE 05/10/1998:\nResidência vistoriada. Portas destrancadas. Ausência de sinais de violência. Encontrados na sala: mesa posta para duas pessoas, alimentos em estado de decomposição compatível com 72h.\n\nOBS.: Não foi possível identificar a segunda pessoa. A desaparecida não recebia visitas segundo os vizinhos ouvidos.\n\nDILIGÊNCIA DE 11/10/1998:\nRecolhido do escritório material manuscrito em grande volume (cadernos, folhas avulsas, fitas magnéticas). Conteúdo de natureza pessoal, parcialmente incoerente.\n\nVerificada menção reiterada a pessoa não identificada, referida apenas como \"a visitante\".\n\nSolicitada avaliação psiquiátrica póstuma do material. INDEFERIDA por ausência de corpo.\n\nDESPACHO FINAL — 22/10/1998:\nAusentes indícios de crime. Arquive-se.\n\na) Aírton Sequeira, Delegado.\n\n—\n\nNo rodapé, a lápis, com outra letra:\n\n\"o material devolvido à residência em 03/11. por ordem de quem?\"",
+    "nota_laura": "",
+    "pista": "mesa_para_dois"
+  },
+  "lista_helena": {
+    "id": "lista_helena",
+    "tipo": "note",
+    "titulo": "Folha presa no armário do corredor",
+    "procedencia": "Escrita à mão. A mesma letra do bilhete da geladeira.",
+    "paginas": [
+      "COISAS QUE EU SEI SOBRE ELA\n\n1. Vai chegar de carro. Sozinha.\n2. Vai chegar à noite, e vai reclamar de ter chegado à noite.\n3. Não vai bater na porta. Vai olhar embaixo do vaso primeiro.\n4. Trabalha com perguntas. Não sei o nome do trabalho.\n5. Acabou de perder alguém, mas não morreu ninguém.\n6. Fuma, mas não acende.\n7. Vai achar que sou eu quem está confusa.",
+      "8. Tem uma cicatriz fina no dorso da mão esquerda. Vidro. Foi criança.\n9. Não vai gostar do corredor.\n10. Vai voltar mais de uma vez ao mesmo cômodo achando que esqueceu alguma coisa lá.\n\n11. Eu gosto dela. Não sei explicar isso e não vou tentar."
+    ],
+    "corpo": "COISAS QUE EU SEI SOBRE ELA\n\n1. Vai chegar de carro. Sozinha.\n2. Vai chegar à noite, e vai reclamar de ter chegado à noite.\n3. Não vai bater na porta. Vai olhar embaixo do vaso primeiro.\n4. Trabalha com perguntas. Não sei o nome do trabalho.\n5. Acabou de perder alguém, mas não morreu ninguém.\n6. Fuma, mas não acende.\n7. Vai achar que sou eu quem está confusa.\n\n8. Tem uma cicatriz fina no dorso da mão esquerda. Vidro. Foi criança.\n9. Não vai gostar do corredor.\n10. Vai voltar mais de uma vez ao mesmo cômodo achando que esqueceu alguma coisa lá.\n\n11. Eu gosto dela. Não sei explicar isso e não vou tentar.",
+    "nota_laura": "Eu não fumo. Eu larguei em março. Eu carrego o maço.\n\nA cicatriz é de uma jarra que caiu da pia quando eu tinha nove anos. Nunca contei isso para ninguém. Não porque seja segredo. Porque não é assunto.",
+    "pista": "lista_sobre_mim"
+  },
+  "receita_medica": {
+    "id": "receita_medica",
+    "tipo": "report",
+    "titulo": "Receituário",
+    "procedencia": "Armário do banheiro, atrás de um vidro de água oxigenada.",
+    "paginas": [
+      "CLÍNICA SÃO BRÁS — RECEITUÁRIO DE CONTROLE ESPECIAL\n\nPaciente: H. VASQUES\nData: 12/08/1998\n\n- Lorazepam 2mg — 1 comprimido ao deitar\n- (ilegível) 25mg — se necessário\n\nObservação do médico, à caneta:\n\"Paciente relata paralisia do sono e alucinações hipnagógicas há 5 meses. Nega uso de álcool. Insiste que os episódios são 'informação, não sintoma'. Encaminhada.\"",
+      "Debaixo da receita, dobrado em quatro, um segundo papel. Não é receita. É a folha de encaminhamento, nunca entregue.\n\nO campo do diagnóstico presumido está preenchido com uma única palavra, escrita devagar, com a caneta apoiada duas vezes:\n\n\"lucidez\"\n\nNão sei se foi o médico que escreveu."
+    ],
+    "corpo": "CLÍNICA SÃO BRÁS — RECEITUÁRIO DE CONTROLE ESPECIAL\n\nPaciente: H. VASQUES\nData: 12/08/1998\n\n- Lorazepam 2mg — 1 comprimido ao deitar\n- (ilegível) 25mg — se necessário\n\nObservação do médico, à caneta:\n\"Paciente relata paralisia do sono e alucinações hipnagógicas há 5 meses. Nega uso de álcool. Insiste que os episódios são 'informação, não sintoma'. Encaminhada.\"\n\nDebaixo da receita, dobrado em quatro, um segundo papel. Não é receita. É a folha de encaminhamento, nunca entregue.\n\nO campo do diagnóstico presumido está preenchido com uma única palavra, escrita devagar, com a caneta apoiada duas vezes:\n\n\"lucidez\"\n\nNão sei se foi o médico que escreveu.",
+    "nota_laura": "Lorazepam. Eu tomei lorazepam por quatro meses este ano. Isso é comum. Isso é a coisa mais comum do mundo. Metade da minha redação toma.",
+    "pista": "mesmo_remedio"
+  },
+  "diario_helena_1": {
+    "id": "diario_helena_1",
+    "tipo": "diary",
+    "titulo": "Caderno de Helena — I",
+    "procedencia": "Gaveta do criado-mudo. Capa dura, elástico arrebentado.",
+    "paginas": [
+      "19 de março de 1998\n\nComecei a escrever tudo porque comecei a esquecer tudo, e depois percebi que não era esquecimento. Era o contrário. Era coisa demais chegando de uma vez.\n\nVou tentar ser exata, porque exatidão é a única coisa que me sobrou.\n\nNão há ninguém na casa além de mim. Isso é verdade e continua verdade mesmo depois do que eu vou escrever agora.\n\nHá uma mulher que ainda vai chegar aqui. Não sei quando. Sei que vai.",
+      "27 de março\n\nHoje escrevi \"a visitante\" pela primeira vez e me senti idiota. Escrever uma coisa dá a ela um corpo. Antes de escrever, era uma sensação. Agora é uma personagem.\n\nMas não inventei. Faço questão de registrar isso enquanto ainda consigo distinguir: eu não inventei.\n\nEla usa um casaco escuro, comprido demais para o calor. Fica na porta da sala e não entra. Olha o corredor como quem mede.",
+      "2 de abril\n\nNelson perguntou se eu estava dormindo bem. Respondi que sim. Menti sem pensar, o que é pior do que mentir pensando.\n\nA verdade é que durmo bem. Durmo profundamente. É acordada que as coisas acontecem."
+    ],
+    "corpo": "19 de março de 1998\n\nComecei a escrever tudo porque comecei a esquecer tudo, e depois percebi que não era esquecimento. Era o contrário. Era coisa demais chegando de uma vez.\n\nVou tentar ser exata, porque exatidão é a única coisa que me sobrou.\n\nNão há ninguém na casa além de mim. Isso é verdade e continua verdade mesmo depois do que eu vou escrever agora.\n\nHá uma mulher que ainda vai chegar aqui. Não sei quando. Sei que vai.\n\n27 de março\n\nHoje escrevi \"a visitante\" pela primeira vez e me senti idiota. Escrever uma coisa dá a ela um corpo. Antes de escrever, era uma sensação. Agora é uma personagem.\n\nMas não inventei. Faço questão de registrar isso enquanto ainda consigo distinguir: eu não inventei.\n\nEla usa um casaco escuro, comprido demais para o calor. Fica na porta da sala e não entra. Olha o corredor como quem mede.\n\n2 de abril\n\nNelson perguntou se eu estava dormindo bem. Respondi que sim. Menti sem pensar, o que é pior do que mentir pensando.\n\nA verdade é que durmo bem. Durmo profundamente. É acordada que as coisas acontecem.",
+    "nota_laura": "",
+    "pista": "visitante_existe"
+  },
+  "diario_helena_2": {
+    "id": "diario_helena_2",
+    "tipo": "diary",
+    "titulo": "Caderno de Helena — II",
+    "procedencia": "Sobre a escrivaninha do quarto, aberto.",
+    "paginas": [
+      "14 de junho\n\nDuas hipóteses, e eu preciso ser honesta com as duas:\n\nPRIMEIRA — estou doente. É o que o Dr. Bianchi acha, e ele tem razão em achar, porque é a explicação econômica. Insônia crônica produz vultos. Solidão produz interlocutores. Uma mulher de trinta e oito anos que mora sozinha há sete e conversa em voz alta com a própria casa é um caso clínico e não um mistério.\n\nEu aceitaria isso. Juro que aceitaria. Seria um alívio.",
+      "SEGUNDA — não estou.\n\nO que me impede de aceitar a primeira é uma coisa só, e é uma coisa pequena, e vou escrever aqui para conferir depois:\n\nEu sei coisas sobre ela que eu não teria como inventar porque não me interessam. Ninguém inventa o que não lhe interessa.\n\nEu não me importo com jornalismo. Nunca li um jornal inteiro na vida. E sei que ela trabalha com perguntas, e sei o cansaço específico do rosto dela, o cansaço de quem passou o dia ouvindo gente mentir e anotando com educação.",
+      "21 de julho\n\nEscrevi para ela hoje. Uma carta. Fechei, endereçei, e depois fiquei meia hora olhando o envelope sem ter para onde mandar.\n\nÉ a coisa mais ridícula que eu já fiz.\n\nGuardei no escritório. Se um dia ela vier, vai estar lá.\n\nE se ninguém vier, alguém vai achar isso depois e vai ter pena de mim. Tudo bem. Já tive pena de gente por menos.",
+      "3 de setembro\n\nEstou com medo, e é um medo novo, e preciso nomear direito porque nomear é a única coisa que eu sei fazer.\n\nNão tenho medo dela.\n\nTenho medo de que ela chegue e eu não esteja mais aqui para explicar."
+    ],
+    "corpo": "14 de junho\n\nDuas hipóteses, e eu preciso ser honesta com as duas:\n\nPRIMEIRA — estou doente. É o que o Dr. Bianchi acha, e ele tem razão em achar, porque é a explicação econômica. Insônia crônica produz vultos. Solidão produz interlocutores. Uma mulher de trinta e oito anos que mora sozinha há sete e conversa em voz alta com a própria casa é um caso clínico e não um mistério.\n\nEu aceitaria isso. Juro que aceitaria. Seria um alívio.\n\nSEGUNDA — não estou.\n\nO que me impede de aceitar a primeira é uma coisa só, e é uma coisa pequena, e vou escrever aqui para conferir depois:\n\nEu sei coisas sobre ela que eu não teria como inventar porque não me interessam. Ninguém inventa o que não lhe interessa.\n\nEu não me importo com jornalismo. Nunca li um jornal inteiro na vida. E sei que ela trabalha com perguntas, e sei o cansaço específico do rosto dela, o cansaço de quem passou o dia ouvindo gente mentir e anotando com educação.\n\n21 de julho\n\nEscrevi para ela hoje. Uma carta. Fechei, endereçei, e depois fiquei meia hora olhando o envelope sem ter para onde mandar.\n\nÉ a coisa mais ridícula que eu já fiz.\n\nGuardei no escritório. Se um dia ela vier, vai estar lá.\n\nE se ninguém vier, alguém vai achar isso depois e vai ter pena de mim. Tudo bem. Já tive pena de gente por menos.\n\n3 de setembro\n\nEstou com medo, e é um medo novo, e preciso nomear direito porque nomear é a única coisa que eu sei fazer.\n\nNão tenho medo dela.\n\nTenho medo de que ela chegue e eu não esteja mais aqui para explicar.",
+    "nota_laura": "",
+    "pista": "medo_de_helena"
+  },
+  "fita_01": {
+    "id": "fita_01",
+    "tipo": "tape",
+    "titulo": "Fita 01 — \"casa (quarto/corredor)\"",
+    "procedencia": "Etiqueta escrita à mão. O gravador ainda tinha pilha.",
+    "paginas": [
+      "[chiado. cadeira arrastando. respiração.]\n\n— ...testando. Um, dois. Dia trinta de agosto, são... onze e vinte da noite.\n\n[pausa longa. quinze segundos de chiado.]\n\n— Se alguém estiver ouvindo isso, e eu sei como essa frase soa, então eu já não estou aqui, ou eu estou aqui e você não me vê, e eu não sei qual das duas é pior.",
+      "— Eu vou dizer as coisas na ordem.\n\n— Um: eu não fui embora. Se disserem que eu fui embora, é mentira, e é uma mentira conveniente, e eu quero que fique gravado que eu previ a conveniência.\n\n— Dois: eu não me matei. Isso também vão dizer. Também é mentira.\n\n— Três: eu não sei o que é a terceira coisa. É por isso que estou gravando.\n\n[silêncio. quase quarenta segundos. um estalo distante, madeira.]\n\n— ...ouviu isso?",
+      "— A casa faz isso desde março. Não é a casa.\n\n[pausa.]\n\n— Se for você ouvindo, e eu acho que é: eu deixei tudo arrumado. O escritório está trancado porque eu tranquei, não porque alguém trancou. A chave está no lugar onde a gente esconde chave quando quer que seja encontrada, não quando quer esconder.\n\n— E, olha... desculpa. Por tudo isso. Eu tentei fazer isso de um jeito gentil e não existe jeito gentil.\n\n[clique. fim da gravação.]"
+    ],
+    "corpo": "[chiado. cadeira arrastando. respiração.]\n\n— ...testando. Um, dois. Dia trinta de agosto, são... onze e vinte da noite.\n\n[pausa longa. quinze segundos de chiado.]\n\n— Se alguém estiver ouvindo isso, e eu sei como essa frase soa, então eu já não estou aqui, ou eu estou aqui e você não me vê, e eu não sei qual das duas é pior.\n\n— Eu vou dizer as coisas na ordem.\n\n— Um: eu não fui embora. Se disserem que eu fui embora, é mentira, e é uma mentira conveniente, e eu quero que fique gravado que eu previ a conveniência.\n\n— Dois: eu não me matei. Isso também vão dizer. Também é mentira.\n\n— Três: eu não sei o que é a terceira coisa. É por isso que estou gravando.\n\n[silêncio. quase quarenta segundos. um estalo distante, madeira.]\n\n— ...ouviu isso?\n\n— A casa faz isso desde março. Não é a casa.\n\n[pausa.]\n\n— Se for você ouvindo, e eu acho que é: eu deixei tudo arrumado. O escritório está trancado porque eu tranquei, não porque alguém trancou. A chave está no lugar onde a gente esconde chave quando quer que seja encontrada, não quando quer esconder.\n\n— E, olha... desculpa. Por tudo isso. Eu tentei fazer isso de um jeito gentil e não existe jeito gentil.\n\n[clique. fim da gravação.]",
+    "nota_laura": "",
+    "pista": "fita_helena"
+  },
+  "carta_1998": {
+    "id": "carta_1998",
+    "tipo": "letter",
+    "titulo": "Carta lacrada, endereçada a ninguém",
+    "procedencia": "Escritório. Envelope amarelado, sem destinatário. Datada de 21 de julho de 1998.",
+    "paginas": [
+      "21 de julho de 1998\n\nVocê chegou hoje.\n\nSei que é estranho ler isso numa carta escrita antes, e sei exatamente o gesto que você fez agora — você olhou a data outra vez para conferir. Não conferiu direito na primeira. Você nunca confere direito na primeira, porque acredita que já leu.\n\nEstá tudo bem. Eu também sou assim.",
+      "Hoje alguém bateu à porta.\n\nFoi de manhã, e eu estava na cozinha, e as batidas foram três, com uma pausa maior antes da terceira, como quem desiste no meio e continua por educação.\n\nEu não abri.\n\nNão abri porque ninguém bateu.\n\nEstou tentando escrever a verdade e a verdade é essa: eu ouvi três batidas numa casa onde não havia ninguém, e eu soube, do jeito que a gente sabe as coisas do próprio corpo, que aquilo tinha acontecido em outro dia que não era aquele.",
+      "Você parou o carro antes da porteira e ficou sentada com o motor desligado. Não sei quanto tempo. O suficiente para reparar que não tem mato no poste da caixa de correio.\n\nDepois você desceu, andou até a varanda, e olhou embaixo do vaso da direita.\n\nVocê acendeu a lanterna antes de precisar dela.\n\nVocê reclamou do cheiro na entrada e não disse nada em voz alta, porque não tem ninguém para dizer, mas você fez aquela cara.",
+      "Não é bruxaria. Não sei o que é. Passei sete meses tentando descobrir o que é e a coisa mais honesta que consegui escrever foi isto:\n\nàs vezes o tempo não passa em fila.\n\nÀs vezes ele se dobra e encosta numa parte de si mesmo, e quem estiver exatamente naquele lugar, naquele instante, com atenção suficiente, escuta o outro lado.\n\nEu estive nesse lugar. A casa é esse lugar. Ou eu sou.",
+      "Você vai querer procurar quem escreveu isto. É o seu ofício e é a sua defesa.\n\nVá procurar. Faz bem procurar.\n\nMas antes de procurar, faz uma coisa por mim: repara na sua própria mão segurando esta folha. Repara na cicatriz.\n\nEu descrevi essa cicatriz em março, num caderno que está na gaveta do criado-mudo, e você já leu, e você já disse a si mesma que aquilo não queria dizer nada.\n\nEla ainda não sabe que está aqui."
+    ],
+    "corpo": "21 de julho de 1998\n\nVocê chegou hoje.\n\nSei que é estranho ler isso numa carta escrita antes, e sei exatamente o gesto que você fez agora — você olhou a data outra vez para conferir. Não conferiu direito na primeira. Você nunca confere direito na primeira, porque acredita que já leu.\n\nEstá tudo bem. Eu também sou assim.\n\nHoje alguém bateu à porta.\n\nFoi de manhã, e eu estava na cozinha, e as batidas foram três, com uma pausa maior antes da terceira, como quem desiste no meio e continua por educação.\n\nEu não abri.\n\nNão abri porque ninguém bateu.\n\nEstou tentando escrever a verdade e a verdade é essa: eu ouvi três batidas numa casa onde não havia ninguém, e eu soube, do jeito que a gente sabe as coisas do próprio corpo, que aquilo tinha acontecido em outro dia que não era aquele.\n\nVocê parou o carro antes da porteira e ficou sentada com o motor desligado. Não sei quanto tempo. O suficiente para reparar que não tem mato no poste da caixa de correio.\n\nDepois você desceu, andou até a varanda, e olhou embaixo do vaso da direita.\n\nVocê acendeu a lanterna antes de precisar dela.\n\nVocê reclamou do cheiro na entrada e não disse nada em voz alta, porque não tem ninguém para dizer, mas você fez aquela cara.\n\nNão é bruxaria. Não sei o que é. Passei sete meses tentando descobrir o que é e a coisa mais honesta que consegui escrever foi isto:\n\nàs vezes o tempo não passa em fila.\n\nÀs vezes ele se dobra e encosta numa parte de si mesmo, e quem estiver exatamente naquele lugar, naquele instante, com atenção suficiente, escuta o outro lado.\n\nEu estive nesse lugar. A casa é esse lugar. Ou eu sou.\n\nVocê vai querer procurar quem escreveu isto. É o seu ofício e é a sua defesa.\n\nVá procurar. Faz bem procurar.\n\nMas antes de procurar, faz uma coisa por mim: repara na sua própria mão segurando esta folha. Repara na cicatriz.\n\nEu descrevi essa cicatriz em março, num caderno que está na gaveta do criado-mudo, e você já leu, e você já disse a si mesma que aquilo não queria dizer nada.\n\nEla ainda não sabe que está aqui.",
+    "nota_laura": "Isso não faz sentido.\n\nEu disse isso em voz alta, sozinha, num escritório vazio, e a minha voz saiu errada.",
+    "pista": "carta_impossivel",
+    "variantes": {
+      "3": {
+        "paginas": [
+          "21 de julho de 1998\n\nVocê chegou hoje.\n\nVocê já leu esta carta uma vez.\n\nReparou que ela está mais curta?",
+          "Não estou tentando assustar você. Estou tentando ser econômica, porque eu tenho cada vez menos espaço.\n\nVocê leu a parte da cicatriz. Você leu a parte do tempo dobrado. Eu escrevi aquilo com muita convicção e agora não tenho tanta.\n\nAqui vai uma possibilidade que eu não escrevi da primeira vez porque tive vergonha:",
+          "E se não houver duas pessoas nesta história.\n\nPensa com calma. Uma mulher de trinta e oito anos, sozinha, insone, medicada, que escreve sobre uma visitante que conhece em detalhe.\n\nE, vinte e sete anos depois, uma mulher de trinta e oito anos, sozinha, insone, medicada, que atravessa o país para investigar uma desconhecida cuja vida ela conhece em detalhe.\n\nUma de nós inventou a outra. Eu passei sete meses achando que sabia qual.\n\nEla ainda não sabe que está aqui."
+        ],
+        "corpo": "21 de julho de 1998\n\nVocê chegou hoje.\n\nVocê já leu esta carta uma vez.\n\nReparou que ela está mais curta?\n\nNão estou tentando assustar você. Estou tentando ser econômica, porque eu tenho cada vez menos espaço.\n\nVocê leu a parte da cicatriz. Você leu a parte do tempo dobrado. Eu escrevi aquilo com muita convicção e agora não tenho tanta.\n\nAqui vai uma possibilidade que eu não escrevi da primeira vez porque tive vergonha:\n\nE se não houver duas pessoas nesta história.\n\nPensa com calma. Uma mulher de trinta e oito anos, sozinha, insone, medicada, que escreve sobre uma visitante que conhece em detalhe.\n\nE, vinte e sete anos depois, uma mulher de trinta e oito anos, sozinha, insone, medicada, que atravessa o país para investigar uma desconhecida cuja vida ela conhece em detalhe.\n\nUma de nós inventou a outra. Eu passei sete meses achando que sabia qual.\n\nEla ainda não sabe que está aqui."
+      }
+    }
+  },
+  "pasta_visitante": {
+    "id": "pasta_visitante",
+    "tipo": "report",
+    "titulo": "Pasta — \"A VISITANTE\"",
+    "procedencia": "Primeira gaveta do arquivo de aço. A etiqueta foi datilografada.",
+    "paginas": [
+      "A pasta é grossa. Não é um delírio rabiscado num guardanapo: é um trabalho. Índice, subdivisões, referência cruzada entre folhas numeradas.\n\nHelena catalogou a própria alucinação com o rigor de quem prepara uma tese.\n\nSEÇÃO A — Aparições (datas, duração, condições de luz)\nSEÇÃO B — Descrição física (revisada 4x)\nSEÇÃO C — Falas ouvidas\nSEÇÃO D — Verificações",
+      "A SEÇÃO D é a que me interrompe.\n\nHelena não acreditou em si mesma. Ela testou.\n\n\"Se é produção da minha cabeça, então não pode conter informação que eu não possua. Método: registrar afirmações verificáveis e conferir depois.\"\n\nVinte e duas afirmações. Vinte e duas.\n\nAo lado de cada uma, a lápis, uma marca posterior: ✓ ou ✗ ou ?",
+      "Dezenove receberam ✓.\n\nEntre elas:\n\n\"Fala em 'apuração' quando quer dizer 'pesquisa'.\" ✓\n\"Diz o nome de uma cidade que não existe no mapa de 1998.\" ✓ — nota: \"consultei o atlas na escola. não existe. anotar de novo em 5 anos.\"\n\"Tem um irmão de quem não fala.\" ✓\n\nDuas receberam ✗:\n\n\"Está grávida.\" ✗\n\"Chegou de manhã.\" ✗\n\nE uma recebeu ?:\n\n\"Diz que se chama Helena.\""
+    ],
+    "corpo": "A pasta é grossa. Não é um delírio rabiscado num guardanapo: é um trabalho. Índice, subdivisões, referência cruzada entre folhas numeradas.\n\nHelena catalogou a própria alucinação com o rigor de quem prepara uma tese.\n\nSEÇÃO A — Aparições (datas, duração, condições de luz)\nSEÇÃO B — Descrição física (revisada 4x)\nSEÇÃO C — Falas ouvidas\nSEÇÃO D — Verificações\n\nA SEÇÃO D é a que me interrompe.\n\nHelena não acreditou em si mesma. Ela testou.\n\n\"Se é produção da minha cabeça, então não pode conter informação que eu não possua. Método: registrar afirmações verificáveis e conferir depois.\"\n\nVinte e duas afirmações. Vinte e duas.\n\nAo lado de cada uma, a lápis, uma marca posterior: ✓ ou ✗ ou ?\n\nDezenove receberam ✓.\n\nEntre elas:\n\n\"Fala em 'apuração' quando quer dizer 'pesquisa'.\" ✓\n\"Diz o nome de uma cidade que não existe no mapa de 1998.\" ✓ — nota: \"consultei o atlas na escola. não existe. anotar de novo em 5 anos.\"\n\"Tem um irmão de quem não fala.\" ✓\n\nDuas receberam ✗:\n\n\"Está grávida.\" ✗\n\"Chegou de manhã.\" ✗\n\nE uma recebeu ?:\n\n\"Diz que se chama Helena.\"",
+    "nota_laura": "Eu tenho um irmão. Nós não nos falamos desde o enterro do meu pai. Isso não está em lugar nenhum. Isso não está no meu Instagram, não está numa matéria, não está numa ficha de RH.\n\nE a cidade. Existe. Foi emancipada em 2004.",
+    "pista": "secao_d"
+  },
+  "foto_escrivaninha": {
+    "id": "foto_escrivaninha",
+    "tipo": "photo",
+    "titulo": "Fotografia emoldurada",
+    "procedencia": "Escritório, sobre a escrivaninha. Papel fosco, cantos gastos de manuseio.",
+    "paginas": [
+      "Helena, na frente desta casa. Meia-idade, casaco escuro, mãos cruzadas na frente do corpo. O sol está alto e ela está apertando os olhos.\n\nÉ a primeira vez que vejo o rosto dela fora de uma fotocópia de jornal.\n\nEla parece cansada e parece bem. As duas coisas ao mesmo tempo, do jeito que só acontece com gente de verdade.\n\nNo verso, a lápis: \"casa. março.\""
+    ],
+    "corpo": "Helena, na frente desta casa. Meia-idade, casaco escuro, mãos cruzadas na frente do corpo. O sol está alto e ela está apertando os olhos.\n\nÉ a primeira vez que vejo o rosto dela fora de uma fotocópia de jornal.\n\nEla parece cansada e parece bem. As duas coisas ao mesmo tempo, do jeito que só acontece com gente de verdade.\n\nNo verso, a lápis: \"casa. março.\"",
+    "nota_laura": "",
+    "pista": "",
+    "variantes": {
+      "2": {
+        "paginas": [
+          "Helena, na frente desta casa.\n\nE, meio passo atrás dela, à direita, uma segunda pessoa.\n\nEstá desfocada — moveu-se durante a exposição, ou a lente não a pegou. Dá para ver o casaco escuro. Dá para ver o comprimento do cabelo. Dá para ver o jeito de segurar a mão direita, um pouco fechada, como quem tem alguma coisa entre os dedos e não vai acender.\n\nNo verso, a lápis, a mesma letra: \"casa. março.\"\n\nSó isso. Nada sobre a segunda pessoa.",
+          "Eu coloquei esta fotografia de volta na mesa há dez minutos.\n\nHavia uma pessoa nela.\n\nExistem explicações. Eu sei que existem, eu ganho a vida com elas: eu vi errado da primeira vez, a luz estava pior, eu estava com a lanterna na mão e olhei rápido. A memória preenche. A memória é uma mentirosa profissional e eu sou a última pessoa do mundo que deveria confiar nela hoje.\n\nExistem explicações.\n\nEu só não estou conseguindo escolher uma."
+        ],
+        "corpo": "Helena, na frente desta casa.\n\nE, meio passo atrás dela, à direita, uma segunda pessoa.\n\nEstá desfocada — moveu-se durante a exposição, ou a lente não a pegou. Dá para ver o casaco escuro. Dá para ver o comprimento do cabelo. Dá para ver o jeito de segurar a mão direita, um pouco fechada, como quem tem alguma coisa entre os dedos e não vai acender.\n\nNo verso, a lápis, a mesma letra: \"casa. março.\"\n\nSó isso. Nada sobre a segunda pessoa.\n\nEu coloquei esta fotografia de volta na mesa há dez minutos.\n\nHavia uma pessoa nela.\n\nExistem explicações. Eu sei que existem, eu ganho a vida com elas: eu vi errado da primeira vez, a luz estava pior, eu estava com a lanterna na mão e olhei rápido. A memória preenche. A memória é uma mentirosa profissional e eu sou a última pessoa do mundo que deveria confiar nela hoje.\n\nExistem explicações.\n\nEu só não estou conseguindo escolher uma."
+      },
+      "4": {
+        "paginas": [
+          "A segunda pessoa está nítida.\n\nHelena é que está desfocada agora, apagada, como se a emulsão tivesse cedido só naquele ponto do papel.\n\nEu não vou escrever aqui de quem é o rosto.\n\nEu vou colocar a fotografia com a face para baixo, e vou sair desta sala, e vou continuar trabalhando, porque é isso que eu faço."
+        ],
+        "corpo": "A segunda pessoa está nítida.\n\nHelena é que está desfocada agora, apagada, como se a emulsão tivesse cedido só naquele ponto do papel.\n\nEu não vou escrever aqui de quem é o rosto.\n\nEu vou colocar a fotografia com a face para baixo, e vou sair desta sala, e vou continuar trabalhando, porque é isso que eu faço."
+      }
+    },
+    "foto_id": "foto_escrivaninha"
+  },
+  "foto_parede": {
+    "id": "foto_parede",
+    "tipo": "photo",
+    "titulo": "Retrato na parede do quarto",
+    "procedencia": "Moldura de madeira, vidro rachado no canto inferior.",
+    "paginas": [
+      "Duas mulheres na frente de uma casa. A mesma casa.\n\nO retrato está no quarto dela, à altura dos olhos de quem está deitado. Foi pendurado para ser a última coisa vista antes de dormir.\n\nO vidro está rachado no canto, e a rachadura passa exatamente entre as duas figuras.\n\nIsso não quer dizer nada. Vidro racha."
+    ],
+    "corpo": "Duas mulheres na frente de uma casa. A mesma casa.\n\nO retrato está no quarto dela, à altura dos olhos de quem está deitado. Foi pendurado para ser a última coisa vista antes de dormir.\n\nO vidro está rachado no canto, e a rachadura passa exatamente entre as duas figuras.\n\nIsso não quer dizer nada. Vidro racha.",
+    "nota_laura": "",
+    "pista": "",
+    "foto_id": "retrato_quarto"
+  },
+  "material_devolvido": {
+    "id": "material_devolvido",
+    "tipo": "report",
+    "titulo": "Caixas de restituição — Polícia Civil",
+    "procedencia": "Arquivo. Três caixas de papelão, lacre rompido, empilhadas com cuidado.",
+    "paginas": [
+      "As caixas que a polícia levou em 11 de outubro de 1998 e devolveu em 3 de novembro. Estão aqui. Alguém as trouxe de volta para dentro da casa, cortou o lacre e organizou o conteúdo por ano.\n\nNão é assim que a polícia devolve coisa. Polícia entrega no balcão para um parente e pede assinatura.\n\nNão havia parente. O jornal diz isso: \"familiares não foram localizados\".\n\nEntão quem assinou.",
+      "No fundo da terceira caixa, o formulário de restituição. Preenchido a máquina, campo por campo.\n\nRECEBEDOR: (em branco)\nGRAU DE PARENTESCO: (em branco)\nDOCUMENTO: (em branco)\nASSINATURA: uma linha de tinta contínua, sem nenhuma letra. Alguém encostou a caneta e arrastou.\n\nData: 03/11/1998.\n\nE, no canto inferior, a lápis, com a letra do rodapé do inquérito — a mesma que perguntava \"por ordem de quem?\":\n\n\"veio uma mulher. disse que era da família. eu deixei.\""
+    ],
+    "corpo": "As caixas que a polícia levou em 11 de outubro de 1998 e devolveu em 3 de novembro. Estão aqui. Alguém as trouxe de volta para dentro da casa, cortou o lacre e organizou o conteúdo por ano.\n\nNão é assim que a polícia devolve coisa. Polícia entrega no balcão para um parente e pede assinatura.\n\nNão havia parente. O jornal diz isso: \"familiares não foram localizados\".\n\nEntão quem assinou.\n\nNo fundo da terceira caixa, o formulário de restituição. Preenchido a máquina, campo por campo.\n\nRECEBEDOR: (em branco)\nGRAU DE PARENTESCO: (em branco)\nDOCUMENTO: (em branco)\nASSINATURA: uma linha de tinta contínua, sem nenhuma letra. Alguém encostou a caneta e arrastou.\n\nData: 03/11/1998.\n\nE, no canto inferior, a lápis, com a letra do rodapé do inquérito — a mesma que perguntava \"por ordem de quem?\":\n\n\"veio uma mulher. disse que era da família. eu deixei.\"",
+    "nota_laura": "Uma mulher disse que era da família de uma mulher que não tinha família, e levou embora tudo o que sobrou dela, e trouxe de volta para a casa vazia, e organizou por ano.\n\nEssa é a primeira coisa hoje que eu consigo escrever no caderno sem tremer. É uma pessoa. Pessoas deixam rastro.",
+    "pista": "mulher_da_familia"
+  },
+  "indice_helena": {
+    "id": "indice_helena",
+    "tipo": "note",
+    "titulo": "Índice geral",
+    "procedencia": "Arquivo. Preso na lateral da estante com fita crepe ressecada.",
+    "paginas": [
+      "Helena indexou a própria casa.\n\nA — correspondência (1991–)\nB — escola / substituições\nC — casa (reformas, contas, o poço)\nD — a visitante\nE — verificações\nF — sonhos\nG — ————\n\nA letra G não tem nome. Tem um traço, longo, feito com a régua.\n\nAs pastas A a F estão nas gavetas. A gaveta G existe. Está vazia, e o fundo está limpo — não tem aquela poeira fina que junta em gaveta que nunca abriu.",
+      "Embaixo do índice, numa folha separada, uma anotação que não é índice de nada:\n\n\"decidi hoje que não vou escrever a G.\n\nnão porque não saiba. porque escrever fixa, e enquanto não estiver escrito ainda dá para ser outra coisa.\n\nse alguém achar esta folha e quiser saber o que era a G: sinto muito. eu também queria.\""
+    ],
+    "corpo": "Helena indexou a própria casa.\n\nA — correspondência (1991–)\nB — escola / substituições\nC — casa (reformas, contas, o poço)\nD — a visitante\nE — verificações\nF — sonhos\nG — ————\n\nA letra G não tem nome. Tem um traço, longo, feito com a régua.\n\nAs pastas A a F estão nas gavetas. A gaveta G existe. Está vazia, e o fundo está limpo — não tem aquela poeira fina que junta em gaveta que nunca abriu.\n\nEmbaixo do índice, numa folha separada, uma anotação que não é índice de nada:\n\n\"decidi hoje que não vou escrever a G.\n\nnão porque não saiba. porque escrever fixa, e enquanto não estiver escrito ainda dá para ser outra coisa.\n\nse alguém achar esta folha e quiser saber o que era a G: sinto muito. eu também queria.\"",
+    "nota_laura": "",
+    "pista": "gaveta_g"
+  },
+  "caderno_porao": {
+    "id": "caderno_porao",
+    "tipo": "diary",
+    "titulo": "Caderno sem capa",
+    "procedencia": "Porão. Sobre a mesa, aberto, com uma pedra segurando a página.",
+    "paginas": [
+      "Não é a letra de Helena.\n\nÉ parecida. A inclinação é a mesma, o \"t\" cortado alto é o mesmo. Mas o \"g\" desce reto, e o de Helena tem uma volta.\n\nDuas pessoas com letra parecida, ou uma pessoa em dois momentos muito distantes da vida.",
+      "\"dia 4 — ela ainda está lá em cima. ouvi a porta da cozinha.\n\ndia 6 — desceu até a metade da escada e voltou. não sei se me viu. acho que não. acho que se tivesse visto teria dito alguma coisa, ela sempre diz alguma coisa.\n\ndia 9 — hoje não ouvi nada o dia inteiro. isso é pior.\n\ndia 11 — não estou presa aqui. quero deixar isso registrado porque um dia alguém vai ler e vai achar que eu estava presa. a porta abre pelo lado de dentro. eu conferi todos os dias e nunca subi.\"",
+      "\"dia 14 — comecei a contar os dias errado de propósito, para ver se eu percebia. percebi no terceiro. anotar isso é a coisa mais tranquilizadora que eu fiz esta semana.\n\ndia 19 — a mulher lá de cima é boa pessoa. eu queria que ela soubesse disso.\n\ndia 23 —\"\n\nAcaba aí. Não é o fim do caderno: tem trinta páginas em branco depois."
+    ],
+    "corpo": "Não é a letra de Helena.\n\nÉ parecida. A inclinação é a mesma, o \"t\" cortado alto é o mesmo. Mas o \"g\" desce reto, e o de Helena tem uma volta.\n\nDuas pessoas com letra parecida, ou uma pessoa em dois momentos muito distantes da vida.\n\n\"dia 4 — ela ainda está lá em cima. ouvi a porta da cozinha.\n\ndia 6 — desceu até a metade da escada e voltou. não sei se me viu. acho que não. acho que se tivesse visto teria dito alguma coisa, ela sempre diz alguma coisa.\n\ndia 9 — hoje não ouvi nada o dia inteiro. isso é pior.\n\ndia 11 — não estou presa aqui. quero deixar isso registrado porque um dia alguém vai ler e vai achar que eu estava presa. a porta abre pelo lado de dentro. eu conferi todos os dias e nunca subi.\"\n\n\"dia 14 — comecei a contar os dias errado de propósito, para ver se eu percebia. percebi no terceiro. anotar isso é a coisa mais tranquilizadora que eu fiz esta semana.\n\ndia 19 — a mulher lá de cima é boa pessoa. eu queria que ela soubesse disso.\n\ndia 23 —\"\n\nAcaba aí. Não é o fim do caderno: tem trinta páginas em branco depois.",
+    "nota_laura": "Dia 23. Alguém morou neste porão por pelo menos vinte e três dias, sabendo que havia outra pessoa na casa, sem subir.\n\nE a coisa que eu não consigo tirar da cabeça não é essa. É \"a mulher lá de cima é boa pessoa\". Quem escreveu isso gostava dela.",
+    "pista": "caderno_porao"
+  },
+  "bilhete_lampiao": {
+    "id": "bilhete_lampiao",
+    "tipo": "note",
+    "titulo": "Bilhete sob o lampião",
+    "procedencia": "Porão. Dobrado em quatro, usado de calço para o pé do lampião.",
+    "paginas": [
+      "\"se for você lendo isto, acende e senta.\n\nnão precisa ter pressa. eu esperei vinte e sete anos, você pode esperar dez minutos.\""
+    ],
+    "corpo": "\"se for você lendo isto, acende e senta.\n\nnão precisa ter pressa. eu esperei vinte e sete anos, você pode esperar dez minutos.\"",
+    "nota_laura": "A dobra do papel está gasta de tanto abrir e fechar. Não é um bilhete que alguém deixou. É um bilhete que alguém leu muitas vezes.",
+    "pista": "bilhete_lampiao"
+  },
+  "bilhete_maquina": {
+    "id": "bilhete_maquina",
+    "tipo": "note",
+    "titulo": "Folha na máquina de escrever",
+    "procedencia": "Ainda presa ao rolo, meio datilografada.",
+    "paginas": [
+      "A folha tem quatro linhas e para no meio de uma palavra.\n\n\"quando ela ler isto eu quero que ela saiba que eu não estava com me\"\n\nO \"e\" final está marcado com força. O carro da máquina ficou preso à direita.\n\nEla levantou no meio da frase e não voltou.",
+      "Comparei o tipo com a carta que eu recebi em São Paulo.\n\nO \"a\" tem a mesma falha, um vinco na perna direita da letra. O \"s\" salta meio milímetro acima da linha, sempre.\n\nÉ esta máquina. A carta que me trouxe até aqui foi escrita nesta máquina.\n\nUma máquina numa sala trancada por dentro, numa casa onde ninguém entra há vinte e sete anos.\n\nAlguém digitou. Uma pessoa, com dedos."
+    ],
+    "corpo": "A folha tem quatro linhas e para no meio de uma palavra.\n\n\"quando ela ler isto eu quero que ela saiba que eu não estava com me\"\n\nO \"e\" final está marcado com força. O carro da máquina ficou preso à direita.\n\nEla levantou no meio da frase e não voltou.\n\nComparei o tipo com a carta que eu recebi em São Paulo.\n\nO \"a\" tem a mesma falha, um vinco na perna direita da letra. O \"s\" salta meio milímetro acima da linha, sempre.\n\nÉ esta máquina. A carta que me trouxe até aqui foi escrita nesta máquina.\n\nUma máquina numa sala trancada por dentro, numa casa onde ninguém entra há vinte e sete anos.\n\nAlguém digitou. Uma pessoa, com dedos.",
+    "nota_laura": "",
+    "pista": "mesma_maquina"
+  },
+  "gaveta_escritorio": {
+    "id": "gaveta_escritorio",
+    "tipo": "note",
+    "titulo": "Gaveta da escrivaninha",
+    "procedencia": "Emperrada. Cede no terceiro puxão.",
+    "paginas": [
+      "Um maço de cigarros, marca que não se fabrica mais, lacrado.\nUma caixa de fósforos vazia.\nTrês pilhas pequenas, ainda no plástico.\nUm caderno escolar sem nada escrito.\n\nE um bilhete, dobrado uma vez só:\n\n\"não é pra você abrir hoje\"\n\nEu abri hoje."
+    ],
+    "corpo": "Um maço de cigarros, marca que não se fabrica mais, lacrado.\nUma caixa de fósforos vazia.\nTrês pilhas pequenas, ainda no plástico.\nUm caderno escolar sem nada escrito.\n\nE um bilhete, dobrado uma vez só:\n\n\"não é pra você abrir hoje\"\n\nEu abri hoje.",
+    "nota_laura": "",
+    "pista": ""
+  },
+  "guarda_roupa": {
+    "id": "guarda_roupa",
+    "tipo": "note",
+    "titulo": "Guarda-roupa",
+    "procedencia": "As dobradiças gritam.",
+    "paginas": [
+      "Roupas de mulher, dobradas com cuidado, cheirando a naftalina e a tempo.\n\nVestidos, duas saias, uma pilha de blusas de manga comprida. Tudo de uma pessoa que se vestia para não ser notada.\n\nNo fundo, no cabide da ponta, um casaco escuro. Comprido. Lã grossa, errada para o calor daqui.\n\nEu estou usando um casaco escuro comprido. Eu estou usando um casaco escuro comprido e sinto uma vontade enorme de tirar, e não vou tirar, porque tirar seria admitir alguma coisa."
+    ],
+    "corpo": "Roupas de mulher, dobradas com cuidado, cheirando a naftalina e a tempo.\n\nVestidos, duas saias, uma pilha de blusas de manga comprida. Tudo de uma pessoa que se vestia para não ser notada.\n\nNo fundo, no cabide da ponta, um casaco escuro. Comprido. Lã grossa, errada para o calor daqui.\n\nEu estou usando um casaco escuro comprido. Eu estou usando um casaco escuro comprido e sinto uma vontade enorme de tirar, e não vou tirar, porque tirar seria admitir alguma coisa.",
+    "nota_laura": "",
+    "pista": "casaco"
+  }
+}

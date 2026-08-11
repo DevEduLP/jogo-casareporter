@@ -1,0 +1,14 @@
+{
+  "id": "ficha_policial",
+  "tipo": "report",
+  "titulo": "Cópia de inquérito",
+  "procedencia": "Fotocópia de terceira geração, quase ilegível nas bordas. Sobre a mesa da sala.",
+  "paginas": [
+    "INQUÉRITO 1.184/98 — DESAPARECIMENTO\nVítima: VASQUES, Helena. 38a. Solteira.\n\nDILIGÊNCIA DE 05/10/1998:\nResidência vistoriada. Portas destrancadas. Ausência de sinais de violência. Encontrados na sala: mesa posta para duas pessoas, alimentos em estado de decomposição compatível com 72h.\n\nOBS.: Não foi possível identificar a segunda pessoa. A desaparecida não recebia visitas segundo os vizinhos ouvidos.",
+    "DILIGÊNCIA DE 11/10/1998:\nRecolhido do escritório material manuscrito em grande volume (cadernos, folhas avulsas, fitas magnéticas). Conteúdo de natureza pessoal, parcialmente incoerente.\n\nVerificada menção reiterada a pessoa não identificada, referida apenas como \"a visitante\".\n\nSolicitada avaliação psiquiátrica póstuma do material. INDEFERIDA por ausência de corpo.",
+    "DESPACHO FINAL — 22/10/1998:\nAusentes indícios de crime. Arquive-se.\n\na) Aírton Sequeira, Delegado.\n\n—\n\nNo rodapé, a lápis, com outra letra:\n\n\"o material devolvido à residência em 03/11. por ordem de quem?\""
+  ],
+  "corpo": "INQUÉRITO 1.184/98 — DESAPARECIMENTO\nVítima: VASQUES, Helena. 38a. Solteira.\n\nDILIGÊNCIA DE 05/10/1998:\nResidência vistoriada. Portas destrancadas. Ausência de sinais de violência. Encontrados na sala: mesa posta para duas pessoas, alimentos em estado de decomposição compatível com 72h.\n\nOBS.: Não foi possível identificar a segunda pessoa. A desaparecida não recebia visitas segundo os vizinhos ouvidos.\n\nDILIGÊNCIA DE 11/10/1998:\nRecolhido do escritório material manuscrito em grande volume (cadernos, folhas avulsas, fitas magnéticas). Conteúdo de natureza pessoal, parcialmente incoerente.\n\nVerificada menção reiterada a pessoa não identificada, referida apenas como \"a visitante\".\n\nSolicitada avaliação psiquiátrica póstuma do material. INDEFERIDA por ausência de corpo.\n\nDESPACHO FINAL — 22/10/1998:\nAusentes indícios de crime. Arquive-se.\n\na) Aírton Sequeira, Delegado.\n\n—\n\nNo rodapé, a lápis, com outra letra:\n\n\"o material devolvido à residência em 03/11. por ordem de quem?\"",
+  "nota_laura": "",
+  "pista": "mesa_para_dois"
+}

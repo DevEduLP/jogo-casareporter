@@ -1,0 +1,199 @@
+[
+  {
+    "a": "carta_recebida",
+    "b": "mesma_maquina",
+    "titulo": "Alguém esteve nesta casa",
+    "corpo": "A carta que me trouxe aqui saiu da máquina do escritório — uma sala que estava trancada por dentro. Ou alguém tem a chave e entra quando quer, ou eu preciso rever o que significa \"trancada por dentro\".",
+    "teses": {
+      "C": 3,
+      "A": 1
+    }
+  },
+  {
+    "a": "conta_paga",
+    "b": "cadeado_novo",
+    "titulo": "A casa tem um zelador",
+    "corpo": "Energia paga, cadeado lubrificado, poste sem mato. Isto não é uma casa abandonada. É uma casa mantida. Manutenção custa dinheiro e exige uma pessoa com um nome.",
+    "teses": {
+      "C": 3
+    }
+  },
+  {
+    "a": "mesa_para_dois",
+    "b": "duas_xicaras",
+    "titulo": "Helena não estava sozinha",
+    "corpo": "Em 1998 a polícia achou a mesa posta para dois e não conseguiu identificar o segundo. As duas xícaras continuam na cozinha. Uma delas foi usada depois da outra — muito depois.",
+    "teses": {
+      "C": 2,
+      "A": 1
+    }
+  },
+  {
+    "a": "lista_sobre_mim",
+    "b": "secao_d",
+    "titulo": "Helena verificou",
+    "corpo": "Ela não se contentou em ver: testou. Dezenove de vinte e duas afirmações confirmadas, e uma delas dependia de um município que só foi emancipado em 2004. Ou ela teve acesso a informação que não existia, ou alguém escreveu essas folhas muito depois de 1998.",
+    "teses": {
+      "A": 3,
+      "C": 2
+    }
+  },
+  {
+    "a": "carta_impossivel",
+    "b": "chave_no_lugar",
+    "titulo": "Ela descreveu a minha chegada",
+    "corpo": "A carta previu o vaso da direita, a lanterna acesa cedo demais, o carro parado antes da porteira. Cada item, sozinho, é o que qualquer visitante faria. Todos juntos, na ordem, são outra coisa.",
+    "teses": {
+      "A": 3,
+      "B": 1
+    }
+  },
+  {
+    "a": "mesma_idade",
+    "b": "mesmo_remedio",
+    "titulo": "A mesma mulher, com vinte e sete anos de atraso",
+    "corpo": "Trinta e oito anos, sozinha, insone, medicada com a mesma substância, escrevendo obsessivamente sobre uma mulher que ela conhece em detalhe e nunca encontrou. Uma de nós é o espelho da outra. Não sei de que lado do vidro eu estou.",
+    "teses": {
+      "B": 3,
+      "A": 1
+    }
+  },
+  {
+    "a": "bilhete_geladeira",
+    "b": "relogio_parado",
+    "titulo": "As minhas manias, na letra dela",
+    "corpo": "Não deixar o corredor no escuro. Três e quarenta e sete. Coisas que eu nunca disse em voz alta porque não são assunto — e que estão nesta casa desde antes de eu saber que ela existia.",
+    "teses": {
+      "B": 2,
+      "A": 2
+    }
+  },
+  {
+    "a": "visitante_existe",
+    "b": "casaco",
+    "titulo": "O casaco",
+    "corpo": "Ela descreveu a peça de roupa que eu escolhi esta manhã, num armário, em março de 1998. Ou eu me vesti para caber na descrição sem saber que a conhecia.",
+    "teses": {
+      "A": 2,
+      "B": 2
+    }
+  },
+  {
+    "a": "fotografia",
+    "b": "mesa_para_dois",
+    "titulo": "A segunda pessoa",
+    "corpo": "Há uma segunda pessoa na mesa de 1998, uma segunda xícara na cozinha e uma segunda figura na fotografia. Nenhuma delas tem nome. Todas têm o mesmo casaco.",
+    "teses": {
+      "A": 2,
+      "C": 2
+    }
+  },
+  {
+    "a": "medo_de_helena",
+    "b": "fita_helena",
+    "titulo": "Ela sabia que ia acabar",
+    "corpo": "Helena não temia a visitante: temia não estar aqui quando ela chegasse. E gravou uma fita antecipando as duas explicações que dariam para o seu sumiço. Quem prevê a própria versão oficial já sabe que vai haver uma.",
+    "teses": {
+      "C": 2,
+      "A": 1,
+      "B": 1
+    }
+  },
+  {
+    "a": "remedios",
+    "b": "secao_d",
+    "titulo": "Lucidez",
+    "corpo": "O médico — ou ela — escreveu \"lucidez\" no campo do diagnóstico. E depois ela montou um protocolo de verificação melhor do que o de metade das redações em que eu trabalhei. Loucos não fazem controle de qualidade da própria loucura.",
+    "teses": {
+      "A": 2,
+      "B": 2
+    }
+  },
+  {
+    "a": "fotografia",
+    "b": "relogio_parado",
+    "titulo": "O que eu vi",
+    "corpo": "Uma fotografia mudou e dois relógios marcam a minha hora. Eu não dormi direito em quatro meses. Sei exatamente o que um bom repórter escreveria sobre uma testemunha nas minhas condições.",
+    "teses": {
+      "B": 3
+    }
+  },
+  {
+    "a": "porta_aberta",
+    "b": "chave_aparecida",
+    "titulo": "Alguém entrou enquanto eu estava aqui dentro",
+    "corpo": "A porta que eu tranquei estava aberta, e sobre o aparador havia uma chave que não estava lá. As duas coisas juntas não são um fenômeno: são uma pessoa com um molho de chaves e a paciência de esperar eu ir para os fundos.",
+    "teses": {
+      "C": 4
+    }
+  },
+  {
+    "a": "casa_mexeu",
+    "b": "relogio_parado",
+    "titulo": "Ou a casa se mexe, ou eu me mexo",
+    "corpo": "Uma cadeira mudou de cômodo, uma caixa de música mudou de cômodo, e eu tenho quatro meses de insônia e um histórico de lapsos que eu nunca contei ao médico. Se eu estivesse apurando o caso de outra pessoa, já sabia qual das duas hipóteses eu escreveria primeiro.",
+    "teses": {
+      "B": 4
+    }
+  },
+  {
+    "a": "mulher_da_familia",
+    "b": "mesma_maquina",
+    "titulo": "A mesma pessoa, desde 1998",
+    "corpo": "Uma mulher retirou o material da polícia em novembro de 1998 alegando um parentesco inexistente. Alguém digitou a minha carta na máquina desta casa em algum momento dos últimos meses. Se for a mesma pessoa, ela vem mantendo isto de pé por vinte e sete anos — e eu sou a primeira coisa que ela decidiu trazer para dentro.",
+    "teses": {
+      "C": 4,
+      "A": 1
+    }
+  },
+  {
+    "a": "caderno_porao",
+    "b": "letra_diferente",
+    "titulo": "A pessoa do porão",
+    "corpo": "Alguém morou aqui embaixo por semanas, escrevendo com uma letra que é quase a de Helena. Ou Helena desceu e passou a escrever diferente, ou havia uma segunda mulher nesta casa desde sempre — e foi ela quem sentou à segunda cadeira da mesa posta.",
+    "teses": {
+      "C": 2,
+      "B": 2,
+      "A": 1
+    }
+  },
+  {
+    "a": "bilhete_lampiao",
+    "b": "carta_impossivel",
+    "titulo": "Vinte e sete anos de espera",
+    "corpo": "\"eu esperei vinte e sete anos, você pode esperar dez minutos.\" A carta de julho de 1998 já descrevia a minha chegada. Alguém, em algum lugar deste intervalo, sabia a data de hoje.",
+    "teses": {
+      "A": 4
+    }
+  },
+  {
+    "a": "caderno_porao",
+    "b": "mesa_para_dois",
+    "titulo": "A segunda pessoa morava embaixo",
+    "corpo": "A polícia não conseguiu identificar quem sentou à segunda cadeira em outubro de 1998. Havia uma pessoa morando no porão, contando os dias, ouvindo Helena andar por cima. Isso explica a mesa posta e não explica mais nada — porque essa pessoa também sumiu.",
+    "teses": {
+      "C": 3,
+      "B": 1
+    }
+  },
+  {
+    "a": "gaveta_g",
+    "b": "secao_d",
+    "titulo": "O que Helena não quis fixar",
+    "corpo": "Ela catalogou tudo, testou tudo, verificou vinte e duas afirmações. E deixou uma pasta sem nome, vazia, com o fundo limpo. \"escrever fixa, e enquanto não estiver escrito ainda dá para ser outra coisa.\"",
+    "teses": {
+      "A": 2,
+      "B": 2
+    }
+  },
+  {
+    "a": "chave_aparecida",
+    "b": "lista_sobre_mim",
+    "titulo": "Item 3",
+    "corpo": "\"Não vai bater na porta. Vai olhar embaixo do vaso primeiro.\" Helena sabia onde eu procuraria uma chave. E hoje uma chave apareceu exatamente no lugar onde eu já tinha procurado, e não estava.",
+    "teses": {
+      "A": 3,
+      "C": 2
+    }
+  }
+]

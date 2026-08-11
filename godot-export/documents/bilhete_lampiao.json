@@ -1,0 +1,12 @@
+{
+  "id": "bilhete_lampiao",
+  "tipo": "note",
+  "titulo": "Bilhete sob o lampião",
+  "procedencia": "Porão. Dobrado em quatro, usado de calço para o pé do lampião.",
+  "paginas": [
+    "\"se for você lendo isto, acende e senta.\n\nnão precisa ter pressa. eu esperei vinte e sete anos, você pode esperar dez minutos.\""
+  ],
+  "corpo": "\"se for você lendo isto, acende e senta.\n\nnão precisa ter pressa. eu esperei vinte e sete anos, você pode esperar dez minutos.\"",
+  "nota_laura": "A dobra do papel está gasta de tanto abrir e fechar. Não é um bilhete que alguém deixou. É um bilhete que alguém leu muitas vezes.",
+  "pista": "bilhete_lampiao"
+}

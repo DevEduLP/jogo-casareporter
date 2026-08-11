@@ -1,0 +1,24 @@
+{
+  "id": "carta_convite",
+  "tipo": "letter",
+  "titulo": "A carta",
+  "procedencia": "Sem remetente. Postada em Vale das Pedras, há onze dias.",
+  "paginas": [
+    "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Não do jeito que todo mundo diz que parou de dormir — sei que você acorda às 3h47 e fica olhando o teto até clarear, e que já são quatro meses assim. Sei que você não desfez as caixas do apartamento novo. Sei que ainda existe uma escova de dentes que não é sua no copo do banheiro e que você não teve coragem de jogar fora.\n\nNão escrevo para assustar você. Escrevo porque você é a única pessoa que ainda faz perguntas sobre Helena Vasques.",
+    "O caso foi arquivado em outubro de 1998 como desaparecimento voluntário. Você sabe disso. Você escreveu duas páginas sobre isso em 2019 e o jornal cortou para seis parágrafos.\n\nO que você não sabe é que a casa continua lá. Inteira. Ninguém vendeu, ninguém demoliu, ninguém entrou.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou.",
+    "Uma última coisa, e depois eu paro.\n\nHelena escreveu sobre uma visitante. Escreveu durante meses, quase todos os dias, sobre uma mulher que ainda viria. Descreveu o cabelo, o casaco, o jeito de segurar o cigarro sem fumar.\n\nTodo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nVá ver."
+  ],
+  "corpo": "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Não do jeito que todo mundo diz que parou de dormir — sei que você acorda às 3h47 e fica olhando o teto até clarear, e que já são quatro meses assim. Sei que você não desfez as caixas do apartamento novo. Sei que ainda existe uma escova de dentes que não é sua no copo do banheiro e que você não teve coragem de jogar fora.\n\nNão escrevo para assustar você. Escrevo porque você é a única pessoa que ainda faz perguntas sobre Helena Vasques.\n\nO caso foi arquivado em outubro de 1998 como desaparecimento voluntário. Você sabe disso. Você escreveu duas páginas sobre isso em 2019 e o jornal cortou para seis parágrafos.\n\nO que você não sabe é que a casa continua lá. Inteira. Ninguém vendeu, ninguém demoliu, ninguém entrou.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou.\n\nUma última coisa, e depois eu paro.\n\nHelena escreveu sobre uma visitante. Escreveu durante meses, quase todos os dias, sobre uma mulher que ainda viria. Descreveu o cabelo, o casaco, o jeito de segurar o cigarro sem fumar.\n\nTodo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nVá ver.",
+  "nota_laura": "Onze dias. Li essa carta trinta vezes em onze dias e continuo sem saber o que me irrita mais: o que ela sabe, ou o fato de eu ter vindo mesmo assim.",
+  "pista": "carta_recebida",
+  "variantes": {
+    "4": {
+      "paginas": [
+        "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Sei que você acorda às 3h47 e fica olhando o teto até clarear.\n\nSei que você já leu esta carta trinta e uma vezes.",
+        "O caso foi arquivado em outubro de 1998 como desaparecimento voluntário.\n\nA casa continua lá. Inteira.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou. A do porão está no arquivo, e a do arquivo você já achou, ou vai achar em alguns minutos, dependendo de quando você estiver lendo isto.",
+        "Helena escreveu sobre uma visitante. Todo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nDesce."
+      ],
+      "corpo": "Laura,\n\nVocê vai desculpar a falta de apresentação. Nomes atrapalham no começo.\n\nSei que você parou de dormir. Sei que você acorda às 3h47 e fica olhando o teto até clarear.\n\nSei que você já leu esta carta trinta e uma vezes.\n\nO caso foi arquivado em outubro de 1998 como desaparecimento voluntário.\n\nA casa continua lá. Inteira.\n\nEstrada do Cedro, depois do posto desativado. A terceira porteira.\n\nA chave está onde ela sempre deixou. A do porão está no arquivo, e a do arquivo você já achou, ou vai achar em alguns minutos, dependendo de quando você estiver lendo isto.\n\nHelena escreveu sobre uma visitante. Todo mundo achou que ela estava doente.\n\nEu acho que ela estava certa.\n\nDesce."
+    }
+  }
+}
