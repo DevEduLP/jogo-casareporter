@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Casa da Repórter</title>
+<!-- Favicon embutido (uma janela acesa numa casa escura): evita o 404 de
+     favicon.ico sujando o console durante o desenvolvimento. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2305060a'/%3E%3Cpath d='M4 15 16 6l12 9v13H4z' fill='%23241f1a' stroke='%234a4038'/%3E%3Crect x='13' y='18' width='6' height='7' fill='%23b9a37a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/ui.css">
+</head>
+<body>
+
+<canvas id="scene"></canvas>
+
+<!-- ============================ HUD ============================ -->
+<div id="hud" class="hidden">
+  <div id="crosshair"><span class="dot"></span></div>
+
+  <div id="prompt" class="hidden">
+    <span class="key">E</span>
+    <span class="verb"></span>
+    <span class="label"></span>
+  </div>
+
+  <div id="objective">
+    <div class="objective-eyebrow">Objetivo</div>
+    <div class="objective-text"></div>
+  </div>
+
+  <div id="subtitle"></div>
+
+  <div id="notifications"></div>
+
+  <div id="click-hint" class="hidden">Clique para retomar o controle da câmera</div>
+
+  <div id="hud-hints">
+    <span><b>WASD</b> mover</span>
+    <span><b>Shift</b> correr</span>
+    <span><b>E</b> interagir</span>
+    <span><b>F</b> lanterna</span>
+    <span><b>J</b> diário</span>
+    <span><b>I</b> itens</span>
+    <span><b>Esc</b> menu</span>
+  </div>
+</div>
+
+<!-- ======================= cartão de capítulo ======================= -->
+<div id="chapter-card" class="hidden">
+  <div class="chapter-n"></div>
+  <div class="chapter-title"></div>
+  <div class="chapter-epigraph"></div>
+</div>
+
+<!-- ========================== documentos =========================== -->
+<div id="overlay-doc" class="overlay hidden">
+  <div class="doc-sheet">
+    <div class="doc-head">
+      <div class="doc-title"></div>
+      <div class="doc-meta"></div>
+    </div>
+    <div class="doc-photo hidden"><canvas width="640" height="480"></canvas></div>
+    <div class="doc-body"></div>
+    <div class="doc-laura hidden">
+      <div class="laura-eyebrow">Laura</div>
+      <div class="laura-text"></div>
+    </div>
+    <div class="doc-foot">
+      <button class="doc-prev" type="button">← Anterior</button>
+      <div class="doc-pages"></div>
+      <button class="doc-next" type="button">Próxima →</button>
+    </div>
+    <div class="doc-close-hint">Esc para guardar</div>
+  </div>
+</div>
+
+<!-- ============================ diário ============================= -->
+<div id="overlay-journal" class="overlay hidden">
+  <div class="journal-sheet">
+    <div class="journal-tabs">
+      <button class="tab active" data-tab="pistas" type="button">Pistas</button>
+      <button class="tab" data-tab="deducoes" type="button">Deduções</button>
+      <button class="tab" data-tab="itens" type="button">Itens</button>
+    </div>
+
+    <div class="journal-panel" data-panel="pistas">
+      <p class="journal-help">
+        Selecione <b>duas pistas</b> para cruzá-las. Nem todo par leva a algum lugar.
+      </p>
+      <div class="clue-list"></div>
+      <div class="connect-bar">
+        <div class="connect-slots">
+          <div class="slot" data-slot="0">—</div>
+          <div class="connect-x">×</div>
+          <div class="slot" data-slot="1">—</div>
+        </div>
+        <button class="connect-btn" type="button" disabled>Cruzar</button>
+        <div class="connect-result"></div>
+      </div>
+    </div>
+
+    <div class="journal-panel hidden" data-panel="deducoes">
+      <div class="deduction-list"></div>
+    </div>
+
+    <div class="journal-panel hidden" data-panel="itens">
+      <div class="item-list"></div>
+    </div>
+
+    <div class="doc-close-hint">Esc ou J para fechar</div>
+  </div>
+</div>
+
+<!-- ============================= pausa ============================= -->
+<div id="overlay-pause" class="overlay hidden">
+  <div class="pause-sheet">
+    <h2>A CASA DA REPÓRTER</h2>
+    <div class="pause-chapter"></div>
+    <div class="pause-buttons">
+      <button data-act="resume" type="button">Continuar</button>
+      <button data-act="save" type="button">Salvar</button>
+      <button data-act="load" type="button">Carregar</button>
+      <button data-act="quit" type="button">Voltar ao início</button>
+    </div>
+    <div class="settings">
+      <label>Volume geral <input type="range" data-set="master" min="0" max="1" step="0.05"></label>
+      <label>Ambiente <input type="range" data-set="ambient" min="0" max="1" step="0.05"></label>
+      <label>Sensibilidade <input type="range" data-set="sens" min="0.4" max="3" step="0.1"></label>
+      <label>Grão da imagem <input type="range" data-set="grain" min="0" max="0.2" step="0.005"></label>
+      <label class="check"><input type="checkbox" data-set="invert"> Inverter eixo Y</label>
+    </div>
+    <div class="pause-note"></div>
+  </div>
+</div>
+
+<!-- ============================= título ============================= -->
+<div id="screen-title">
+  <div class="title-inner">
+    <div class="title-eyebrow">Estrada do Cedro, s/n</div>
+    <h1>A CASA<br>DA REPÓRTER</h1>
+    <p class="title-sub">
+      Helena Vasques desapareceu em outubro de 1998.<br>
+      Ela passou os sete meses anteriores escrevendo sobre uma visitante que ainda viria.
+    </p>
+    <div class="title-buttons">
+      <button id="btn-start" type="button">Começar</button>
+      <button id="btn-continue" type="button" class="hidden">Continuar</button>
+    </div>
+    <p class="title-warn">
+      Terror psicológico. Sem jumpscares. Use fones de ouvido.<br>
+      O jogo pede acesso ao cursor do mouse para o controle da câmera.
+    </p>
+    <div id="load-error" class="hidden"></div>
+  </div>
+</div>
+
+<!-- ============================== final ============================= -->
+<div id="screen-ending" class="hidden">
+  <div class="ending-inner">
+    <div class="ending-title"></div>
+    <div class="ending-text"></div>
+    <div class="ending-splinter"></div>
+    <div class="ending-stats"></div>
+    <button id="btn-ending-close" type="button">Voltar ao início</button>
+  </div>
+</div>
+
+<noscript>
+  <div class="fatal">Este jogo precisa de JavaScript habilitado.</div>
+</noscript>
+
+<script type="module" src="src/main.js"></script>
+<script>
+// Módulos ES não carregam via file:// por causa da política de CORS. Se a
+// página foi aberta com duplo clique, o jogo nunca inicializa e a tela fica
+// parada sem explicação — então detectamos e explicamos.
+if (location.protocol === 'file:') {
+  var box = document.getElementById('load-error');
+  box.classList.remove('hidden');
+  box.innerHTML = 'Abra o projeto por um servidor local.<br>' +
+    'No terminal, dentro da pasta do jogo:<br><code>python -m http.server 8000</code><br>' +
+    'e acesse <code>http://localhost:8000</code>';
+  document.getElementById('btn-start').disabled = true;
+}
+</script>
+</body>
+</html>

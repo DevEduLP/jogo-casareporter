@@ -1,0 +1,7 @@
+# O projeto não tem build nem dependências: quase nada a ignorar.
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Saves locais do jogo ficam em localStorage, não em arquivo.
