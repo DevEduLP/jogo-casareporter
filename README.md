@@ -3,8 +3,8 @@
 Terror psicológico investigativo em primeira pessoa, rodando direto no navegador.
 **Sem dependências externas, sem build, sem backend, sem arquivos de asset.**
 
-Vertical slice jogável: **capítulos 1 a 5** — a carta, a chegada, a casa, a
-descoberta impossível e a fotografia.
+Jogável: **capítulos 1 a 6** — a carta, a chegada, a casa, a descoberta
+impossível, a fotografia e a presença.
 
 ---
 
@@ -109,6 +109,11 @@ jogador sai daquele cômodo. Uma porta que se fecha na cara do jogador é um
 efeito. Uma porta que estava aberta e está fechada quando ele volta é uma
 dúvida — e só a dúvida interessa.
 
+Objetos que "mudam de lugar" nunca são transformados em runtime: existem duas
+cópias estáticas, uma por destino, e o sistema apaga uma e acende a outra
+(`world.moveObject`). Malha e colisão acendem juntas, então um objeto invisível
+também deixa de bloquear.
+
 ### A fotografia
 
 É desenhada por código (`drawPhotograph`), não carregada de um arquivo. Trocar
@@ -163,12 +168,12 @@ pegou uma inversão de winding que teria feito toda peça cilíndrica desaparece
 
 ## Estado atual e próximos passos
 
-**Pronto:** engine, áudio, casa completa (9 cômodos + exterior), 9 portas com
-chaves, 17 documentos (~2.500 palavras), 20 pistas, 12 conexões, inventário,
-diário, save/load, Sistema de Realidade, eventos ambientes, 4 finais.
+**Pronto:** engine, áudio, casa completa (11 cômodos + exterior + porão em
+nível inferior), 9 portas com cadeia de chaves, 21 documentos (~3.000
+palavras), 28 pistas, 20 conexões, inventário, diário, save/load, Sistema de
+Realidade até o nível 4, eventos ambientes, 4 finais.
 
-**Capítulos 6–10** estão declarados em `chapters.js` com título, epígrafe,
+**Capítulos 7–10** estão declarados em `chapters.js` com título, epígrafe,
 objetivo, nível de realidade e condição de avanço. Expandi-los é preencher
 `documents.js`, `clues.js` e as mutações em `scripts.js` — nenhum sistema
-precisa mudar. As áreas já existem no nível (porão, sótão, arquivo, quintal),
-trancadas por trás de chaves ainda não distribuídas.
+precisa mudar. O sótão e o quintal ainda não existem como espaço.

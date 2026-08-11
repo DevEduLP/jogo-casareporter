@@ -46,6 +46,35 @@ Vá ver.`,
     ],
     lauraNote: 'Onze dias. Li essa carta trinta vezes em onze dias e continuo sem saber o que me irrita mais: o que ela sabe, ou o fato de eu ter vindo mesmo assim.',
     clue: 'carta_recebida',
+    // Laura carrega esta carta no bolso o jogo inteiro e pode reabri-la pelo
+    // inventário a qualquer momento. No nível 4, ela não diz mais a mesma
+    // coisa. É a única mutação do jogo que acontece num objeto que nunca saiu
+    // das mãos dela.
+    alt: {
+      4: [
+`Laura,
+
+Você vai desculpar a falta de apresentação. Nomes atrapalham no começo.
+
+Sei que você parou de dormir. Sei que você acorda às 3h47 e fica olhando o teto até clarear.
+
+Sei que você já leu esta carta trinta e uma vezes.`,
+
+`O caso foi arquivado em outubro de 1998 como desaparecimento voluntário.
+
+A casa continua lá. Inteira.
+
+Estrada do Cedro, depois do posto desativado. A terceira porteira.
+
+A chave está onde ela sempre deixou. A do porão está no arquivo, e a do arquivo você já achou, ou vai achar em alguns minutos, dependendo de quando você estiver lendo isto.`,
+
+`Helena escreveu sobre uma visitante. Todo mundo achou que ela estava doente.
+
+Eu acho que ela estava certa.
+
+Desce.`,
+      ],
+    },
   },
 
   /* ===================== CAPÍTULO 2 — A CASA ============================= */
@@ -529,6 +558,116 @@ O vidro está rachado no canto, e a rachadura passa exatamente entre as duas fig
 
 Isso não quer dizer nada. Vidro racha.`,
     ],
+  },
+
+  /* ==================== CAPÍTULO 6 — A PRESENÇA ========================== */
+
+  material_devolvido: {
+    id: 'material_devolvido',
+    type: 'report',
+    title: 'Caixas de restituição — Polícia Civil',
+    meta: 'Arquivo. Três caixas de papelão, lacre rompido, empilhadas com cuidado.',
+    pages: [
+`As caixas que a polícia levou em 11 de outubro de 1998 e devolveu em 3 de novembro. Estão aqui. Alguém as trouxe de volta para dentro da casa, cortou o lacre e organizou o conteúdo por ano.
+
+Não é assim que a polícia devolve coisa. Polícia entrega no balcão para um parente e pede assinatura.
+
+Não havia parente. O jornal diz isso: "familiares não foram localizados".
+
+Então quem assinou.`,
+
+`No fundo da terceira caixa, o formulário de restituição. Preenchido a máquina, campo por campo.
+
+RECEBEDOR: (em branco)
+GRAU DE PARENTESCO: (em branco)
+DOCUMENTO: (em branco)
+ASSINATURA: uma linha de tinta contínua, sem nenhuma letra. Alguém encostou a caneta e arrastou.
+
+Data: 03/11/1998.
+
+E, no canto inferior, a lápis, com a letra do rodapé do inquérito — a mesma que perguntava "por ordem de quem?":
+
+"veio uma mulher. disse que era da família. eu deixei."`,
+    ],
+    lauraNote: 'Uma mulher disse que era da família de uma mulher que não tinha família, e levou embora tudo o que sobrou dela, e trouxe de volta para a casa vazia, e organizou por ano.\n\nEssa é a primeira coisa hoje que eu consigo escrever no caderno sem tremer. É uma pessoa. Pessoas deixam rastro.',
+    clue: 'mulher_da_familia',
+  },
+
+  indice_helena: {
+    id: 'indice_helena',
+    type: 'note',
+    title: 'Índice geral',
+    meta: 'Arquivo. Preso na lateral da estante com fita crepe ressecada.',
+    pages: [
+`Helena indexou a própria casa.
+
+A — correspondência (1991–)
+B — escola / substituições
+C — casa (reformas, contas, o poço)
+D — a visitante
+E — verificações
+F — sonhos
+G — ————
+
+A letra G não tem nome. Tem um traço, longo, feito com a régua.
+
+As pastas A a F estão nas gavetas. A gaveta G existe. Está vazia, e o fundo está limpo — não tem aquela poeira fina que junta em gaveta que nunca abriu.`,
+
+`Embaixo do índice, numa folha separada, uma anotação que não é índice de nada:
+
+"decidi hoje que não vou escrever a G.
+
+não porque não saiba. porque escrever fixa, e enquanto não estiver escrito ainda dá para ser outra coisa.
+
+se alguém achar esta folha e quiser saber o que era a G: sinto muito. eu também queria."`,
+    ],
+    clue: 'gaveta_g',
+  },
+
+  caderno_porao: {
+    id: 'caderno_porao',
+    type: 'diary',
+    title: 'Caderno sem capa',
+    meta: 'Porão. Sobre a mesa, aberto, com uma pedra segurando a página.',
+    pages: [
+`Não é a letra de Helena.
+
+É parecida. A inclinação é a mesma, o "t" cortado alto é o mesmo. Mas o "g" desce reto, e o de Helena tem uma volta.
+
+Duas pessoas com letra parecida, ou uma pessoa em dois momentos muito distantes da vida.`,
+
+`"dia 4 — ela ainda está lá em cima. ouvi a porta da cozinha.
+
+dia 6 — desceu até a metade da escada e voltou. não sei se me viu. acho que não. acho que se tivesse visto teria dito alguma coisa, ela sempre diz alguma coisa.
+
+dia 9 — hoje não ouvi nada o dia inteiro. isso é pior.
+
+dia 11 — não estou presa aqui. quero deixar isso registrado porque um dia alguém vai ler e vai achar que eu estava presa. a porta abre pelo lado de dentro. eu conferi todos os dias e nunca subi."`,
+
+`"dia 14 — comecei a contar os dias errado de propósito, para ver se eu percebia. percebi no terceiro. anotar isso é a coisa mais tranquilizadora que eu fiz esta semana.
+
+dia 19 — a mulher lá de cima é boa pessoa. eu queria que ela soubesse disso.
+
+dia 23 —"
+
+Acaba aí. Não é o fim do caderno: tem trinta páginas em branco depois.`,
+    ],
+    lauraNote: 'Dia 23. Alguém morou neste porão por pelo menos vinte e três dias, sabendo que havia outra pessoa na casa, sem subir.\n\nE a coisa que eu não consigo tirar da cabeça não é essa. É "a mulher lá de cima é boa pessoa". Quem escreveu isso gostava dela.',
+    clue: 'caderno_porao',
+  },
+
+  bilhete_lampiao: {
+    id: 'bilhete_lampiao',
+    type: 'note',
+    title: 'Bilhete sob o lampião',
+    meta: 'Porão. Dobrado em quatro, usado de calço para o pé do lampião.',
+    pages: [
+`"se for você lendo isto, acende e senta.
+
+não precisa ter pressa. eu esperei vinte e sete anos, você pode esperar dez minutos."`,
+    ],
+    lauraNote: 'A dobra do papel está gasta de tanto abrir e fechar. Não é um bilhete que alguém deixou. É um bilhete que alguém leu muitas vezes.',
+    clue: 'bilhete_lampiao',
   },
 
   /* ===================== notas curtas de ambiente ======================== */

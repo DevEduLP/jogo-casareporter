@@ -169,8 +169,16 @@ export class Player {
   }
 
   _overlaps(c) {
-    // Colisores muito baixos (tapetes, degraus) não bloqueiam.
-    if (c.height !== undefined && c.height < 0.35) return false;
+    // Teste vertical antes do horizontal: um obstáculo só bloqueia se dividir
+    // altura com o corpo. É o que permite passar por baixo de uma verga e o
+    // que impede que as paredes do porão barrem quem anda no quintal acima.
+    const feet = this.groundY;
+    const head = feet + EYE_STAND;
+    const base = c.baseY === undefined ? 0 : c.baseY;
+    const top = base + (c.height === undefined ? 2 : c.height);
+    if (top < feet + 0.35) return false;   // baixo demais: tapete, degrau
+    if (base > head) return false;         // alto demais: viga, verga
+
     const x = this.position[0], z = this.position[2];
     const nx = clamp(x, c.min[0], c.max[0]);
     const nz = clamp(z, c.min[1], c.max[1]);

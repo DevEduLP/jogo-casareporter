@@ -37,6 +37,12 @@ export class Narrative {
 
   hasFlag(flag) { return this.flags.has(flag); }
 
+  /** Redefine o objetivo no meio de um capítulo, quando a cena muda o alvo. */
+  setObjective(text) {
+    this.objective = text;
+    this.bus.emit(EVENTS.OBJECTIVE_SET, { text });
+  }
+
   startChapter(index) {
     if (index < 0 || index >= CHAPTERS.length) return;
     this.chapterIndex = index;

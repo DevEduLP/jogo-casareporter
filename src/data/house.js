@@ -20,9 +20,15 @@ const WH = 2.8;      // altura do pé-direito
 const TE = 0.32;     // espessura de parede externa
 const TI = 0.16;     // espessura de parede interna
 
+// Escada do porão: 12 degraus a partir de z = -9.4, descendo até PORAO_Y.
+const STEPS = 12, RUN = 0.32, RISE = 0.24;
+const STAIR_TOP_Z = -9.4;
+const PORAO_Y = 0.28 - STEPS * RISE;              // -2.6
+const STAIR_END_Z = STAIR_TOP_Z - STEPS * RUN;    // -13.24
+
 /** Segmento de parede alinhado aos eixos. */
-function wall(x1, z1, x2, z2, tex = 'plaster', thick = TI, h = WH) {
-  return { x1, z1, x2, z2, tex, thick, h };
+function wall(x1, z1, x2, z2, tex = 'plaster', thick = TI, h = WH, baseY) {
+  return { x1, z1, x2, z2, tex, thick, h, baseY };
 }
 
 export function buildHouse() {
@@ -35,8 +41,9 @@ export function buildHouse() {
   // Fachada sul, com o vão da porta de entrada (x de -0.65 a 0.65).
   walls.push(wall(-8, 9, -0.65, 9, 'plaster', TE));
   walls.push(wall(0.65, 9, 8, 9, 'plaster', TE));
-  // Fundos, oeste.
-  walls.push(wall(-8, -9, 8, -9, 'plaster', TE));
+  // Fundos, com o vão da porta do porão (x de -0.6 a 0.6). Oeste inteiriça.
+  walls.push(wall(-8, -9, -0.6, -9, 'plaster', TE));
+  walls.push(wall(0.6, -9, 8, -9, 'plaster', TE));
   walls.push(wall(-8, -9, -8, 9, 'plaster', TE));
   // Leste, com o vão da porta dos fundos (z de 4.3 a 5.7).
   walls.push(wall(8, -9, 8, 4.3, 'plaster', TE));
@@ -66,6 +73,29 @@ export function buildHouse() {
   walls.push(wall(2.5, 2.5, 8, 2.5, 'plaster'));        // cozinha | banheiro
   walls.push(wall(2.5, -1.5, 8, -1.5, 'plaster'));      // banheiro | escritório
 
+  /* ------------------- caixa da escada e porão -------------------------- */
+  // A escada desce por um anexo colado aos fundos da casa. O anexo nunca é
+  // visto de fora (a sebe fecha o quintal antes dele), então só precisa vedar
+  // a visão de quem está descendo.
+  const ANEXO_TOPO = 2.6;
+  walls.push(wall(-1.4, -9.16, -1.4, -13.4, 'brick', TI, ANEXO_TOPO - PORAO_Y, PORAO_Y));
+  walls.push(wall(1.4, -9.16, 1.4, -13.4, 'brick', TI, ANEXO_TOPO - PORAO_Y, PORAO_Y));
+  // Testeiras que emendam o anexo na parede dos fundos, ladeando a porta.
+  walls.push(wall(-1.4, -9.16, -0.6, -9.16, 'brick', TI, ANEXO_TOPO - 0.28, 0.28));
+  walls.push(wall(0.6, -9.16, 1.4, -9.16, 'brick', TI, ANEXO_TOPO - 0.28, 0.28));
+  // Fundo do anexo: fecha só a parte acima do teto do porão, deixando a
+  // passagem livre embaixo.
+  walls.push(wall(-1.4, -13.4, 1.4, -13.4, 'brick', TI, ANEXO_TOPO + 0.3, -0.3));
+
+  // Paredes do porão (baseY explícito: aqui embaixo o piso é outro).
+  const PH = 2.3;
+  walls.push(wall(-6.5, -20.5, 6.5, -20.5, 'brick', TE, PH, PORAO_Y));
+  walls.push(wall(-6.5, -20.5, -6.5, -13.24, 'brick', TE, PH, PORAO_Y));
+  walls.push(wall(6.5, -20.5, 6.5, -13.24, 'brick', TE, PH, PORAO_Y));
+  // Parede da frente do porão, com o vão por onde a escada chega.
+  walls.push(wall(-6.5, -13.24, -1.4, -13.24, 'brick', TE, PH, PORAO_Y));
+  walls.push(wall(1.4, -13.24, 6.5, -13.24, 'brick', TE, PH, PORAO_Y));
+
   /* -------------------------------- cômodos ----------------------------- */
 
   const rooms = [
@@ -78,6 +108,13 @@ export function buildHouse() {
     { id: 'quarto', name: 'Quarto de Helena', min: [-8, -4.5], max: [-2.5, 1.5], floor: 'floorWood', surface: 'wood' },
     { id: 'arquivo', name: 'Arquivo', min: [-8, -9], max: [-2.5, -4.5], floor: 'floorConcrete', surface: 'concrete' },
     { id: 'varanda', name: 'Varanda', min: [-3.2, 9], max: [3.2, 11], floor: 'wood', surface: 'wood', ceiling: false, outdoor: true },
+    // A escada não ganha piso automático: quem define a altura são os degraus.
+    { id: 'escada', name: 'Escada do porão', min: [-1.3, -13.3], max: [1.3, -9.4], surface: 'wood', noFloor: true, ceiling: false },
+    // O porão fica ao norte da casa, não literalmente sob ela. O jogador nunca
+    // vê os dois espaços ao mesmo tempo, e no nível 4 de realidade uma planta
+    // que não fecha é tema, não defeito. Pé-direito baixo (2.3) para que o teto
+    // fique abaixo do gramado externo.
+    { id: 'porao', name: 'Porão', min: [-6.5, -20.5], max: [6.5, -13.3], floor: 'floorConcrete', surface: 'concrete', baseY: PORAO_Y, height: 2.3, ceilingTex: 'wood' },
   ];
 
   /* --------------------------------- portas ----------------------------- */
@@ -121,7 +158,9 @@ export function buildHouse() {
       lockedText: 'Emperrada. A madeira inchou com a umidade e não se move um milímetro.',
     },
     {
-      id: 'porta_porao', hinge: [-0.55, -8.84], width: 1.1, closedRot: 0, openDelta: H,
+      // Abre para dentro do vão da escada (openDelta positivo leva a porta
+      // para -z), para não travar quem está no corredor.
+      id: 'porta_porao', hinge: [-0.6, -9], width: 1.2, closedRot: 0, openDelta: H,
       open: false, locked: true, key: 'chave_porao', label: 'Porta do porão',
       lockedText: 'Um cadeado. Enferrujado por fora, limpo na parte de baixo — foi aberto há pouco tempo.',
     },
@@ -151,6 +190,29 @@ export function buildHouse() {
     outside.push(P.box_(0, 0, 0, 17.2 - inset * 1.6, 0.36, 19.2 - inset * 1.6, 'wood',
       { uvScale: [2, 2], collide: false, y: WH + 0.2 + i * 0.34, tint: [0.55, 0.5, 0.45] }));
   }
+
+  /* ------------------ anexo da escada, escada e porão ------------------- */
+
+  // Cobertura do anexo: veda o vão da escada por cima.
+  outside.push(P.box_(0, -11.3, 0, 3.4, 0.24, 4.5, 'wood',
+    { collide: false, y: 2.6, uvScale: [1.4, 1.4], tint: [0.5, 0.45, 0.4] }));
+  // Degraus (visuais: a altura de quem desce vem das plataformas).
+  outside.push(P.staircase(0, STAIR_TOP_Z, STEPS, RUN, RISE, 2.6));
+  // Corrimão de um lado só, encostado na parede.
+  for (let i = 0; i < STEPS; i += 2) {
+    outside.push(P.box_(1.28, STAIR_TOP_Z - i * RUN - RUN, 0, 0.06, 0.9, 0.06, 'wood',
+      { collide: false, y: 0.28 - (i + 1) * RISE, tint: [0.45, 0.4, 0.34] }));
+  }
+
+  // Sebe que fecha o quintal: sem ela o jogador contorna a casa e cai dentro
+  // do volume do porão, que fica sob o gramado dos fundos.
+  const sebe = (x1, z1, x2, z2) => P.box_((x1 + x2) / 2, (z1 + z2) / 2, 0,
+    Math.max(Math.abs(x2 - x1), 0.5), 2.0, Math.max(Math.abs(z2 - z1), 0.5), 'grass',
+    { collide: true, uvScale: [1.6, 1.6], tint: [0.34, 0.4, 0.3] });
+  outside.push(sebe(-9.5, -9.5, -9.5, 20.5));
+  outside.push(sebe(9.5, -9.5, 9.5, 20.5));
+  outside.push(sebe(-9.5, -9.5, -1.4, -9.5));
+  outside.push(sebe(1.4, -9.5, 9.5, -9.5));
 
   // Cerca frontal, com o portão aberto.
   for (let x = -14; x <= 14; x += 1.6) {
@@ -226,7 +288,7 @@ export function buildHouse() {
     P.fridge(3.2, 8.4, 0),
     P.table(5.4, 5.4, 0, 1.3, 0.85),
     P.chair(5.4, 6.5, Math.PI),
-    P.chair(5.4, 4.3, 0),
+    // A segunda cadeira da cozinha vive em `mutaveis`: ela muda de cômodo.
     P.cabinet(7.5, 8.0, -H, 0.9, 0.8),
     P.ceilingLamp(5.4, 6.0, 'luz_cozinha', false),
     // Quadro de energia: o objetivo elétrico do capítulo 2. Fica num trecho de
@@ -243,7 +305,10 @@ export function buildHouse() {
     P.rug(0, 7.6, 0, 1.6, 1.0, [0.4, 0.34, 0.3]),
     P.ceilingLamp(0, 7.0, 'luz_entrada', false),
     P.picture(2.40, 1.5, 7.9, -H, 0.3, 0.38, 'paper', [0.75, 0.7, 0.6]),
-    P.paperStack(-1.8, 8.2, 0, 6, 0.8),   // correspondência acumulada de anos
+    // A correspondência ocupa só a metade direita do aparador: a esquerda fica
+    // livre para a chave que aparece no capítulo 6, senão uma cobre a mira da
+    // outra e o item vira inalcançável.
+    P.paperStack(-1.62, 8.2, 0, 6, 0.8),
   );
 
   /* ------------------------------- CORREDOR ----------------------------- */
@@ -291,8 +356,7 @@ export function buildHouse() {
     P.ceilingLamp(-5.2, -1.5, 'luz_quarto', false),
     P.picture(-7.80, 1.6, -0.2, H, 0.3, 0.4, 'photo0', [0.85, 0.8, 0.72]),
     P.curtain(-7.78, 1.05, -1.6, H, 1.4, 1.6, [0.46, 0.42, 0.4]),
-    // A caixa de música, sobre a escrivaninha.
-    P.box_(-3.55, 0.6, -H, 0.22, 0.14, 0.16, 'woodLight', { collide: false, y: 0.78, uvScale: [2, 2] }),
+    // A caixa de música vive em `mutaveis`: ela muda de cômodo no capítulo 6.
     P.paperStack(-3.30, 1.15, 0.2, 7, 0.78),
   );
 
@@ -328,13 +392,70 @@ export function buildHouse() {
     P.fileCabinet(-6.9, -8.4, 0, 4),
     P.fileCabinet(-6.2, -8.4, 0, 4),
     P.bookshelf(-7.6, -6.0, H, 1.6, 2.1),
-    P.table(-3.4, -7.4, H, 1.6, 0.9),
+    // A mesa fica recuada contra a parede dos fundos: encostada no vão da
+    // porta (x -2.5, z -7.2 a -6.1) ela estrangulava a entrada do cômodo.
+    P.table(-4.4, -8.0, 0, 1.6, 0.9),
     P.crate(-3.2, -5.2, 0.3, 0.6),
     P.ceilingLamp(-5.2, -6.8, 'luz_arquivo', false),
-    P.paperStack(-3.4, -7.4, 0.1, 11, 0.76),
+    P.paperStack(-4.4, -8.0, 0.1, 11, 0.76),
   );
 
-  const roomProps = P.combine(sala, cozinha, entrada, corredor, banheiro, quarto, escritorio, arquivo);
+  /* --------------------------------- PORÃO ------------------------------ */
+  // Frio e quase vazio — o peso vem do que está arrumado demais para um porão
+  // abandonado. Props de porão nascem em PORAO_Y, não em zero.
+  // Rebaixa um prop para o nível do porão. Precisa mover as luzes junto —
+  // uma luminária cujo corpo desce e cuja luz fica no nível do térreo
+  // iluminaria o gramado a partir de dentro da terra.
+  const py = (p) => {
+    for (const part of p.parts) part.position[1] += PORAO_Y;
+    for (const light of p.lights) light.position[1] += PORAO_Y;
+    for (const col of p.colliders) col.baseY = (col.baseY || 0) + PORAO_Y;
+    return p;
+  };
+
+  const porao = P.combine(
+    py(P.bookshelf(-6.2, -16.0, H, 1.4, 1.8)),
+    py(P.fileCabinet(-6.1, -18.6, 0, 3)),
+    py(P.crate(-4.6, -19.4, 0.2, 0.6)),
+    py(P.crate(-3.9, -19.6, -0.3, 0.5)),
+    py(P.crate(5.4, -19.2, 0.4, 0.55)),
+    py(P.table(4.6, -15.4, -H, 1.6, 0.8)),
+    py(P.paperStack(4.6, -15.4, 0.1, 8, 0.76)),
+    py(P.ceilingLamp(0, -16.5, 'luz_porao', false, 2.05)),
+    // O quadro que fecha o capítulo: um colchão no chão, uma cadeira virada
+    // para a parede do fundo e um lampião. Alguém ficou aqui. Não em 1998.
+    py(P.box_(0.4, -18.8, 0.1, 1.9, 0.16, 0.9, 'fabric',
+      { collide: false, uvScale: [1.2, 1.2], tint: [0.55, 0.5, 0.44] })),
+    py(P.box_(-0.5, -18.6, 0.1, 0.5, 0.12, 0.3, 'fabric',
+      { collide: false, tint: [0.72, 0.68, 0.6] })),
+    py(P.chair(1.2, -16.6, Math.PI)),
+    py(P.box_(-1.6, -17.4, 0, 0.2, 0.3, 0.2, 'metal',
+      { collide: false, tint: [0.5, 0.46, 0.4] })),
+  );
+
+  /* ---------------------- objetos que trocam de lugar ------------------- */
+  // Cada objeto móvel existe em duas cópias, uma por destino. O Sistema de
+  // Realidade apaga uma e acende a outra enquanto o jogador está em outro
+  // cômodo. Nunca há transformação em runtime — só um estado que já mudou.
+  const mutaveis = P.combine(
+    P.tag(P.chair(5.4, 4.3, 0), 'cadeira_cozinha', true),
+    // Virada para a porta do porão, mas recuada: a poucos passos dela ela
+    // fecharia o único caminho até a porta.
+    P.tag(P.chair(0, -6.6, Math.PI), 'cadeira_corredor', false),
+
+    P.tag(P.box_(-3.55, 0.6, -H, 0.22, 0.14, 0.16, 'woodLight',
+      { collide: false, y: 0.78, uvScale: [2, 2] }), 'caixa_musica_quarto', true),
+    P.tag(P.box_(-1.55, 8.2, 0.3, 0.22, 0.14, 0.16, 'woodLight',
+      { collide: false, y: 0.8, uvScale: [2, 2] }), 'caixa_musica_entrada', false),
+
+    // A chave do arquivo, sobre o aparador da entrada. Não estava ali antes.
+    P.tag(P.box_(-2.14, 8.15, 0.5, 0.08, 0.012, 0.03, 'metal',
+      { collide: false, y: 0.81, tint: [0.8, 0.76, 0.62], gloss: 0.4 }),
+    'chave_arquivo_visivel', false),
+  );
+
+  const roomProps = P.combine(sala, cozinha, entrada, corredor, banheiro, quarto,
+    escritorio, arquivo, porao, mutaveis);
   props.push(...roomProps.parts);
 
   const colliders = [
@@ -389,7 +510,7 @@ export function buildHouse() {
       action: { type: 'switch', light: 'luz_entrada' },
     },
     {
-      id: 'correspondencia', pos: [-1.8, 0.9, 8.2], size: [0.7, 0.3, 0.4],
+      id: 'correspondencia', pos: [-1.62, 0.92, 8.2], size: [0.46, 0.3, 0.36],
       label: 'Correspondência', verb: 'Examinar',
       action: { type: 'read', doc: 'conta_luz' },
     },
@@ -569,6 +690,80 @@ export function buildHouse() {
       label: 'Gaveta da escrivaninha', verb: 'Abrir',
       action: { type: 'script', id: 'gaveta_escritorio' },
     },
+
+    /* ---------- capítulo 6: o que aparece ---------- */
+    {
+      // Sobre o aparador da entrada, onde Laura já vasculhou a correspondência.
+      id: 'chave_arquivo_aparece', pos: [-2.14, 0.87, 8.15], size: [0.22, 0.18, 0.24],
+      label: 'Chave sobre o aparador', verb: 'Pegar', hidden: true,
+      action: { type: 'pickup', item: 'chave_arquivo', clue: 'chave_aparecida' },
+    },
+    {
+      id: 'caixa_musica_entrada', pos: [-1.55, 0.87, 8.2], size: [0.3, 0.24, 0.26],
+      label: 'Caixa de música', verb: 'Examinar', hidden: true,
+      action: { type: 'script', id: 'caixa_musica_mudou' },
+    },
+    {
+      id: 'cadeira_corredor', pos: [0, 0.75, -6.6], size: [0.7, 1.1, 0.7],
+      label: 'Cadeira no corredor', verb: 'Examinar', hidden: true,
+      action: { type: 'script', id: 'cadeira_corredor' },
+    },
+
+    /* ---------- arquivo ---------- */
+    {
+      id: 'arquivo_gavetas', pos: [-6.9, 0.98, -8.4], size: [2.3, 1.5, 0.75],
+      label: 'Arquivos de aço', verb: 'Abrir as gavetas',
+      action: { type: 'script', id: 'arquivo_gavetas' },
+    },
+    {
+      id: 'arquivo_mesa', pos: [-4.4, 0.9, -8.0], size: [1.7, 0.4, 1.0],
+      label: 'Caixas sobre a mesa', verb: 'Examinar',
+      action: { type: 'read', doc: 'material_devolvido' },
+    },
+    {
+      id: 'arquivo_estante', pos: [-7.6, 1.2, -6.0], size: [0.55, 2.0, 1.7],
+      label: 'Estante do arquivo', verb: 'Examinar',
+      action: { type: 'read', doc: 'indice_helena' },
+    },
+    {
+      id: 'interruptor_arquivo', pos: [-2.62, 1.3, -5.4], size: [0.16, 0.24, 0.2],
+      label: 'Interruptor', verb: 'Acionar',
+      action: { type: 'switch', light: 'luz_arquivo' },
+    },
+
+    /* ---------- porão ---------- */
+    {
+      id: 'interruptor_porao', pos: [2.0, PORAO_Y + 1.2, -13.45], size: [0.16, 0.24, 0.2],
+      label: 'Interruptor', verb: 'Acionar',
+      action: { type: 'switch', light: 'luz_porao' },
+    },
+    {
+      id: 'porao_colchao', pos: [0.4, PORAO_Y + 0.2, -18.8], size: [2.0, 0.6, 1.1],
+      label: 'Colchão no chão', verb: 'Examinar',
+      action: { type: 'script', id: 'porao_colchao' },
+    },
+    {
+      id: 'porao_cadeira', pos: [1.2, PORAO_Y + 0.5, -16.6], size: [0.7, 1.1, 0.7],
+      label: 'Cadeira', verb: 'Examinar',
+      action: { type: 'script', id: 'porao_cadeira' },
+    },
+    {
+      id: 'porao_lampiao', pos: [-1.6, PORAO_Y + 0.2, -17.4], size: [0.34, 0.44, 0.34],
+      label: 'Lampião', verb: 'Examinar',
+      action: { type: 'script', id: 'porao_lampiao' },
+    },
+    {
+      id: 'porao_mesa', pos: [4.6, PORAO_Y + 0.85, -15.4], size: [1.7, 0.4, 0.9],
+      label: 'Papéis sobre a mesa', verb: 'Examinar',
+      // Duas pistas do mesmo papel: o que está escrito e a letra com que foi
+      // escrito. A segunda é a que importa.
+      action: { type: 'read', doc: 'caderno_porao', clue: 'letra_diferente' },
+    },
+    {
+      id: 'porao_parede', pos: [1.2, PORAO_Y + 1.1, -20.32], size: [3.6, 1.8, 0.3],
+      label: 'A parede do fundo', verb: 'Olhar',
+      action: { type: 'script', id: 'porao_parede' },
+    },
   );
 
   // Plataformas: a casa assenta sobre um alicerce e a varanda tem um degrau.
@@ -576,8 +771,18 @@ export function buildHouse() {
   const platforms = [
     { min: [-8.4, -9.4], max: [8.4, 9.4], y: 0.28 },     // interior
     { min: [-3.2, 9], max: [3.2, 11.1], y: 0.28 },       // varanda
-    { min: [-1.7, 11.1], max: [1.7, 11.7], y: 0.14 },    // degrau
+    { min: [-1.7, 11.1], max: [1.7, 11.7], y: 0.14 },    // degrau da varanda
   ];
+  // Um patamar por degrau da escada do porão: sem física vertical de verdade,
+  // é a interpolação de floorHeightAt que faz a descida parecer descida.
+  for (let i = 0; i < STEPS; i++) {
+    platforms.push({
+      min: [-1.4, STAIR_TOP_Z - (i + 1) * RUN],
+      max: [1.4, STAIR_TOP_Z - i * RUN],
+      y: 0.28 - (i + 1) * RISE,
+    });
+  }
+  platforms.push({ min: [-6.6, -20.6], max: [6.6, STAIR_END_Z], y: PORAO_Y });
 
   return {
     wallHeight: WH,

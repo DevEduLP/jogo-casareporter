@@ -21,6 +21,8 @@ export class World {
     this.photosById = new Map();
     this.partsById = new Map();
     this.galleryPhotos = [];
+    // Grupos: conjuntos de peças + colisores que acendem e apagam juntos.
+    this.groups = new Map();
     this.doors = new Map();
     this.colliders = [];       // AABBs estáticos {min:[x,z], max:[x,z], height}
     this.platforms = data.platforms || [];
@@ -72,19 +74,21 @@ export class World {
   }
 
   _buildRooms() {
-    const WH = this.data.wallHeight;
     for (const room of this.data.rooms) {
-      if (room.outdoor) continue;   // a varanda já tem seu próprio assoalho
+      // `outdoor` já tem assoalho próprio; `noFloor` é para vãos de escada,
+      // onde o piso é inclinado e vem dos degraus.
+      if (room.outdoor || room.noFloor) continue;
       const w = room.max[0] - room.min[0];
       const d = room.max[1] - room.min[1];
       const cx = (room.min[0] + room.max[0]) / 2;
       const cz = (room.min[1] + room.max[1]) / 2;
-      const y = this.floorHeightAt(cx, cz);
+      const y = room.baseY !== undefined ? room.baseY : this.floorHeightAt(cx, cz);
+      const h = room.height || this.data.wallHeight;
       this._addMesh(['floor', w, d, false], [cx, y + 0.001, cz], 0,
         { texture: room.floor, uvScale: [0.35, 0.35] });
       if (room.ceiling !== false) {
-        this._addMesh(['floor', w, d, true], [cx, y + WH, cz], 0,
-          { texture: 'plaster', uvScale: [0.3, 0.3], tint: [0.62, 0.6, 0.56] });
+        this._addMesh(['floor', w, d, true], [cx, y + h, cz], 0,
+          { texture: room.ceilingTex || 'plaster', uvScale: [0.3, 0.3], tint: [0.62, 0.6, 0.56] });
       }
     }
   }
@@ -98,12 +102,15 @@ export class World {
       const cz = (w.z1 + w.z2) / 2;
       const bw = horizontal ? len : w.thick;
       const bd = horizontal ? w.thick : len;
-      const y = this.floorHeightAt(cx, cz);
+      // baseY explícito é necessário no porão e na caixa da escada, onde o
+      // piso sob a parede não é o mesmo do resto da casa.
+      const y = w.baseY !== undefined ? w.baseY : this.floorHeightAt(cx, cz);
       this._addMesh(['box', bw, w.h, bd], [cx, y, cz], 0,
         { texture: w.tex, uvScale: [0.32, 0.32] });
       this.colliders.push({
         min: [cx - bw / 2, cz - bd / 2],
         max: [cx + bw / 2, cz + bd / 2],
+        baseY: y,
         height: w.h,
       });
     }
@@ -112,12 +119,25 @@ export class World {
   _buildProps() {
     for (const part of this.data.props) {
       const obj = this._addMesh(part.geo, part.position, part.rotationY, part.material);
+      if (part.visible === false) obj.visible = false;
       // Índices para que sistemas narrativos alterem peças específicas depois.
       if (part.bulbOf) this.bulbsById.set(part.bulbOf, obj);
       if (part.photoOf) this.photosById.set(part.photoOf, obj);
       if (part.galleryPhoto) this.galleryPhotos.push(obj);
       if (part.id) this.partsById.set(part.id, obj);
+      if (part.group) this._group(part.group).parts.push(obj);
     }
+    // Colisores marcados com grupo entram no mesmo índice, para que um objeto
+    // invisível também deixe de bloquear a passagem.
+    for (const col of this.data.colliders || []) {
+      if (col.group) this._group(col.group).colliders.push(col);
+    }
+  }
+
+  _group(id) {
+    let g = this.groups.get(id);
+    if (!g) { g = { parts: [], colliders: [], visible: true }; this.groups.set(id, g); }
+    return g;
   }
 
   _buildDoors() {
@@ -187,6 +207,7 @@ export class World {
     return {
       min: [Math.min(x1, x2) - 0.06, Math.min(z1, z2) - 0.06],
       max: [Math.max(x1, x2) + 0.06, Math.max(z1, z2) + 0.06],
+      baseY: state.baseY,
       height: 2.05,
     };
   }
@@ -254,17 +275,47 @@ export class World {
     if (obj) obj.visible = visible;
   }
 
+  /** Acende/apaga um objeto inteiro (malha + colisão). */
+  setGroupVisible(id, visible) {
+    const g = this.groups.get(id);
+    if (!g) return false;
+    g.visible = visible;
+    for (const part of g.parts) part.visible = visible;
+    for (const col of g.colliders) col.enabled = visible;
+    return true;
+  }
+
+  isGroupVisible(id) {
+    const g = this.groups.get(id);
+    return g ? g.visible : false;
+  }
+
+  /**
+   * "Move" um objeto: apaga a cópia de origem e acende a de destino. Duas
+   * cópias estáticas custam menos que transformar geometria em runtime, e o
+   * jogador só vê o resultado — que é exatamente o ponto.
+   */
+  moveObject(fromGroup, toGroup) {
+    this.setGroupVisible(fromGroup, false);
+    this.setGroupVisible(toGroup, true);
+  }
+
   /* --------------------------------- espaço ----------------------------- */
 
-  /** Altura do piso: a casa fica sobre um alicerce, a varanda tem degraus. */
+  /**
+   * Altura do piso: a casa fica sobre um alicerce, a varanda tem degraus e o
+   * porão fica abaixo do nível do terreno. Sem plataforma correspondente, o
+   * chão é o terreno externo (y = 0) — e é por isso que a busca começa em
+   * `null` e não em zero: uma plataforma negativa precisa poder vencer.
+   */
   floorHeightAt(x, z) {
-    let h = 0;
+    let best = null;
     for (const p of this.platforms) {
       if (x >= p.min[0] && x <= p.max[0] && z >= p.min[1] && z <= p.max[1]) {
-        if (p.y > h) h = p.y;
+        if (best === null || p.y > best) best = p.y;
       }
     }
-    return h;
+    return best === null ? 0 : best;
   }
 
   roomAt(x, z) {
@@ -283,7 +334,7 @@ export class World {
 
   /** Todos os colisores válidos neste instante (estáticos + portas fechadas). */
   activeColliders() {
-    const list = this.colliders.slice();
+    const list = this.colliders.filter((c) => c.enabled !== false);
     for (const state of this.doors.values()) {
       if (!state.open) list.push(this.doorCollider(state));
     }
@@ -334,7 +385,9 @@ export class World {
     for (const [id, l] of this.lightsById) lights[id] = l.enabled;
     const photos = {};
     for (const [id, obj] of this.photosById) photos[id] = obj.material.texture;
-    return { doors, lights, photos };
+    const groups = {};
+    for (const [id, g] of this.groups) groups[id] = g.visible;
+    return { doors, lights, photos, groups };
   }
 
   deserialize(state) {
@@ -345,5 +398,6 @@ export class World {
     }
     for (const [id, on] of Object.entries(state.lights || {})) this.setLight(id, on);
     for (const [id, tex] of Object.entries(state.photos || {})) this.setPhoto(id, tex);
+    for (const [id, vis] of Object.entries(state.groups || {})) this.setGroupVisible(id, vis);
   }
 }

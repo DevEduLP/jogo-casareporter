@@ -106,6 +106,49 @@ export const CLUES = {
     text: 'O relógio da sala e o do corredor marcam 3h47. Os dois. É a hora em que eu acordo todas as noites.',
     tags: ['eu', 'impossivel'],
   },
+
+  /* ---------------------- capítulo 6 — A PRESENÇA ---------------------- */
+
+  chave_aparecida: {
+    n: 21, title: 'A chave que apareceu',
+    text: 'Etiqueta "ARQ", sobre o aparador da entrada. Eu revirei aquela pilha de correspondência no meu primeiro quarto de hora nesta casa.',
+    tags: ['presenca', 'impossivel', 'recente'],
+  },
+  casa_mexeu: {
+    n: 22, title: 'As coisas mudaram de lugar',
+    text: 'A cadeira da cozinha está no corredor, virada para a porta do porão. A caixa de música saiu do quarto e está na entrada. Nada disso é discutível: eu fotografei os dois cômodos.',
+    tags: ['presenca', 'impossivel'],
+  },
+  porta_aberta: {
+    n: 23, title: 'A porta da frente',
+    text: 'Eu tranquei. Tenho certeza de que tranquei, porque pensei em não trancar e decidi trancar. Estava aberta.',
+    tags: ['presenca', 'recente', 'eu'],
+  },
+  mulher_da_familia: {
+    n: 24, title: '"veio uma mulher. disse que era da família."',
+    text: 'Em 3 de novembro de 1998, alguém retirou o material apreendido de Helena alegando parentesco — de uma mulher sem parentes — e o devolveu à casa, organizado por ano.',
+    tags: ['conspiracao', 'presenca', '1998'],
+  },
+  gaveta_g: {
+    n: 25, title: 'A gaveta G',
+    text: 'O índice de Helena vai de A a G. A pasta G nunca foi escrita. A gaveta existe, está vazia, e o fundo não tem poeira.',
+    tags: ['helena', 'metodo'],
+  },
+  caderno_porao: {
+    n: 26, title: 'Vinte e três dias no porão',
+    text: 'Alguém morou aqui embaixo sabendo que havia outra pessoa na casa, e nunca subiu. "a porta abre pelo lado de dentro. eu conferi todos os dias."',
+    tags: ['porao', 'segunda_pessoa', 'helena'],
+  },
+  bilhete_lampiao: {
+    n: 27, title: '"eu esperei vinte e sete anos"',
+    text: 'Bilhete sob o lampião do porão, com a dobra gasta de tanto ser aberta e fechada. Vinte e sete anos é exatamente a distância entre 1998 e hoje.',
+    tags: ['porao', 'impossivel', 'previsao'],
+  },
+  letra_diferente: {
+    n: 28, title: 'A letra quase igual',
+    text: 'O caderno do porão tem a inclinação de Helena e o "t" alto de Helena. Mas o "g" desce reto, e o dela tem uma volta.',
+    tags: ['helena', 'segunda_pessoa', 'eu'],
+  },
 };
 
 /**
@@ -184,6 +227,57 @@ export const CONNECTIONS = [
     title: 'O que eu vi',
     text: 'Uma fotografia mudou e dois relógios marcam a minha hora. Eu não dormi direito em quatro meses. Sei exatamente o que um bom repórter escreveria sobre uma testemunha nas minhas condições.',
     lean: { psicologica: 3 },
+  },
+
+  /* ---------------------- capítulo 6 — A PRESENÇA ---------------------- */
+
+  {
+    a: 'porta_aberta', b: 'chave_aparecida',
+    title: 'Alguém entrou enquanto eu estava aqui dentro',
+    text: 'A porta que eu tranquei estava aberta, e sobre o aparador havia uma chave que não estava lá. As duas coisas juntas não são um fenômeno: são uma pessoa com um molho de chaves e a paciência de esperar eu ir para os fundos.',
+    lean: { conspiracao: 4 },
+  },
+  {
+    a: 'casa_mexeu', b: 'relogio_parado',
+    title: 'Ou a casa se mexe, ou eu me mexo',
+    text: 'Uma cadeira mudou de cômodo, uma caixa de música mudou de cômodo, e eu tenho quatro meses de insônia e um histórico de lapsos que eu nunca contei ao médico. Se eu estivesse apurando o caso de outra pessoa, já sabia qual das duas hipóteses eu escreveria primeiro.',
+    lean: { psicologica: 4 },
+  },
+  {
+    a: 'mulher_da_familia', b: 'mesma_maquina',
+    title: 'A mesma pessoa, desde 1998',
+    text: 'Uma mulher retirou o material da polícia em novembro de 1998 alegando um parentesco inexistente. Alguém digitou a minha carta na máquina desta casa em algum momento dos últimos meses. Se for a mesma pessoa, ela vem mantendo isto de pé por vinte e sete anos — e eu sou a primeira coisa que ela decidiu trazer para dentro.',
+    lean: { conspiracao: 4, sobrenatural: 1 },
+  },
+  {
+    a: 'caderno_porao', b: 'letra_diferente',
+    title: 'A pessoa do porão',
+    text: 'Alguém morou aqui embaixo por semanas, escrevendo com uma letra que é quase a de Helena. Ou Helena desceu e passou a escrever diferente, ou havia uma segunda mulher nesta casa desde sempre — e foi ela quem sentou à segunda cadeira da mesa posta.',
+    lean: { conspiracao: 2, psicologica: 2, sobrenatural: 1 },
+  },
+  {
+    a: 'bilhete_lampiao', b: 'carta_impossivel',
+    title: 'Vinte e sete anos de espera',
+    text: '"eu esperei vinte e sete anos, você pode esperar dez minutos." A carta de julho de 1998 já descrevia a minha chegada. Alguém, em algum lugar deste intervalo, sabia a data de hoje.',
+    lean: { sobrenatural: 4 },
+  },
+  {
+    a: 'caderno_porao', b: 'mesa_para_dois',
+    title: 'A segunda pessoa morava embaixo',
+    text: 'A polícia não conseguiu identificar quem sentou à segunda cadeira em outubro de 1998. Havia uma pessoa morando no porão, contando os dias, ouvindo Helena andar por cima. Isso explica a mesa posta e não explica mais nada — porque essa pessoa também sumiu.',
+    lean: { conspiracao: 3, psicologica: 1 },
+  },
+  {
+    a: 'gaveta_g', b: 'secao_d',
+    title: 'O que Helena não quis fixar',
+    text: 'Ela catalogou tudo, testou tudo, verificou vinte e duas afirmações. E deixou uma pasta sem nome, vazia, com o fundo limpo. "escrever fixa, e enquanto não estiver escrito ainda dá para ser outra coisa."',
+    lean: { sobrenatural: 2, psicologica: 2 },
+  },
+  {
+    a: 'chave_aparecida', b: 'lista_sobre_mim',
+    title: 'Item 3',
+    text: '"Não vai bater na porta. Vai olhar embaixo do vaso primeiro." Helena sabia onde eu procuraria uma chave. E hoje uma chave apareceu exatamente no lugar onde eu já tinha procurado, e não estava.',
+    lean: { sobrenatural: 3, conspiracao: 2 },
   },
 ];
 

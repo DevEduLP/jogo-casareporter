@@ -70,6 +70,9 @@ class Prop {
     this.colliders.push({
       min: [wx - ew / 2, wz - ed / 2],
       max: [wx + ew / 2, wz + ed / 2],
+      // baseY é obrigatório para que um obstáculo saiba em que andar ele está:
+      // sem isso, uma viga acima da cabeça bloqueia os pés.
+      baseY: this.oy,
       height: h,
     });
     return this;
@@ -458,6 +461,30 @@ export function box_(x, z, rot, w, h, d, tex, opts = {}) {
 export function ground(x, y, z, w, d, tex, uvScale = [1, 1], tint) {
   const p = new Prop(x, y, z, 0);
   p.flat(w, d, 0, 0, 0, tex, { uvScale, tint });
+  return p;
+}
+
+/**
+ * Marca todas as peças e colisores de um prop com um id de grupo. É assim que
+ * um objeto "muda de lugar": duas cópias em cômodos diferentes, uma visível e
+ * outra não, trocadas pelo Sistema de Realidade enquanto ninguém olha.
+ */
+export function tag(prop, groupId, visible = true) {
+  for (const part of prop.parts) { part.group = groupId; part.visible = visible; }
+  for (const col of prop.colliders) { col.group = groupId; col.enabled = visible; }
+  return prop;
+}
+
+/** Lance de escada descendente, usado como degraus visuais (sem colisor:
+ *  quem resolve a altura é o floorHeightAt do World). */
+export function staircase(x, z, steps, run, rise, width = 2.2) {
+  const p = new Prop(x, 0, z, 0);
+  for (let i = 0; i < steps; i++) {
+    const y = -(i + 1) * rise;
+    // Espelho (a face vertical) e piso (a face horizontal) de cada degrau.
+    p.box(width, rise, 0.04, 0, y, -i * run, 'wood', { uvScale: [0.8, 0.8] });
+    p.box(width, 0.05, run, 0, y + rise, -i * run - run / 2, 'wood', { uvScale: [0.8, 0.8] });
+  }
   return p;
 }
 

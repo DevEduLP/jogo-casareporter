@@ -348,8 +348,8 @@ export class Game {
       `Documentos lidos: ${this.journal.readDocuments.size}`,
       `Nível de realidade: ${this.reality.level}`,
       '',
-      'Fim da vertical slice — capítulos 1 a 5.',
-      'Os capítulos 6 a 10 estão estruturados em src/data/chapters.js.',
+      'Fim do conteúdo atual — capítulos 1 a 6.',
+      'Os capítulos 7 a 10 estão estruturados em src/data/chapters.js.',
     ].join('<br>');
 
     this.paused = true;

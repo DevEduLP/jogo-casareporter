@@ -177,6 +177,97 @@ export function runScript(game, id, source) {
       return;
     }
 
+    /* ==================== capítulo 6 — A PRESENÇA ====================== */
+
+    case 'cadeira_corredor': {
+      narrative.say([
+        'É a cadeira da cozinha. A mesma: tem o mesmo respingo de tinta branca no pé direito.',
+        'Está no meio do corredor, virada para a porta do porão. A uns dois metros dela.',
+        'Alguém sentou aqui para olhar aquela porta. Por tempo suficiente para precisar de uma cadeira.',
+      ]);
+      journal.addClue('casa_mexeu');
+      reality.spike(0.7, 5);
+      return;
+    }
+
+    case 'caixa_musica_mudou': {
+      audio.musicBox();
+      narrative.say([
+        'A caixa de música está na entrada. Sobre o aparador.',
+        'Eu abri essa caixa no quarto de Helena e deixei ela lá, com a tampa levantada, porque eu tirei uma chave de dentro e não me dei o trabalho de fechar.',
+        'A tampa está fechada.',
+      ]);
+      journal.addClue('casa_mexeu');
+      reality.spike(0.6, 4);
+      return;
+    }
+
+    case 'arquivo_gavetas': {
+      if (narrative.hasFlag('achou_chave_porao')) {
+        narrative.interrupt('Pastas de A a F. A gaveta G continua vazia.');
+        return;
+      }
+      narrative.setFlag('achou_chave_porao');
+      audio.click(0.7, 0.2);
+      inventory.add('chave_porao');
+      narrative.say([
+        'Seis pastas, etiquetadas à máquina, ordenadas. A sétima gaveta está vazia.',
+        'Não completamente vazia. No fundo, no canto, uma chave pesada com o dente polido de uso.',
+        'A gaveta que ela decidiu não escrever é a única em que ela guardou alguma coisa.',
+      ]);
+      journal.addClue('gaveta_g');
+      reality.spike(0.5, 4);
+      return;
+    }
+
+    /* --------------------------- o porão ------------------------------- */
+
+    case 'porao_colchao': {
+      narrative.say([
+        'Um colchão de solteiro, direto no chão, com um cobertor dobrado no pé. Dobrado, não jogado.',
+        'A poeira em cima é fina e uniforme. Meses, talvez. Não vinte e sete anos — vinte e sete anos de porão úmido teriam comido isso até o enchimento.',
+        'Alguém dormiu aqui, e não faz tanto tempo assim, e arrumou a cama antes de ir embora.',
+      ]);
+      journal.addClue('caderno_porao');
+      reality.spike(0.6, 5);
+      return;
+    }
+
+    case 'porao_cadeira': {
+      narrative.say([
+        'Uma cadeira, no meio do porão, virada para a parede do fundo.',
+        'Não para a escada. Não para a mesa. Para a parede.',
+        'O verniz do encosto está gasto nos dois pontos onde encostam os ombros de quem senta muito tempo sem se mexer.',
+      ]);
+      reality.spike(0.7, 6);
+      audio.tinnitus(4, 0.04);
+      return;
+    }
+
+    case 'porao_lampiao': {
+      game.openDocument('bilhete_lampiao');
+      return;
+    }
+
+    case 'porao_parede': {
+      if (narrative.hasFlag('viu_parede_porao')) {
+        narrative.interrupt('Continuo sem conseguir contar.');
+        return;
+      }
+      narrative.setFlag('viu_parede_porao');
+      narrative.say([
+        'A parede que a cadeira encara está cheia de riscos.',
+        'Grupos de cinco, o quinto atravessado, do jeito que todo mundo conta dias.',
+        'Começam na altura do peito de quem está sentado e descem até o chão, e depois voltam a subir mais à direita, e depois de novo.',
+        'Eu comecei a contar e parei no terceiro bloco, porque percebi uma coisa: os riscos mais recentes estão por cima dos antigos, e os antigos estão desbotados de um jeito que leva décadas.',
+        'Alguém contou dias nesta parede muitas vezes. Em épocas diferentes. Com anos de intervalo.',
+      ]);
+      journal.addClue('bilhete_lampiao');
+      reality.spike(1, 10);
+      audio.stinger(43, 0.14, 12);
+      return;
+    }
+
     default:
       console.warn('Script desconhecido:', id);
   }
@@ -278,6 +369,95 @@ export function wireStoryEvents(game) {
   bus.on(EVENTS.DOOR_LOCKED, ({ id }) => {
     if (id === 'porta_porao' && !journal.hasClue('cadeado_novo')) {
       journal.addClue('cadeado_novo');
+    }
+  });
+
+  /* ==================== capítulo 6 — A PRESENÇA ======================== */
+
+  bus.on(EVENTS.CHAPTER_START, ({ chapter }) => {
+    if (chapter.id !== 'a_presenca') return;
+
+    // Cada alteração é gatilhada pelo cômodo onde ela acontece, nunca por um
+    // temporizador global: assim nenhuma delas pode ocorrer sob o olhar.
+    reality.mutate('porta_frente_abre', 'entrada', () => {
+      world.setDoorSilent('porta_frente', true);
+      world.setGroupVisible('chave_arquivo_visivel', true);
+      interaction.setHidden('chave_arquivo_aparece', false);
+    });
+
+    reality.mutate('cadeira_some', 'cozinha', () => {
+      world.setGroupVisible('cadeira_cozinha', false);
+    });
+    reality.mutate('cadeira_aparece', 'corredor', () => {
+      world.setGroupVisible('cadeira_corredor', true);
+      interaction.setHidden('cadeira_corredor', false);
+    });
+
+    reality.mutate('caixa_some', 'quarto', () => {
+      world.setGroupVisible('caixa_musica_quarto', false);
+      interaction.setHidden('caixa_musica', true);
+    });
+    reality.mutate('caixa_aparece', 'entrada', () => {
+      world.setGroupVisible('caixa_musica_entrada', true);
+      interaction.setHidden('caixa_musica_entrada', false);
+    });
+
+    // Terceiro estado da fotografia: a segunda figura nítida, Helena apagada.
+    reality.mutate('foto_nivel4', 'escritorio', () => {
+      world.setPhoto('foto_escrivaninha', 'photo2');
+    });
+    reality.mutate('galeria_nivel4', 'corredor', () => {
+      world.setGalleryPhoto('photo2');
+    });
+
+    // Um empurrão para a frente da casa: Laura ouve a porta, não a vê abrir.
+    setTimeout(() => {
+      if (!narrative.hasFlag('viu_porta_aberta')) {
+        audio.door(true, false, 12);
+        audio.creak(11, 0.8);
+        narrative.interrupt('Isso veio da frente da casa.');
+        reality.spike(0.8, 6);
+      }
+    }, 9000);
+  });
+
+  // Chegar à entrada depois disso: a porta que ela trancou está aberta.
+  bus.on(EVENTS.ROOM_ENTER, ({ id }) => {
+    if (id === 'entrada' && reality.level >= 4 && !narrative.hasFlag('viu_porta_aberta')) {
+      narrative.setFlag('viu_porta_aberta');
+      journal.addClue('porta_aberta');
+      narrative.say([
+        'A porta da frente está aberta.',
+        'Eu tranquei. Eu lembro de trancar, porque eu pensei em não trancar — pensei "não tem ninguém a quilômetros daqui" — e tranquei mesmo assim.',
+        'Lá fora não tem nada. O carro está onde eu deixei.',
+      ], 0.6);
+      reality.spike(0.9, 7);
+    }
+
+    // Descer: fim do capítulo 6.
+    if (id === 'escada' && !narrative.hasFlag('desceu_escada')) {
+      narrative.setFlag('desceu_escada');
+      audio.creak(2, 1.3);
+      narrative.say(['A escada é de madeira e cada degrau reclama. Não dá para descer isto em silêncio. Nunca deu.'], 0.4);
+    }
+    if (id === 'porao' && !narrative.hasFlag('desceu_porao')) {
+      narrative.setFlag('desceu_porao');
+      audio.stinger(38, 0.12, 14);
+      reality.spike(1, 12);
+      narrative.say([
+        'Frio. Cheiro de terra e de pavio queimado.',
+        'Tem uma cadeira no meio do porão, virada para a parede do fundo.',
+      ], 0.8);
+      // O objetivo muda dentro do capítulo: a cena tem um alvo próprio.
+      narrative.setObjective('Olhar para onde a cadeira está olhando.');
+    }
+  });
+
+  // Destrancar o porão fecha o puzzle do capítulo (mas não o capítulo).
+  bus.on(EVENTS.SCRIPT, ({ id, door }) => {
+    if (id === 'porta_destrancada' && door === 'porta_porao') {
+      narrative.setFlag('porao_aberto');
+      narrative.say(['O cadeado abre no primeiro giro. Está lubrificado.']);
     }
   });
 }

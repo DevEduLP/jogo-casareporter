@@ -100,11 +100,17 @@ export const CHAPTERS = [
     id: 'a_presenca',
     title: 'A PRESENÇA',
     epigraph: 'A casa começa a discordar de si mesma.',
-    objective: 'Descer ao porão.',
+    objective: 'Descobrir o que há embaixo da casa.',
     reality: 4,
-    onStart: { monologue: ['Eu passei por este corredor quatro vezes. Ele não tinha esse comprimento.'] },
-    advance: { flag: 'porao_aberto' },
-    stub: true,
+    onStart: {
+      monologue: [
+        'Certo. Vou fazer o que eu sei fazer. Vou parar de tentar explicar e vou registrar.',
+        'Registrar é o que sobra quando explicar não dá mais. Foi exatamente isso que a Helena fez, e eu passei o dia inteiro achando que era sintoma.',
+      ],
+    },
+    // Abrir a porta é a resolução do puzzle; descer é a chegada. O capítulo só
+    // fecha quando Laura olha para onde a cadeira está olhando — que é a cena.
+    advance: { flag: 'viu_parede_porao' },
   },
   {
     n: 7,
@@ -112,7 +118,13 @@ export const CHAPTERS = [
     title: 'HELENA',
     epigraph: 'Nenhuma das respostas exclui as outras.',
     objective: 'Descobrir o que aconteceu com Helena Vasques.',
-    reality: 4,
+    reality: 5,
+    onStart: {
+      monologue: [
+        'Tem um colchão no chão e uma cadeira virada para a parede.',
+        'Alguém esteve aqui embaixo. Contando os dias. Sabendo que tinha gente em cima.',
+      ],
+    },
     advance: { flag: 'destino_helena' },
     stub: true,
   },
